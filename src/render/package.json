@@ -1,0 +1,17 @@
+{
+  "name": "PlayerRender",
+  "version": "1.0.0",
+  "dependencies": {
+    "element-plus": "^2.1.11",
+    "loadsh": "^0.0.4"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.2",
+    "@iconify/vue": "^3.2.1",
+    "eslint-plugin-vue": "^8.7.1",
+    "less": "^4.1.2",
+    "unplugin-icons": "^0.14.1",
+    "vite": "^2.7.13",
+    "vue-eslint-parser": "^8.3.0"
+  }
+}
