@@ -2,8 +2,12 @@
   "name": "PlayerRender",
   "version": "1.0.0",
   "dependencies": {
+    "@vueuse/core": "^8.3.1",
+    "dayjs": "^1.11.0",
     "element-plus": "^2.1.11",
-    "loadsh": "^0.0.4"
+    "loadsh": "^0.0.4",
+    "pinia": "^2.0.13",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@iconify-json/ic": "^1.1.2",

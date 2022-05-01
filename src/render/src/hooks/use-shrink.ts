@@ -1,6 +1,7 @@
 import {
   onMounted,
-  onBeforeUnmount
+  onBeforeUnmount,
+  getCurrentInstance
 } from "vue"
 import type {
   Ref
@@ -17,15 +18,11 @@ export const useShrink = (
   dragRef: Ref<HTMLElement>,
   limitX: [number, number] = [Infinity, Infinity],
 ) => {
-  const transform = {
-    // 距离初始位置的偏移程度
-    offsetX: 0,
-  }
+  const instance = getCurrentInstance()
+  const defaultWidth = limitX[1]
   
   const onMouseDown = (event: MouseEvent) => {
     const mouseDownX = event.clientX
-    
-    const { offsetX } = transform
     
     const targetRect = targetRef.value.getBoundingClientRect()
     const targetWidth = targetRect.width
@@ -35,13 +32,16 @@ export const useShrink = (
    
     const onMousemove = (event: MouseEvent) => {
       const moveX = Math.max(
-        Math.min(offsetX + event.clientX - mouseDownX, maxRight),
+        Math.min(event.clientX - mouseDownX, maxRight),
         minLeft
       )
       
-      transform.offsetX = moveX
+      const curWidth = moveX + targetWidth
+      targetRef.value.style.width = curWidth + 'px'
       
-      targetRef.value.style.width = moveX + targetWidth + 'px'
+      const percentage = (curWidth / defaultWidth).toFixed(4)
+      
+      instance.emit('change', percentage)
     }
     
     const onMouseup = () => {

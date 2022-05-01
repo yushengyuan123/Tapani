@@ -5,6 +5,12 @@ import type {
 } from "vue"
 import App from './pages/App.vue'
 
+/** Store Style Import*/
+import store from "./store"
+
+/** Router Import*/
+import router from './router/index'
+
 /** Icons Style Import*/
 import iconCollect from "./components/Icons/entry"
 import Icons from '@/components/Icons/Index.vue'
@@ -31,6 +37,10 @@ function initIcons(app: AppOps) {
 
 function initVueApplication() {
   const app = createApp(App)
+  
+  app.use(router)
+  
+  app.use(store)
   
   initElementPlus(app)
   

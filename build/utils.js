@@ -54,8 +54,8 @@ function greeting () {
   const cols = process.stdout.columns
   let text = ''
   
-  if (cols > 104) text = 'Freddieyu-VideoPlayer'
-  else if (cols > 76) text = 'Freddieyu-|VideoPlayer'
+  if (cols > 104) text = 'Freddieyu-VideoControls'
+  else if (cols > 76) text = 'Freddieyu-|VideoControls'
   else text = false
   
   if (text) {
@@ -70,7 +70,7 @@ function greeting () {
 
 module.exports = {
   logStats,
-  electronMainLog: electronRenderProcessLog(),
-  electronRenderProcessLog: electronMainLog(),
+  electronMainLog: electronMainLog(),
+  electronRenderProcessLog: electronRenderProcessLog(),
   greeting
 }

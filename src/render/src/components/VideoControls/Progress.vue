@@ -25,7 +25,7 @@
 import {
   defineComponent,
   computed,
-  ref, watch
+  ref, watch, onMounted
 } from "vue"
 import {
   useProgress

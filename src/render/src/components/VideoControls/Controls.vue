@@ -11,6 +11,7 @@
               <video-progress
                 :percentage="0.5"
                 :width="65"
+                @change="volumeChange"
               />
             </el-row>
           </el-col>
@@ -38,15 +39,16 @@
       </div>
       <div class="control-progress-area">
         <el-row align="middle">
-          <el-col :span="3">07:32</el-col>
+          <el-col :span="3">{{ currentTime }}</el-col>
           <el-col :span="18">
             <video-progress
-              :percentage="0.5"
+              :percentage="0"
+              @change="videoProgressChange"
             />
           </el-col>
           <el-col :span="3">
             <el-row justify="end">
-              01:55:57
+              {{ duration }}
             </el-row>
           </el-col>
         </el-row>
@@ -58,10 +60,16 @@
 <script lang="ts">
 import {
   defineComponent,
-  ref
+  ref,
+  computed
 } from "vue"
 import Progress from "./Progress.vue"
 import IconBaseline5g from '~icons/ic/baseline-5g'
+import { useVideoInfo } from "../../store/videoInfo"
+import { storeToRefs } from "pinia"
+import {
+  secondsTransformToTime
+} from "../../utils"
 
 import type {
   SetupContext
@@ -73,11 +81,23 @@ export default defineComponent({
     [Progress.name]: Progress
   },
   setup(props, context: SetupContext) {
+    const videoInfoStore = useVideoInfo()
+    const { videoDuration, videoCurrentTime } = storeToRefs(videoInfoStore)
+
     /* false表示暂停，true表示播放中 */
     const videoStatus = ref(false)
 
+    const duration = computed(
+      () => secondsTransformToTime(videoDuration.value)
+    )
+
+    const currentTime = computed(
+      () => secondsTransformToTime(videoCurrentTime.value)
+    )
+
     const switchVideoStatus = () => {
       videoStatus.value = !videoStatus.value
+      context.emit('video-status-change', videoStatus.value)
     }
 
     const leftMenuVisible = () => {
@@ -88,11 +108,23 @@ export default defineComponent({
       context.emit('visible-settings')
     }
 
+    const videoProgressChange = (percentage: number) => {
+      context.emit('video-time-change', percentage)
+    }
+
+    const volumeChange = () => {
+      context.emit('volume-change')
+    }
+
     return {
       videoStatus,
+      duration,
+      currentTime,
       switchVideoStatus,
       leftMenuVisible,
-      settingsVisible
+      settingsVisible,
+      videoProgressChange,
+      volumeChange
     }
   }
 })
@@ -109,6 +141,7 @@ export default defineComponent({
   background-color: transparent;
   width: @width;
   opacity: 0.7;
+  z-index: 1000;
 
   .control-container-inner {
     height: 100%;
@@ -119,7 +152,7 @@ export default defineComponent({
     transition: all .3s ease-in-out;
 
     .control-button-area {
-      height: 50px;
+      height: 45px;
       width: 100%;
       padding-left: 10px;
       padding-right: 10px;

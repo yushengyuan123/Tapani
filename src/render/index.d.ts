@@ -1,3 +1,4 @@
-declare namespace Haha {
-
+interface SelectArrItem {
+  name: string,
+  imgSrc: string,
 }
