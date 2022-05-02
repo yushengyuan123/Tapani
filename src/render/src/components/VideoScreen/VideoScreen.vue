@@ -1,19 +1,19 @@
 <template>
-  <el-upload
-    class="upload-demo"
-    :auto-upload="false"
-    :on-change="handleChange"
-    :on-preview="handlePreview"
-    :on-remove="handleRemove"
-    :show-file-list="true"
-  >
-    <el-button type="primary">Click to upload</el-button>
-    <template #tip>
-      <div class="el-upload__tip">
-        jpg/png files with a size less than 500KB.
-      </div>
-    </template>
-  </el-upload>
+<!--  <el-upload-->
+<!--    class="upload-demo"-->
+<!--    :auto-upload="false"-->
+<!--    :on-change="handleChange"-->
+<!--    :on-preview="handlePreview"-->
+<!--    :on-remove="handleRemove"-->
+<!--    :show-file-list="true"-->
+<!--  >-->
+<!--    <el-button type="primary">Click to upload</el-button>-->
+<!--    <template #tip>-->
+<!--      <div class="el-upload__tip">-->
+<!--        jpg/png files with a size less than 500KB.-->
+<!--      </div>-->
+<!--    </template>-->
+<!--  </el-upload>-->
   <video
     class="video-screen"
     ref="videoScreenRef"
@@ -32,8 +32,10 @@ import {useMediaControls} from "@vueuse/core"
 export default defineComponent({
   name: "video-screen",
   setup() {
-    const blobURL = ref<string>()
     const videoScreenRef = ref<HTMLVideoElement>()
+    const { videoBlobAddress } = storeToRefs(useVideoInfo())
+
+    useMedia(videoScreenRef)
 
     const handleRemove: UploadProps['onRemove'] = (file, uploadFiles) => {
       console.log(file, uploadFiles)
@@ -46,13 +48,10 @@ export default defineComponent({
     const handleChange: UploadProps['onChange'] = (
       uploadFile: UploadFile
     ) => {
-      // console.log('caonima', uploadFile)
-      // blobURL.value = URL.createObjectURL(uploadFile.raw)
-      useMedia(videoScreenRef, URL.createObjectURL(uploadFile.raw))
+      videoBlobAddress.value = URL.createObjectURL(uploadFile.raw)
     }
 
     return {
-      blobURL,
       videoScreenRef,
       handlePreview,
       handleRemove,

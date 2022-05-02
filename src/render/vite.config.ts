@@ -22,7 +22,8 @@ const viteConfig = defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, "./src") //把src改为@
+      '@': path.resolve(__dirname, "./src"),
+      '~': path.resolve(__dirname)
     }
   }
 })

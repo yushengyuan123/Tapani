@@ -1,74 +1,74 @@
-import {
-  BrowserWindow,
-  app
-} from 'electron'
-import electronConfig from './config/electronConfig'
-import * as is from 'electron-is'
-import { AspectRatio } from "./global"
+import WindowManager from "./WindowManager"
+import MenuManager from "./MenuManager"
+import * as logger from 'electron-log'
+import * as fs from 'fs-extra'
+import {EventEmitter} from 'events'
+import {Command} from "~"
+import {dialog} from 'electron'
 
-const debugAddress = 'http://localhost:1337/'
 
-enum ResizeDirection {
-  Align = 'Align',
-  Justify = 'Justify',
-  Diagonal = 'Diagonal'
-}
-
-class Application {
+class Application extends EventEmitter {
+  menuManager!: MenuManager
+  
+  windowManager!: WindowManager
+  
   constructor() {
-    this.createWindows()
+    super()
+    
+    this.setupMenuManager()
+    
+    this.initWindowManager()
+    
+    this.handleCommand()
   }
   
-  createWindows() {
-    app.whenReady().then(() => {
-      const window = new BrowserWindow({
-        ...electronConfig
+  setupMenuManager() {
+    this.menuManager = new MenuManager()
+  }
+  
+  initWindowManager() {
+    this.windowManager = new WindowManager()
+  }
+  
+  sendCommandToAll(command: CommandTypes, ...args: any[]) {
+    if (!this.emit(command)) {
+      this.windowManager.getWindowList().forEach(window => {
+        this.windowManager.sendCommandTo(window, command, ...args)
       })
+    }
+  }
+  
+  handleFileWithCommand(filePath: string, command: Command) {
+    if (!filePath) {
+      return
+    }
     
-      if (is.dev()) {
-        window.loadURL(debugAddress)
-        window.webContents.openDevTools({
-          mode: 'detach'
+    fs.readFile(filePath)
+      .then((buffer: Buffer) => {
+        this.sendCommandToAll(command, {
+          basePath: filePath,
+          buffer: buffer
+        })
+      }).catch((error: string) => {
+        logger.warn(`[Player] read file error: ${filePath}`, error)
+      })
+  }
+  
+  handleCommand() {
+    // 主进程主动打开文件
+    this.on(
+      Command.APPLICATION_OPEN_FILE,
+      () => {
+        dialog.showOpenDialog({
+          properties: ['openFile']
+        }).then(({ canceled, filePaths }) => {
+          if (canceled || filePaths.length === 0) {
+            return
+          }
+          this.handleFileWithCommand(filePaths[0], Command.VIDEO_LOCAL_SELECT)
         })
       }
-  
-      window.on('will-resize', (event, newBounds) => {
-        event.preventDefault()
-        // 0表示宽度 1表示高度
-        const curSize = window.getSize()
-        const curWidth = curSize[0]
-        const curHeight = curSize[1]
-        let resizeDirection: ResizeDirection
-        
-        if (
-          curWidth !== newBounds.width &&
-          curHeight !== newBounds.height
-        ) {
-          resizeDirection = ResizeDirection.Diagonal
-        } else if (curWidth !== newBounds.width) {
-          resizeDirection = ResizeDirection.Justify
-        } else {
-          resizeDirection = ResizeDirection.Align
-        }
-        
-        switch (resizeDirection) {
-        // 拉伸高度
-        case ResizeDirection.Align: {
-          window.setContentSize(~~(newBounds.height * AspectRatio.SixteenToNine), newBounds.height)
-          break
-        }
-        // 拉伸宽度
-        case ResizeDirection.Justify: {
-          window.setContentSize(newBounds.width, ~~(newBounds.width / AspectRatio.SixteenToNine))
-          break
-        }
-        case ResizeDirection.Diagonal: {
-          window.setContentSize(newBounds.width, newBounds.height)
-          break
-        }
-        }
-      })
-    })
+    )
   }
 }
 

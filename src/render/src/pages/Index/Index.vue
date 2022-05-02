@@ -22,6 +22,7 @@ import {
 } from "vue"
 import SelectItem from "./SelectItem/SelectItem.vue"
 import { useRouter } from 'vue-router'
+import { SelectArrItem } from "types"
 
 export default defineComponent({
   name: "app-index",

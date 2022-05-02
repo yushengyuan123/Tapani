@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@vueuse/core": "^8.3.1",
+    "@vueuse/electron": "^8.3.1",
     "dayjs": "^1.11.0",
     "element-plus": "^2.1.11",
     "loadsh": "^0.0.4",

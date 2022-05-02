@@ -9,11 +9,12 @@ const initHeight: number = 700
 const electronConfig: BrowserWindowConstructorOptions = {
   height: initHeight,
   width: ~~(initHeight * AspectRatio.SixteenToNine),
-  backgroundColor: is.macOS() ? '#00000000' : '#FFF',
+  backgroundColor: is.macOS() ? '#000000' : '#FFF',
   webPreferences: {
     // preload: path.join(__dirname, 'renderPreload.ts'),
     contextIsolation: false,
-    webSecurity: !is.dev()
+    webSecurity: !is.dev(),
+    nodeIntegration: true
   },
   titleBarStyle: 'hiddenInset',
 }

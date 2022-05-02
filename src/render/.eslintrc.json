@@ -12,7 +12,8 @@
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "no-undef": "off"
   },
   "env": {
     "node": true,

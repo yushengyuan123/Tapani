@@ -1,3 +1,4 @@
 import Application from "./application"
 
-const app = new Application()
+// @ts-ignore
+global.application = new Application()

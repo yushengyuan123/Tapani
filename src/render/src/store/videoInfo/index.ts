@@ -6,8 +6,8 @@ export const useVideoInfo = defineStore('videoInfo', () => {
   const videoBlobAddress = ref<string>()
   /* 视频当前的时间 */
   const videoCurrentTime = ref<number>(0)
-  /* 视频当前的状态 播放->暂停(false) or 暂停->播放(true) */
-  const videoStatus = ref<boolean>(true)
+  /* 视频当前的状态 播放->暂停(false，处于暂停状态) or 暂停->播放(true, 处于播放状态) */
+  const videoStatus = ref<boolean>(false)
   /* 视频总共时长 */
   const videoDuration = ref<number>(0)
   

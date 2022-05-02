@@ -9,6 +9,7 @@
       "@/components": ["./src/components"],
       "@/asserts": ["./src/asserts"],
       "@/hooks": ["./src/hooks"],
+      "~": ["./"]
     },
     "sourceMap": true
   },
@@ -19,7 +20,10 @@
     "./src/**/*.d.ts",
     "./src/**/*.vue",
     "./src/**/*.tsx",
-    "index.d.ts"
+    "index.d.ts",
+    "types.ts",
+    "../share/**/*.d.ts",
+    "../share/**/*.ts"
   ],
   "exclude": [
     "node_modules"

@@ -63,6 +63,7 @@ import {
   ref,
   computed
 } from "vue"
+import { useIdle } from "@vueuse/core";
 import Progress from "./Progress.vue"
 import IconBaseline5g from '~icons/ic/baseline-5g'
 import { useVideoInfo } from "../../store/videoInfo"
@@ -82,11 +83,13 @@ export default defineComponent({
   },
   setup(props, context: SetupContext) {
     const videoInfoStore = useVideoInfo()
-    const { videoDuration, videoCurrentTime } = storeToRefs(videoInfoStore)
+    const {
+      videoDuration,
+      videoCurrentTime,
+      videoStatus
+    } = storeToRefs(videoInfoStore)
 
-    /* false表示暂停，true表示播放中 */
-    const videoStatus = ref(false)
-
+    // const {} = useIdle()
     const duration = computed(
       () => secondsTransformToTime(videoDuration.value)
     )

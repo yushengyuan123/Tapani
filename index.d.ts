@@ -1,4 +1,8 @@
-// export enum AspectRatio {
-//   SixteenToNine = 16 / 9,
-//   FourToThree = 4 / 3
-// }
+export {}
+
+declare global {
+  interface application {}
+  namespace NodeJs {
+    interface application {}
+  }
+}

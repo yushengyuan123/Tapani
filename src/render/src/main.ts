@@ -22,6 +22,9 @@ import '@/components/Theme/Main.less'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
+/** Commands Import */
+import registerCommands from './command'
+
 function initElementPlus(app: AppOps) {
   app.use(ElementPlus)
 }
@@ -45,6 +48,8 @@ function initVueApplication() {
   initElementPlus(app)
   
   initIcons(app)
+  
+  registerCommands()
   
   app.mount('#app')
 }

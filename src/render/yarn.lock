@@ -97,6 +97,14 @@
     "@vueuse/shared" "8.3.1"
     vue-demi "*"
 
+"@vueuse/electron@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/electron/-/electron-8.3.1.tgz#d06ceb4636386f4d59771870581b44f6d0d075b3"
+  integrity sha512-wMsvts6xTaY+I7j+bJTr5o4m84BL8BDRmhqpRZ1DzVygH3iD7o71rdtAVy2Z38xQ7eYHv2/33HZT0aMC5wlXvw==
+  dependencies:
+    "@vueuse/shared" "8.3.1"
+    vue-demi "*"
+
 "@vueuse/metadata@8.3.1":
   version "8.3.1"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-8.3.1.tgz#acc0ff9ad686c68dfc7b4869639c43e71ae2682b"

@@ -8,16 +8,22 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "~": ["./src/share"]
+    },
     "lib": [
       "esnext",
       "dom"
     ]
   },
   "include": [
-    "src/main/**/*.ts",
-    "src/main/**/*.d.ts",
-    "src/main/global.ts",
-    "index.d.ts"
+    "./src/main/**/*.ts",
+    "./src/main/**/*.d.ts",
+    "./src/main/types.d.ts",
+    "./src/share/**/*.d.ts",
+    "./src/share/**/*.ts",
+    "./index.d.ts",
   ],
   "exclude": [
     "src/render/*"
