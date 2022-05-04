@@ -23,7 +23,7 @@ import VideoUpload from "@/components/VideoUpload/VideoUpload.vue"
 import VideoScreen from "@/components/VideoScreen/VideoScreen.vue";
 import { useVideoInfo } from '../../store/videoInfo'
 import { storeToRefs } from "pinia"
-import {secondsTransformToTime} from "../../utils";
+import {convertSecondsToTime} from "../../utils";
 
 export default defineComponent({
   name: "video-player",

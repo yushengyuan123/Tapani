@@ -1,24 +1,35 @@
 import { commandsManager } from "./components/CommonManager/instance"
-import { useVideoInfo } from "./store/videoInfo";
+import {
+  ref
+} from "vue"
+import { useVideoInfo } from "./store/videoInfo"
 import { storeToRefs } from 'pinia'
-import { 
+import { useFileSystemAccess } from "@vueuse/core"
+import fileStreamManager from "./buffer"
+import {
   Command,
-  videoSelectArgs
-} from "../../share"
+  VideoSelectArgs,
+} from "../../share/index.ts"
 import {
   IpcRendererListener
 } from "types"
+import fileModuleApi from "./api/fileApi"
 
-const videoSelectFromMenu: IpcRendererListener<videoSelectArgs>
-  = (event, args) => {
-    console.log('注册文件选择回调', args)
-    const blob = new Blob([args.buffer])
-    const { videoBlobAddress } = storeToRefs(useVideoInfo())
-    videoBlobAddress.value = URL.createObjectURL(blob)
-  }
+console.log(Command)
+
+const videoSelectFromMenu: IpcRendererListener<VideoSelectArgs> = (event, args) => {
+  const videStore = useVideoInfo()
+  const { videoBlobAddress } = storeToRefs(videStore)
+  
+  fileModuleApi.fetchFile(args.basePath).then(res => {
+    console.log(1111)
+    console.log(res)
+    videoBlobAddress.value = URL.createObjectURL(res)
+  })
+}
 
 const registerCommands = () => {
-  commandsManager.register(Command.VIDEO_LOCAL_SELECT, videoSelectFromMenu)
+  commandsManager.register('video:local-select', videoSelectFromMenu)
 }
 
 export default registerCommands

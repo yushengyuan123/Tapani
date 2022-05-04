@@ -6,7 +6,6 @@ export enum Command {
   VIDEO_LOCAL_SELECT= 'video:local-select',
 }
 
-export interface videoSelectArgs {
+export interface VideoSelectArgs {
   basePath: string,
-  buffer: Buffer
 }

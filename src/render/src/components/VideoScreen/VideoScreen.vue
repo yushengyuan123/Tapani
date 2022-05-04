@@ -48,6 +48,7 @@ export default defineComponent({
     const handleChange: UploadProps['onChange'] = (
       uploadFile: UploadFile
     ) => {
+      console.log(uploadFile.raw)
       videoBlobAddress.value = URL.createObjectURL(uploadFile.raw)
     }
 

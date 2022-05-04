@@ -12,7 +12,7 @@ export function getCurrentTime() {
   return dayjs(curSec).format('HH:mm:ss')
 }
 
-export function secondsTransformToTime(seconds: number) {
+export function convertSecondsToTime(seconds: number) {
   const duration = dayjs.duration(seconds, 'seconds')
   return duration.format('HH:mm:ss')
 }

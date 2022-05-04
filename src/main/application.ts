@@ -5,6 +5,7 @@ import * as fs from 'fs-extra'
 import {EventEmitter} from 'events'
 import {Command} from "~"
 import {dialog} from 'electron'
+import * as buffer from "buffer"
 
 
 class Application extends EventEmitter {
@@ -32,6 +33,7 @@ class Application extends EventEmitter {
   
   sendCommandToAll(command: CommandTypes, ...args: any[]) {
     if (!this.emit(command)) {
+      console.log('发送时间')
       this.windowManager.getWindowList().forEach(window => {
         this.windowManager.sendCommandTo(window, command, ...args)
       })
@@ -42,16 +44,7 @@ class Application extends EventEmitter {
     if (!filePath) {
       return
     }
-    
-    fs.readFile(filePath)
-      .then((buffer: Buffer) => {
-        this.sendCommandToAll(command, {
-          basePath: filePath,
-          buffer: buffer
-        })
-      }).catch((error: string) => {
-        logger.warn(`[Player] read file error: ${filePath}`, error)
-      })
+    this.sendCommandToAll(command, { basePath: filePath })
   }
   
   handleCommand() {

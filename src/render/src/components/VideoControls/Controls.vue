@@ -1,5 +1,7 @@
 <template>
-  <div class="control-container">
+  <div
+    :class="['control-container', idleClass]"
+  >
     <div class="control-container-inner">
       <div class="control-button-area">
         <el-row align="middle" style="height: 100%">
@@ -60,16 +62,16 @@
 <script lang="ts">
 import {
   defineComponent,
-  ref,
   computed
 } from "vue"
 import { useIdle } from "@vueuse/core";
+import { useControl } from "./use-control";
 import Progress from "./Progress.vue"
 import IconBaseline5g from '~icons/ic/baseline-5g'
 import { useVideoInfo } from "../../store/videoInfo"
 import { storeToRefs } from "pinia"
 import {
-  secondsTransformToTime
+  convertSecondsToTime
 } from "../../utils"
 
 import type {
@@ -89,40 +91,38 @@ export default defineComponent({
       videoStatus
     } = storeToRefs(videoInfoStore)
 
-    // const {} = useIdle()
+    const {
+      switchVideoStatus,
+      leftMenuVisible,
+      volumeChange,
+      videoProgressChange,
+      settingsVisible
+    } = useControl()
+
+    const { idle } = useIdle(4000)
+
+    const idleClass = computed(
+      () => {
+        if (idle.value) {
+          return 'control-user-idle'
+        }
+        return ''
+      }
+    )
+
     const duration = computed(
-      () => secondsTransformToTime(videoDuration.value)
+      () => convertSecondsToTime(videoDuration.value)
     )
 
     const currentTime = computed(
-      () => secondsTransformToTime(videoCurrentTime.value)
+      () => convertSecondsToTime(videoCurrentTime.value)
     )
-
-    const switchVideoStatus = () => {
-      videoStatus.value = !videoStatus.value
-      context.emit('video-status-change', videoStatus.value)
-    }
-
-    const leftMenuVisible = () => {
-      context.emit('visible-menu')
-    }
-
-    const settingsVisible = () => {
-      context.emit('visible-settings')
-    }
-
-    const videoProgressChange = (percentage: number) => {
-      context.emit('video-time-change', percentage)
-    }
-
-    const volumeChange = () => {
-      context.emit('volume-change')
-    }
 
     return {
       videoStatus,
       duration,
       currentTime,
+      idleClass,
       switchVideoStatus,
       leftMenuVisible,
       settingsVisible,
@@ -145,6 +145,11 @@ export default defineComponent({
   width: @width;
   opacity: 0.7;
   z-index: 1000;
+
+  &.control-user-idle {
+    transition: opacity .8s linear;
+    opacity: 0;
+  }
 
   .control-container-inner {
     height: 100%;

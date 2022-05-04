@@ -14,7 +14,7 @@ const electronConfig: BrowserWindowConstructorOptions = {
     // preload: path.join(__dirname, 'renderPreload.ts'),
     contextIsolation: false,
     webSecurity: !is.dev(),
-    nodeIntegration: true
+    nodeIntegration: true,
   },
   titleBarStyle: 'hiddenInset',
 }
