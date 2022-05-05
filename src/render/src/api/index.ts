@@ -1,40 +1,76 @@
-import axios, {Axios, AxiosResponse} from "axios"
-import { ElMessage } from 'element-plus'
+import axios from "axios"
+import type {
+  AxiosInstance,
+  AxiosResponse,
+  AxiosRequestConfig
+} from 'axios'
+import type {
+  RequestConfig,
+  RequestInterceptors
+} from './types'
+import {
+  ElMessage
+} from "element-plus"
 
-const basicUrl = 'http://localhost:7001'
+class Request {
+  instance: AxiosInstance
+  interceptorsObj?: RequestInterceptors
+  
+  constructor(config: RequestConfig) {
+    this.instance = axios.create(config)
+    this.interceptorsObj = config.interceptors
+    
+    this.instance.interceptors.request.use(
+      (res: AxiosRequestConfig) => {
+        console.log('全局请求拦截器')
+        return res
+      },
+      (err: any) => {
+        ElMessage.error(err)
+      },
+    )
+    
+    this.instance.interceptors.request.use(
+      this.interceptorsObj?.requestInterceptors,
+      this.interceptorsObj?.requestInterceptorsCatch,
+    )
+    
+    this.instance.interceptors.response.use(
+      this.interceptorsObj?.responseInterceptors,
+      this.interceptorsObj?.responseInterceptorsCatch,
+    )
 
-const _request: Axios = axios.create({
-  baseURL: basicUrl,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-})
-
-_request.interceptors.request.use(config => {
-  return config
-}, (error) => {
-  ElMessage.error(error)
-})
-
-interface resData {
-  code: number,
-  message: string,
-  data: any
+    this.instance.interceptors.response.use(
+      (res: AxiosResponse) => {
+        console.log('全局响应拦截器')
+        return res.data
+      },
+      (err: any) => {
+        ElMessage.error(err)
+      },
+    )
+  }
+  
+  request<T>(config: RequestConfig): Promise<T> {
+    return new Promise((resolve, reject) => {
+      if (config.interceptors?.requestInterceptors) {
+        config = config.interceptors.requestInterceptors(config)
+      }
+      this.instance
+        .request<any, T>(config)
+        .then(res => {
+          if (config.interceptors?.responseInterceptors) {
+            res = config.interceptors.responseInterceptors<T>(res)
+          }
+          
+          resolve(res)
+        })
+        .catch((err: any) => {
+          reject(err)
+        })
+    })
+  }
 }
 
-_request.interceptors.response.use((res: AxiosResponse<resData>) => {
-  const data = res.data
-  const { code, message } = data
-  
-  // if (code !== 200) {
-  //   ElMessage.error(message)
-  //   return Promise.reject(message)
-  // }
-  
-  return data
-}, (error => {
-  ElMessage.error(error)
-}))
+export default Request
 
-
-export default _request

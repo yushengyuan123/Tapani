@@ -5,6 +5,9 @@ import Setting from './Setting'
 import Volume from './Volume'
 import Pause from "./Pause"
 import MenuList from './MenuList'
+import Color from './Color'
+import App from "./App"
+import Video from './Video'
 import { registerIcon } from "./Index.vue"
 import type {
   registerIconName
@@ -19,7 +22,10 @@ function batchRegisterIcons() {
     Setting,
     Volume,
     Pause,
-    MenuList
+    MenuList,
+    Color,
+    App,
+    Video
   ]
   registerArr.forEach(ops => {
     registerIcon(ops)
@@ -33,7 +39,10 @@ const iconCollect: Record<registerIconName, any> = {
   "round-settings": Setting.iconInstance,
   "round-volume": Volume.iconInstance,
   "outline-pause": Pause.iconInstance,
-  "round-menu": MenuList.iconInstance
+  "round-menu": MenuList.iconInstance,
+  "round-color-lens": Color.iconInstance,
+  "baseline-dvr": App.iconInstance,
+  "round-missed-video-call": Video.iconInstance
 }
 
 batchRegisterIcons()

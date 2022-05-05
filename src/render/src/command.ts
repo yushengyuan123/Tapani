@@ -1,11 +1,5 @@
 import { commandsManager } from "./components/CommonManager/instance"
-import {
-  ref
-} from "vue"
 import { useVideoInfo } from "./store/videoInfo"
-import { storeToRefs } from 'pinia'
-import { useFileSystemAccess } from "@vueuse/core"
-import fileStreamManager from "./buffer"
 import {
   Command,
   VideoSelectArgs,
@@ -13,23 +7,22 @@ import {
 import {
   IpcRendererListener
 } from "types"
-import fileModuleApi from "./api/fileApi"
-
-console.log(Command)
+import {
+  localFileApi
+} from "./api/localFile"
 
 const videoSelectFromMenu: IpcRendererListener<VideoSelectArgs> = (event, args) => {
-  const videStore = useVideoInfo()
-  const { videoBlobAddress } = storeToRefs(videStore)
+  const {
+    updateVideoAddress
+  } = useVideoInfo()
   
-  fileModuleApi.fetchFile(args.basePath).then(res => {
-    console.log(1111)
-    console.log(res)
-    videoBlobAddress.value = URL.createObjectURL(res)
+  localFileApi.getLocalFile(args.basePath).then(blob => {
+    updateVideoAddress(URL.createObjectURL(blob))
   })
 }
 
 const registerCommands = () => {
-  commandsManager.register('video:local-select', videoSelectFromMenu)
+  commandsManager.register(Command.VIDEO_LOCAL_SELECT, videoSelectFromMenu)
 }
 
 export default registerCommands

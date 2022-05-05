@@ -1,15 +1,16 @@
 <template>
   <div class="menu-aside-container">
     <div class="menu-aside-top">
-      <div class="menu-aside-download menu-aside-btn">
-        <icon-collect name="setting"/>
-      </div>
-      <div class="menu-aside-btn">
-        <icon-collect name="setting"/>
-      </div>
+      <router-link :to="'/index'">
+        <div class="menu-aside-download menu-aside-btn">
+          <icon-collect name="video"/>
+        </div>
+      </router-link>
     </div>
     <div class="menu-aside-bottom menu-aside-btn">
-      <icon-collect name="setting"/>
+      <router-link :to="'/settings'">
+        <icon-collect name="setting"/>
+      </router-link>
     </div>
   </div>
 </template>
@@ -33,7 +34,7 @@ export default defineComponent({
   display: flex;
   flex-flow: column;
   height: 100%;
-  background-color: #000000db;
+  background: rgba(29, 22, 22, 0.6);
 
   .menu-aside-top {
     flex: 1;

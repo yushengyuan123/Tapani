@@ -1,20 +1,32 @@
 <template>
-  <div class="select-item-con">
-    <div class="select-item-icon-con">
-      <el-row align="middle" justify="center">
-        <img :src="imgSrc" alt="">
-      </el-row>
+  <el-upload
+    :auto-upload="false"
+    :on-change="handleChange"
+    :show-file-list="false"
+  >
+    <div class="select-item-con">
+      <div class="select-item-icon-con">
+        <el-row align="middle" justify="center">
+          <img :src="imgSrc" alt="">
+        </el-row>
+      </div>
+      <div class="select-item-text">
+        <span>{{itemText}}</span>
+      </div>
     </div>
-    <div class="select-item-text">
-      <span>{{itemText}}</span>
-    </div>
-  </div>
+  </el-upload>
 </template>
 
 <script lang="ts">
 import {
-  defineComponent
+  defineComponent,
+  SetupContext
 } from 'vue'
+import {
+  UploadFile,
+  UploadProps
+} from "element-plus"
+import {useVideoInfo} from "../../../store/videoInfo";
 
 export default defineComponent({
   name: "select-item",
@@ -27,13 +39,22 @@ export default defineComponent({
       type: String
     }
   },
-  setup(props) {
+  setup(props, context: SetupContext) {
     const itemText = props.itemText
     const imgSrc = props.imgSrc
+    const { updateVideoAddress } = useVideoInfo()
+
+    const handleChange: UploadProps['onChange'] = (
+      uploadFile: UploadFile
+    ) => {
+      updateVideoAddress(URL.createObjectURL(uploadFile.raw))
+      context.emit('file-select')
+    }
 
     return {
       itemText,
-      imgSrc
+      imgSrc,
+      handleChange
     }
   }
 })

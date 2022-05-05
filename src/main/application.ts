@@ -1,12 +1,11 @@
+import { spawn } from 'child_process'
 import WindowManager from "./WindowManager"
 import MenuManager from "./MenuManager"
-import * as logger from 'electron-log'
-import * as fs from 'fs-extra'
 import {EventEmitter} from 'events'
 import {Command} from "~"
 import {dialog} from 'electron'
-import * as buffer from "buffer"
-
+import is from "electron-is"
+import * as path from "path"
 
 class Application extends EventEmitter {
   menuManager!: MenuManager
@@ -21,6 +20,8 @@ class Application extends EventEmitter {
     this.initWindowManager()
     
     this.handleCommand()
+    
+    this.initEggServer()
   }
   
   setupMenuManager() {
@@ -31,9 +32,27 @@ class Application extends EventEmitter {
     this.windowManager = new WindowManager()
   }
   
+  initEggServer() {
+    if (is.dev()) {
+      const scriptPath = path.join(__dirname, '../../startup.sh')
+      const server = spawn(`sh`, [scriptPath])
+  
+      server.stdout.on('data', (data: Buffer) => {
+        console.log('[Egg Server]:', data.toString())
+      })
+  
+      server.stderr.on('data', (data: Buffer) => {
+        console.error('[Egg Server]: error', data.toString())
+      })
+  
+      server.on('close', () => {
+        console.error('http server close！')
+      })
+    }
+  }
+  
   sendCommandToAll(command: CommandTypes, ...args: any[]) {
     if (!this.emit(command)) {
-      console.log('发送时间')
       this.windowManager.getWindowList().forEach(window => {
         this.windowManager.sendCommandTo(window, command, ...args)
       })

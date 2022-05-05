@@ -1,4 +1,6 @@
-import {Command} from "~"
+import {
+  Command
+} from "~"
 
 const template: AppMenuOption[] = [
   {
@@ -13,12 +15,7 @@ const template: AppMenuOption[] = [
         id: 'file.select',
         label: '打开文件',
         command: Command.APPLICATION_OPEN_FILE
-      },
-      {
-        id: 'folder.select',
-        label: '打开文件夹',
-        command: Command.APPLICATION_OPEN_FILE
-      },
+      }
     ]
   }
 ]

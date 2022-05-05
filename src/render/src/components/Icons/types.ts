@@ -9,7 +9,10 @@ type registerIconName =
   'round-settings' |
   'round-volume' |
   'outline-pause' |
-  'round-menu'
+  'round-menu' |
+  'round-color-lens' |
+  'baseline-dvr' |
+  'round-missed-video-call'
 
 type iconNewName =
   'continue' |
@@ -18,7 +21,10 @@ type iconNewName =
   'setting' |
   'volume' |
   'pause' |
-  'menu-list'
+  'menu-list' |
+  'color' |
+  'app' |
+  'video'
 
 interface IconRegisterOption {
   name: iconNewName

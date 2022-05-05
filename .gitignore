@@ -4,6 +4,10 @@
 node_modules
 /dist
 
+# egg
+./egg/app
+./egg/logs
+
 # local env files
 .env.local
 .env.*.local

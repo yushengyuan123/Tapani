@@ -5,11 +5,12 @@ import {
 } from "vue-router"
 import AppIndex from "@/pages/Index/Index.vue"
 import VideoIndex from "@/pages/VideoPlayer/Index.vue"
+import Settings from "@/pages/Settings/Settings.vue"
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/video'
+    redirect: '/settings'
   },
   {
     path: '/index',
@@ -20,6 +21,11 @@ const routes: RouteRecordRaw[] = [
     path: '/video',
     name: 'video-index',
     component: VideoIndex
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: Settings
   },
 ]
 

@@ -2,7 +2,6 @@
   <div class="menu-index-container">
     <menu-aside />
   </div>
-
 </template>
 
 <script lang="ts">
@@ -29,10 +28,7 @@ export default defineComponent({
 
 <style scoped lang="less">
 .menu-index-container {
-  position: absolute;
   height: 100%;
   width: 78px;
-  left: 0;
-  top: 0;
 }
 </style>
