@@ -8,6 +8,10 @@ body {
   border: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -50,7 +54,7 @@ a {
 
 /* Setting Aside Style
 -------------------------- */
-.aside-bar-con  {
+.settings-aside {
   background-color: @--settings-aside-item-bg;
 }
 
@@ -64,6 +68,64 @@ a {
 
 .setting-main {
   background-color: @--settings-main-content;
+
+  .setting-main-check-update-button {
+    background-color: @--settings-main-app-button-bg;
+    color: @--settings-aside-text
+  }
+
+  .setting-main-app-name {
+    color: @--settings-main-app-logo;
+  }
+
+  .setting-main-version {
+    color: @--settings-main-app-version;
+  }
+
+  .base-info-item-con {
+    .base-info-item-title {
+      color: @--settings-main-app-base-info-color;
+    }
+
+    .base-info-item-desc {
+      color: @--settings-main-app-version;
+    }
+  }
+
+  .function-setting-title {
+    color: @--settings-main-app-base-info-color
+  }
+
+  .function-setting-form-item-title {
+    color: @--settings-main-app-base-info-color;
+  }
+
+  .function-setting-form-item-desc {
+    color: @--settings-main-app-version;
+  }
+
+  .el-input__wrapper {
+    background-color: #181e23;
+  }
+}
+
+.media-setting-con {
+  .media-setting-title {
+    color: @--settings-aside-text;
+  }
+
+  .equalizer-adjust-page-equalizer-title-text {
+    font-size: 14px;
+    color: @--settings-aside-text;
+  }
+
+  .equalizer-adjust-aside-text {
+    color: @--settings-aside-text;
+  }
+
+  .key-board-item-text {
+    color: @--settings-aside-text;
+  }
 }
 
 #app,

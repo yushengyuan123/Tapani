@@ -6,6 +6,8 @@ import {
 import AppIndex from "@/pages/Index/Index.vue"
 import VideoIndex from "@/pages/VideoPlayer/Index.vue"
 import Settings from "@/pages/Settings/Settings.vue"
+import AppSetting from "@/pages/Settings/SettingsMain/AppSetting/AppSetting.vue"
+import MediaSetting from "@/pages/Settings/SettingsMain/MediaSetting/MediaSetting.vue";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -25,7 +27,20 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/settings',
     name: 'settings',
-    component: Settings
+    component: Settings,
+    redirect: '/media',
+    children: [
+      {
+        path: '/app',
+        name: 'app-setting',
+        component: AppSetting
+      },
+      {
+        path: '/media',
+        name: 'media-setting',
+        component: MediaSetting
+      }
+    ]
   },
 ]
 

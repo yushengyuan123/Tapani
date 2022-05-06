@@ -101,3 +101,147 @@ name: "ClusterClientNoResponseError"
 pid: 21596
 hostname: yushenguandeMBP
 
+2022-05-06 10:49:47,309 ERROR 4442 nodejs.ClusterClientNoResponseError: client no response in 1006431ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 4442
+hostname: yushenguandeMBP
+
+2022-05-06 11:47:57,578 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 1075861ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 12:38:24,416 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 972597ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 12:54:55,074 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 990654ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 13:11:45,679 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 1010596ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 13:27:18,276 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 932591ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 13:42:51,119 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 932834ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 13:59:19,808 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 988686ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 14:01:31,404 ERROR 6947 nodejs.ClusterClientNoResponseError: client no response in 131590ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 6947
+hostname: yushenguandeMBP
+
+2022-05-06 15:27:06,301 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 933544ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 15:43:06,680 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 960371ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 16:03:44,073 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 1058081ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 16:20:06,656 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 982577ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 16:36:22,256 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 975594ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 16:53:36,108 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 1033845ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 17:08:56,702 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 920589ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 17:16:20,472 ERROR 7779 nodejs.ClusterClientNoResponseError: client no response in 443765ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 7779
+hostname: yushenguandeMBP
+
+2022-05-06 19:11:07,212 ERROR 16497 nodejs.ClusterClientNoResponseError: client no response in 311562ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 16497
+hostname: yushenguandeMBP
+

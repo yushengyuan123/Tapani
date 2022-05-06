@@ -54,6 +54,10 @@ export default defineComponent({
         name: '外观',
         icon: "color"
       },
+      {
+        name: '媒体设置',
+        icon: 'media'
+      }
     ]
 
     const switchItem = (index) => {

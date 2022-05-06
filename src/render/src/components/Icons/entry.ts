@@ -8,6 +8,7 @@ import MenuList from './MenuList'
 import Color from './Color'
 import App from "./App"
 import Video from './Video'
+import MediaControl from "./Media";
 import { registerIcon } from "./Index.vue"
 import type {
   registerIconName
@@ -25,7 +26,8 @@ function batchRegisterIcons() {
     MenuList,
     Color,
     App,
-    Video
+    Video,
+    MediaControl
   ]
   registerArr.forEach(ops => {
     registerIcon(ops)
@@ -42,7 +44,8 @@ const iconCollect: Record<registerIconName, any> = {
   "round-menu": MenuList.iconInstance,
   "round-color-lens": Color.iconInstance,
   "baseline-dvr": App.iconInstance,
-  "round-missed-video-call": Video.iconInstance
+  "round-missed-video-call": Video.iconInstance,
+  "baseline-media-bluetooth-on": MediaControl.iconInstance
 }
 
 batchRegisterIcons()

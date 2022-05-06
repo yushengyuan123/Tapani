@@ -21,7 +21,7 @@
 import {
   defineComponent
 } from 'vue'
-import AsideBar from "@/components/SetDialog/AsideBar.vue"
+import AsideBar from "@/components/SetAside/AsideBar.vue"
 
 export default defineComponent({
   name: "settings",
@@ -48,5 +48,7 @@ export default defineComponent({
 .setting-main {
   height: 100%;
   width: 100%;
+  max-width: 600px;
+  padding-top: 10px;
 }
 </style>

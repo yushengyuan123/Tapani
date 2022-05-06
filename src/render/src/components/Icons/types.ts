@@ -12,7 +12,8 @@ type registerIconName =
   'round-menu' |
   'round-color-lens' |
   'baseline-dvr' |
-  'round-missed-video-call'
+  'round-missed-video-call' |
+  'baseline-media-bluetooth-on'
 
 type iconNewName =
   'continue' |
@@ -24,7 +25,8 @@ type iconNewName =
   'menu-list' |
   'color' |
   'app' |
-  'video'
+  'video' |
+  'media'
 
 interface IconRegisterOption {
   name: iconNewName

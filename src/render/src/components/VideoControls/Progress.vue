@@ -47,6 +47,10 @@ export default defineComponent({
       type: Number,
       default: 4
     },
+    strokeColor: {
+      type: String,
+      default: '#409eff'
+    },
     width: {
       type: Number,
       default: 350
@@ -72,7 +76,8 @@ export default defineComponent({
     )
     const barStyle = computed(
       (): CSSProperties => ({
-        width: `${curWidth}px`
+        width: `${curWidth}px`,
+        "background-color": props.strokeColor
       })
     )
 
