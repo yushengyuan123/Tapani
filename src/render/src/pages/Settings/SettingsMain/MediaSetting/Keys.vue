@@ -1,43 +1,80 @@
 <template>
-   <div class="keys-con">
-
-   </div>
+  <div class="keys-con" @click="openKeySetDialog">
+    <img src="src/asserts/mac-command.png" alt="">
+    <div>K</div>
+  </div>
+  <key-modify-dialog
+    v-model:visible="visible"
+    v-if="visible"
+    @save="keySave"
+  />
 </template>
 
 <script lang="ts">
 import {
   computed,
-  defineComponent, watchEffect
+  defineComponent, PropType,
+  ref
 } from 'vue'
-import {useMagicKeys, whenever} from "@vueuse/core"
+import {
+  useKeyBoardSet,
+  OperatorKeyTypes
+} from "../../../../store/keyboard"
+import KeyModifyDialog from "@/components/KeyModifyDialog/KeyModifyDialog.vue"
 
 export default defineComponent({
-  name: "Keys",
-  setup() {
-    const { current } = useMagicKeys()
+  name: "keys",
+  props: {
+    keys: {
+      type: Array
+    }
+  },
+  components: {
+    [KeyModifyDialog.name]: KeyModifyDialog
+  },
+  setup(props) {
+    const visible = ref(false)
+    const openKeySetDialog = () => {
+      visible.value = true
+    }
+    console.log('aaa')
 
-    const keys = computed(() => {
-      console.log('案件发生变化', current)
-      return Array.from(current)
-    })
+    console.log(props)
 
-    watchEffect(() => {
-      console.log(current)
-    })
+    const keySave = (keys) => {
+      console.log('用户选择key')
+      console.log(keys)
+      // useKeyBoardSet(props.operate)
+    }
 
-    whenever(() => {
-      return current.has('a')
-    }, () => {
-      console.log(current)
-    })
-
-    return {}
+    return {
+      visible,
+      openKeySetDialog,
+      keySave
+    }
   }
 })
 </script>
 
 <style scoped lang="less">
 .keys-con {
-  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  float: right;
+  opacity: .8;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0 10px;
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.keys-con-plus {
+
 }
 </style>

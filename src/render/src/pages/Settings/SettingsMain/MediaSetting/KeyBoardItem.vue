@@ -1,28 +1,68 @@
 <template>
   <div class="key-board-item-con">
-    <div class="key-board-item-text">全屏（full-screen）</div>
-    <div class="key-board-item-button-con"></div>
+    <div class="key-board-item-text">
+      {{ text }}
+    </div>
+    <div class="key-board-item-button-con">
+      <keys
+        v-if="hasKey"
+        :keys="getKey"
+      />
+      <span v-else>添加...</span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import {
-  defineComponent
+  defineComponent,
+  PropType,
+  computed
 } from 'vue'
+import Keys from "./Keys.vue"
 import {
-  useMagicKeys,
-  whenever
-} from "@vueuse/core"
+  useKeyBoardSet,
+  OperatorKeyTypes
+} from "../../../../store/keyboard";
+
 
 export default defineComponent({
   name: "key-board-item",
   props: {
-    keyText: {
+    operate: {
+      type: String as PropType<OperatorKeyTypes>
+    },
+    text: {
       type: String
     }
   },
-  setup() {
-    return {}
+  components: {
+    [Keys.name]: Keys
+  },
+  setup(props) {
+    const text = props.text
+    const {
+      checkIsSetKey,
+      getSetKey
+    } = useKeyBoardSet()
+    const operateName = props.operate
+
+    console.log(props)
+
+    const hasKey = computed(() => {
+      return checkIsSetKey(operateName)
+    })
+
+    const getKey = computed(() => {
+      const res = getSetKey(operateName)
+      return Array.from(res)
+    })
+
+    return {
+      text,
+      hasKey,
+      getKey
+    }
   }
 })
 </script>
@@ -30,10 +70,16 @@ export default defineComponent({
 <style scoped lang="less">
 .key-board-item-con {
   display: flex;
-  height: 20px;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
 }
 
-.key-board-item-text {
-  font-size: 14px;
+.key-board-item-button-con {
+  flex: 1;
+  text-align: right;
+  line-height: 40px;
+  cursor: pointer;
 }
 </style>

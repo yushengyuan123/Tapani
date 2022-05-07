@@ -2,7 +2,6 @@ import {defineStore} from "pinia"
 import {ref} from 'vue'
 import {convertSecondsToTime} from "../../utils"
 import type {TypesTimes} from "../../../types"
-import {TypesTimes} from "../../../types";
 
 export const useVideoInfo = defineStore('videoInfo', () => {
   /* 视频blob地址 */

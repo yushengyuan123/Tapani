@@ -22,17 +22,15 @@
     <div class="media-setting-item-con">
       <h1 class="media-setting-title">快捷键</h1>
       <div class="key-board-item-area">
-        <key-board-item />
-        <Note>Keys Pressed</Note>
-        <div class="flex mt-2 justify-center space-x-1 min-h-1.5em">
-          <code
-            v-for="key in keys"
-            :key="key"
-            class="font-mono"
-          >
-            {{ key }}
-          </code>
-        </div>
+        <template
+          v-for="item in keyBoardSetItem"
+          :key="item.operate"
+        >
+          <key-board-item
+            :operate="item.operate"
+            :text="item.text"
+          />
+        </template>
       </div>
     </div>
   </div>
@@ -47,14 +45,18 @@ import {
 import FunctionFormItem from "@/components/FunctionFormItem/FunctionFormItem.vue"
 import EqualizerAdjust from "@/components/Equalizer/EqualizerAdjust.vue";
 import KeyBoardItem from "./KeyBoardItem.vue"
-import {
-  useMagicKeys,
-  whenever
-} from "@vueuse/core"
+import type {
+  OperatorKeyTypes
+} from "../../../../store/keyboard"
 
 interface ScreenProportion {
   value: string | number,
   label: string
+}
+
+interface KeyBoardSetItem {
+  operate: OperatorKeyTypes,
+  text: string
 }
 
 export default defineComponent({
@@ -62,10 +64,20 @@ export default defineComponent({
   components: {
     [FunctionFormItem.name]: FunctionFormItem,
     [EqualizerAdjust.name]: EqualizerAdjust,
-    [KeyBoardItem.name]: KeyBoardItem
+    [KeyBoardItem.name]: KeyBoardItem,
   },
   setup() {
     let id = 0
+    const keyBoardSetItem = ref<KeyBoardSetItem[]>([
+      {
+        operate: "full-screen",
+        text: '全屏（full-screen）'
+      },
+      {
+        operate: "zoom-in",
+        text: '放大（zoom-in）'
+      }
+    ])
     const screenProportion = ref<ScreenProportion[]>([
       {
         value: id++,
@@ -81,27 +93,11 @@ export default defineComponent({
       },
     ])
     const activeProportion = unref(screenProportion)[0].value
-    const { current } = useMagicKeys()
-
-    const keys = computed(() => {
-      console.log('案件发生变化', current)
-      return Array.from(current)
-    })
-
-    watchEffect(() => {
-      console.log(current)
-    })
-
-    whenever(() => {
-      return current.has('a')
-    }, () => {
-      console.log(current)
-    })
 
     return {
       screenProportion,
       activeProportion,
-      keys
+      keyBoardSetItem,
     }
   }
 })
@@ -120,7 +116,6 @@ export default defineComponent({
 }
 
 .key-board-item-area {
-  padding: 10px 0;
+  width: 100%;
 }
-
 </style>
