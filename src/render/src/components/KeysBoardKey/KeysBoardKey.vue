@@ -13,12 +13,6 @@ import {
   ref
 } from 'vue'
 
-// type SpecialKeyValue =
-//   'MetaLeft' |
-//   'MetaRight' |
-//   'AltLeft' |
-//   'AltRight'
-
 const SpecialKeyArr = ["MetaLeft", "MetaRight", "AltLeft", "AltRight"]
 const SpecialKeySet = new Set(SpecialKeyArr)
 

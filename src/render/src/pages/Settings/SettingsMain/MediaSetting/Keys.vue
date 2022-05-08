@@ -1,7 +1,28 @@
 <template>
-  <div class="keys-con" @click="openKeySetDialog">
-    <img src="src/asserts/mac-command.png" alt="">
-    <div>K</div>
+  <div
+    v-if="keysArr.length > 0"
+    class="keys-con"
+    @click="openKeySetDialog"
+  >
+    <div
+      v-for="(item, index) in keysArr"
+      :key="item"
+      class="keys-con-text"
+    >
+      <img v-if="useMetaKey(item)" src="src/asserts/mac-command.png" alt="">
+      <img v-else-if="useAltKey(item)" src="src/asserts/mac-option.png" alt="">
+      <span v-else>{{ formatKey(item) }}</span>
+      <span v-if="index !== keysArr.length - 1">
+        +
+      </span>
+    </div>
+  </div>
+  <div
+    v-else
+    class="keys-con"
+    @click="openKeySetDialog"
+  >
+    <div>添加...</div>
   </div>
   <key-modify-dialog
     v-model:visible="visible"
@@ -12,15 +33,20 @@
 
 <script lang="ts">
 import {
-  computed,
-  defineComponent, PropType,
-  ref
+  defineComponent,
+  ref, SetupContext,
+  toRef
 } from 'vue'
-import {
-  useKeyBoardSet,
-  OperatorKeyTypes
-} from "../../../../store/keyboard"
 import KeyModifyDialog from "@/components/KeyModifyDialog/KeyModifyDialog.vue"
+
+const SpecialKeyArr = ["MetaLeft", "MetaRight", "AltLeft", "AltRight"]
+const SpecialKeySet = new Set(SpecialKeyArr)
+
+const regMeta = /^Meta/
+const regAlt = /^Alt/
+
+const regKey = /Key[A-Z]/
+const regShift = /^Shift/
 
 export default defineComponent({
   name: "keys",
@@ -32,25 +58,44 @@ export default defineComponent({
   components: {
     [KeyModifyDialog.name]: KeyModifyDialog
   },
-  setup(props) {
+  setup(props, context: SetupContext) {
     const visible = ref(false)
     const openKeySetDialog = () => {
       visible.value = true
     }
-    console.log('aaa')
+    const keysArr = toRef(props, 'keys')
 
-    console.log(props)
+    const useMetaKey = (keyText) => {
+      return regMeta.test(keyText) && SpecialKeySet.has(keyText)
+    }
+
+    const useAltKey = (keyText) => {
+      return regAlt.test(keyText) && SpecialKeySet.has(keyText)
+    }
+
+    const formatKey = (word: string) => {
+      if (regKey.test(word)) {
+        word = word[word.length - 1]
+      } else if (word === "Control") {
+        word = 'Ctrl'
+      } else if (regShift.test(word)) {
+        word = 'Shift'
+      }
+      return word;
+    }
 
     const keySave = (keys) => {
-      console.log('用户选择key')
-      console.log(keys)
-      // useKeyBoardSet(props.operate)
+      context.emit('save-key', keys)
     }
 
     return {
       visible,
+      keysArr,
       openKeySetDialog,
-      keySave
+      keySave,
+      formatKey,
+      useMetaKey,
+      useAltKey
     }
   }
 })
@@ -67,14 +112,23 @@ export default defineComponent({
   cursor: pointer;
   border-radius: 6px;
   padding: 0 10px;
+}
+
+.keys-con-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
 
   img {
     height: 20px;
     width: 20px;
   }
-}
 
-.keys-con-plus {
-
+  span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1px;
+  }
 }
 </style>

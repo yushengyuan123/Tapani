@@ -32,36 +32,44 @@ import {
   defineComponent,
   ref
 } from 'vue'
+import { useRouter } from "vue-router";
 import {
   iconNewName
 } from "../Icons/types";
 
 interface SettingItems {
   name: string,
-  icon: iconNewName
+  icon: iconNewName,
+  path: string
 }
 
 export default defineComponent({
   name: "aside-bar",
   setup() {
     const currentActiveIndex = ref(0)
+    const router = useRouter()
     const settingsItem: SettingItems[] = [
       {
         name: '应用',
-        icon: "app"
+        icon: "app",
+        path: 'app'
       },
-      {
-        name: '外观',
-        icon: "color"
-      },
+      // {
+      //   name: '外观',
+      //   icon: "color"
+      // },
       {
         name: '媒体设置',
-        icon: 'media'
+        icon: 'media',
+        path: 'media'
       }
     ]
 
     const switchItem = (index) => {
       currentActiveIndex.value = index
+      router.push({
+        path: `settings/${settingsItem[index].path}`
+      })
     }
 
     return {

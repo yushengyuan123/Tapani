@@ -1,7 +1,9 @@
 import {defineStore} from "pinia"
 import {ref} from 'vue'
 import {convertSecondsToTime} from "../../utils"
-import type {TypesTimes} from "../../../types"
+import {
+  TypesTimes
+} from "../../../types"
 
 export const useVideoInfo = defineStore('videoInfo', () => {
   /* 视频blob地址 */
@@ -12,6 +14,8 @@ export const useVideoInfo = defineStore('videoInfo', () => {
   const videoStatus = ref<boolean>(false)
   /* 视频总共时长 */
   const videoDuration = ref<number>(0)
+  /* 系统声音 */
+  const videoVolume = ref<number>(0)
   
   const getTimeFormat = (types: TypesTimes) => {
     let times: number
@@ -29,7 +33,7 @@ export const useVideoInfo = defineStore('videoInfo', () => {
     videoBlobAddress.value = payload
   }
   
-  const updateCurrentTime = (payload: number) => {
+  const updateCurrentTime = (payload: boolean) => {
     videoStatus.value = payload
   }
   
@@ -39,6 +43,10 @@ export const useVideoInfo = defineStore('videoInfo', () => {
   
   const updateDuration = (payload: number) => {
     videoDuration.value = payload
+  }
+  
+  const updateVolume = (payload: number) => {
+    videoVolume.value = payload
   }
   
   return {
@@ -51,6 +59,7 @@ export const useVideoInfo = defineStore('videoInfo', () => {
     updateCurrentTime,
     updateVideoStatus,
     updateDuration,
+    updateVolume
   }
 })
 

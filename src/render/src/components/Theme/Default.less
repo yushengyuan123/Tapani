@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -113,24 +114,26 @@ a {
   .media-setting-title {
     color: @--settings-aside-text;
   }
-
-  .equalizer-adjust-page-equalizer-title-text {
-    font-size: 14px;
-    color: @--settings-aside-text;
-  }
-
-  .equalizer-adjust-aside-text {
-    color: @--settings-aside-text;
-  }
-
-  .key-board-item-text {
-    color: @--settings-aside-text;
-  }
 }
 
 .keys-con {
   border: 1px solid @--settings-main-app-border;
   background-color: @--settings-main-app-keys-button-bg;
+  color: @--settings-aside-text;
+}
+
+/* Equalizer Adjust Style
+-------------------------- */
+.equalizer-adjust-page-equalizer-title-text {
+  font-size: 14px;
+  color: @--settings-aside-text;
+}
+
+.equalizer-adjust-aside-text {
+  color: @--settings-aside-text;
+}
+
+.key-board-item-text {
   color: @--settings-aside-text;
 }
 
@@ -153,6 +156,21 @@ a {
   color: @--keys-board-color;
 }
 
+/* Aside Drawer Style
+-------------------------- */
+.aside-drawer-con {
+  background-color: @--aside-drawer-con-bg;
+}
+
+.video-player-drawer-header-con {
+  border-bottom: 1px solid @--aside-drawer-header-border-bottom;
+}
+
+.video-player-drawer-header-tab {
+  background-color: @--aside-drawer-header-tab-bg;
+  color: white;
+}
+
 .key-modify-dialog-save-notice {
   color: @--keys-board-color;
 }
@@ -161,8 +179,60 @@ a {
   color: @--settings-aside-text;
 }
 
+/* Unopen Style
+-------------------------- */
+.un-open-content-text {
+  color: @--settings-aside-text;
+}
+
+/* Select Dropdown Style
+-------------------------- */
+.select-dropdown-con {
+  background-color: @--aside-drawer-header-tab-bg;
+}
+
+.select-dropdown-text {
+  color: @--settings-aside-text;
+}
+
+.select-dropdown-menu-con {
+  background-color: @--drop-down-menu-con-item-bg;
+  border: 0.1px solid @--drop-down-menu-con-item-border-color;
+  color: @--settings-aside-text;
+}
+
+.select-dropdown-menu-item-con {
+  &.active {
+    background-color: @--drop-down-menu-item-bg;
+  }
+}
+
+.video-screen-setting-screen-proportion {
+  color: @--settings-aside-text;
+}
+
+
 #app,
 #container{
   height: 100%;
   width: 100%;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: @--settings-aside-item-bg;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: @--settings-aside-item-bg;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

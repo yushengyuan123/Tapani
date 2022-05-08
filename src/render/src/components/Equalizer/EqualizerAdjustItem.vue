@@ -1,6 +1,9 @@
 <template>
   <div class="equalizer-adjust-con">
-    <div class="equalizer-adjust-aside">
+    <div
+      class="equalizer-adjust-aside"
+      :style="labelStyle"
+    >
       <div class="equalizer-adjust-aside-con">
         <img :src="imgSrc" alt="">
       </div>
@@ -11,7 +14,7 @@
     <div class="equalizer-adjust-progress">
       <video-progress
         :percentage="0"
-        :width="200"
+        :width="progressWidth"
         :stroke-color="'#615d5d'"
       />
     </div>
@@ -20,7 +23,9 @@
 
 <script lang="ts">
 import {
-  defineComponent
+  CSSProperties,
+  defineComponent,
+  inject, provide
 } from 'vue'
 import Progress from "@/components/VideoControls/Progress.vue"
 
@@ -40,10 +45,19 @@ export default defineComponent({
   setup(props) {
     const label = props.label
     const imgSrc = props.imgSrc
-    // console.log(11)
+
+    const labelWidth = inject('labelWidth')
+    const progressWidth = inject('progressWidth')
+
+    const labelStyle: CSSProperties = {
+      width: labelWidth + 'px'
+    }
+    // consoe.log(11)
     return {
       label,
-      imgSrc
+      imgSrc,
+      labelStyle,
+      progressWidth
     }
   }
 })

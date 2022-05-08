@@ -1,8 +1,10 @@
 <template>
-  <el-upload
+  <wrapper-file-upload
+    :wrapper-upload="fileAttr"
     :auto-upload="false"
     :on-change="handleChange"
     :show-file-list="false"
+    @normal-click="normalClick"
   >
     <div class="select-item-con">
       <div class="select-item-icon-con">
@@ -14,7 +16,7 @@
         <span>{{itemText}}</span>
       </div>
     </div>
-  </el-upload>
+  </wrapper-file-upload>
 </template>
 
 <script lang="ts">
@@ -22,6 +24,7 @@ import {
   defineComponent,
   SetupContext
 } from 'vue'
+import WrapperFileUpload from "../../../components/WrapperFileUpload/WrapperFileUpload.vue";
 import {
   UploadFile,
   UploadProps
@@ -30,6 +33,9 @@ import {useVideoInfo} from "../../../store/videoInfo";
 
 export default defineComponent({
   name: "select-item",
+  components: {
+    [WrapperFileUpload.name]: WrapperFileUpload
+  },
   props: {
     itemText: {
       type: String,
@@ -37,11 +43,16 @@ export default defineComponent({
     },
     imgSrc: {
       type: String
+    },
+    isFile: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, context: SetupContext) {
     const itemText = props.itemText
     const imgSrc = props.imgSrc
+    const fileAttr = props.isFile
     const { updateVideoAddress } = useVideoInfo()
 
     const handleChange: UploadProps['onChange'] = (
@@ -51,10 +62,16 @@ export default defineComponent({
       context.emit('file-select')
     }
 
+    const normalClick = () => {
+      context.emit('file-select')
+    }
+
     return {
       itemText,
       imgSrc,
-      handleChange
+      fileAttr,
+      handleChange,
+      normalClick
     }
   }
 })

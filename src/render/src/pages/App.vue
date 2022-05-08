@@ -1,19 +1,23 @@
 <template>
   <div class="app-con">
     <el-container id="container">
-      <el-aside width="78px">
-        <menu-index />
-      </el-aside>
       <router-view />
     </el-container>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import {
+  defineComponent,
+  onMounted
+} from "vue"
 import VideoPlayer from './VideoPlayer/VideoPlayer.vue'
 import Index from './Index/Index.vue'
-import MenuIndex from "@/components/Menu/MenuIndex.vue";
+import {
+  useVideoInfo
+} from "../store/videoInfo"
+
+const loudness = require('loudness')
 
 export default defineComponent({
   name: "App",
@@ -21,8 +25,23 @@ export default defineComponent({
     VideoPlayer,
     [VideoPlayer.name]: VideoPlayer,
     [Index.name]: Index,
-    [MenuIndex.name]: MenuIndex,
   },
+  setup() {
+    const { updateVolume } = useVideoInfo()
+
+    const initSystemVolume = () => {
+      loudness.getVolume().then(volume => {
+        console.log('获得声音', volume)
+        updateVolume(volume)
+      })
+    }
+
+    onMounted(() => {
+      // initSystemVolume()
+    })
+
+    return {}
+  }
 })
 </script>
 
@@ -30,7 +49,7 @@ export default defineComponent({
 .app-con {
   height: 100%;
   width: 100%;
-  background: transparent url('@/asserts/index-bg.png') top center no-repeat;
+  //background: transparent url('@/asserts/index-bg.png') top center no-repeat;
   background-size: cover;
 }
 </style>

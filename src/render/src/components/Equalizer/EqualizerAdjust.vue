@@ -22,16 +22,30 @@
 
 <script lang="ts">
 import {
-  defineComponent
+  defineComponent,
+  provide
 } from 'vue'
 import EqualizerAdjustItem from "./EqualizerAdjustItem.vue"
 
 export default defineComponent({
   name: "equalizer-adjust",
+  props: {
+    labelWidth: {
+      type: Number,
+      default: 100
+    },
+    progressWidth: {
+      type: Number,
+      default: 200
+    }
+  },
   components: {
     [EqualizerAdjustItem.name]: EqualizerAdjustItem,
   },
-  setup() {
+  setup(props) {
+    provide('labelWidth', props.labelWidth)
+    provide('progressWidth', props.progressWidth)
+
     return {}
   }
 })

@@ -43,7 +43,7 @@ import {
   ref, unref, watchEffect
 } from 'vue'
 import FunctionFormItem from "@/components/FunctionFormItem/FunctionFormItem.vue"
-import EqualizerAdjust from "@/components/Equalizer/EqualizerAdjust.vue";
+import EqualizerAdjust from "@/components/Equalizer/EqualizerAdjust.vue"
 import KeyBoardItem from "./KeyBoardItem.vue"
 import type {
   OperatorKeyTypes

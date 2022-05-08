@@ -25,17 +25,25 @@ import 'element-plus/dist/index.css'
 /** Commands Import */
 import registerCommands from './command'
 
+/** Directives Import */
+import directives from "./directives"
+
 function initElementPlus(app: AppOps) {
   app.use(ElementPlus)
 }
 
 function initIcons(app: AppOps) {
   _.forOwn(iconCollect, (value, key) => {
-    console.log(key, value)
     app.component(key, value)
   })
 
   app.component('icon-collect', Icons)
+}
+
+function initDirectives(app: AppOps) {
+  _.forOwn(directives, (value, key) => {
+    app.directive(key, value)
+  })
 }
 
 function initVueApplication() {
@@ -46,6 +54,8 @@ function initVueApplication() {
   app.use(store)
   
   initElementPlus(app)
+  
+  initDirectives(app)
   
   initIcons(app)
   

@@ -97,9 +97,7 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      console.log('重新渲染')
       setTimeout(() => {
-        console.log('清楚')
         onSave()
       }, 3000)
     })

@@ -48,3 +48,876 @@
 2022-05-07 23:13:14,905 INFO 18872 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
 2022-05-07 23:13:14,905 INFO 18872 [egg-watcher:agent] watcher start success
 2022-05-07 23:13:14,911 INFO 18872 [egg:core] dump config after ready, 2ms
+2022-05-08 09:16:14,410 INFO 2790 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:16:14,413 INFO 2790 [egg:core] dump config after load, 2ms
+2022-05-08 09:16:14,431 INFO 2790 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:16:14,431 INFO 2790 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:16:14,431 INFO 2790 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:16:14,431 INFO 2790 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:16:14,432 INFO 2790 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:16:14,432 INFO 2790 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:16:14,432 INFO 2790 [egg-watcher:agent] watcher start success
+2022-05-08 09:16:14,436 INFO 2790 [egg:core] dump config after ready, 2ms
+2022-05-08 09:29:54,263 INFO 4456 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:29:54,266 INFO 4456 [egg:core] dump config after load, 2ms
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:29:54,281 INFO 4456 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:29:54,282 INFO 4456 [egg-watcher:agent] watcher start success
+2022-05-08 09:29:54,286 INFO 4456 [egg:core] dump config after ready, 2ms
+2022-05-08 09:38:34,389 INFO 5098 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:38:34,392 INFO 5098 [egg:core] dump config after load, 1ms
+2022-05-08 09:38:34,407 INFO 5098 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:38:34,408 INFO 5098 [egg-watcher:agent] watcher start success
+2022-05-08 09:38:34,413 INFO 5098 [egg:core] dump config after ready, 2ms
+2022-05-08 09:43:18,875 INFO 5615 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:43:18,879 INFO 5615 [egg:core] dump config after load, 2ms
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:43:18,895 INFO 5615 [egg-watcher:agent] watcher start success
+2022-05-08 09:43:18,900 INFO 5615 [egg:core] dump config after ready, 2ms
+2022-05-08 09:44:18,383 INFO 5743 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:44:18,386 INFO 5743 [egg:core] dump config after load, 2ms
+2022-05-08 09:44:18,402 INFO 5743 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:44:18,403 INFO 5743 [egg-watcher:agent] watcher start success
+2022-05-08 09:44:18,408 INFO 5743 [egg:core] dump config after ready, 2ms
+2022-05-08 09:44:56,308 INFO 5832 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:44:56,311 INFO 5832 [egg:core] dump config after load, 2ms
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:44:56,327 INFO 5832 [egg-watcher:agent] watcher start success
+2022-05-08 09:44:56,332 INFO 5832 [egg:core] dump config after ready, 2ms
+2022-05-08 09:49:20,019 INFO 6325 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:49:20,022 INFO 6325 [egg:core] dump config after load, 1ms
+2022-05-08 09:49:20,040 INFO 6325 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:49:20,040 INFO 6325 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:49:20,041 INFO 6325 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:49:20,041 INFO 6325 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:49:20,041 INFO 6325 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:49:20,041 INFO 6325 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:49:20,041 INFO 6325 [egg-watcher:agent] watcher start success
+2022-05-08 09:49:20,046 INFO 6325 [egg:core] dump config after ready, 2ms
+2022-05-08 09:53:59,090 INFO 6702 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:53:59,094 INFO 6702 [egg:core] dump config after load, 2ms
+2022-05-08 09:53:59,109 INFO 6702 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:53:59,110 INFO 6702 [egg-watcher:agent] watcher start success
+2022-05-08 09:53:59,115 INFO 6702 [egg:core] dump config after ready, 2ms
+2022-05-08 09:59:35,252 INFO 7232 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 09:59:35,274 INFO 7232 [egg:core] dump config after load, 20ms
+2022-05-08 09:59:35,290 INFO 7232 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 09:59:35,290 INFO 7232 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 09:59:35,290 INFO 7232 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 09:59:35,290 INFO 7232 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 09:59:35,290 INFO 7232 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 09:59:35,291 INFO 7232 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 09:59:35,291 INFO 7232 [egg-watcher:agent] watcher start success
+2022-05-08 09:59:35,295 INFO 7232 [egg:core] dump config after ready, 1ms
+2022-05-08 10:07:20,951 INFO 7783 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:07:20,954 INFO 7783 [egg:core] dump config after load, 2ms
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:07:20,971 INFO 7783 [egg-watcher:agent] watcher start success
+2022-05-08 10:07:20,976 INFO 7783 [egg:core] dump config after ready, 2ms
+2022-05-08 10:07:49,601 INFO 7832 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:07:49,604 INFO 7832 [egg:core] dump config after load, 2ms
+2022-05-08 10:07:49,619 INFO 7832 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:07:49,619 INFO 7832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:07:49,619 INFO 7832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:07:49,619 INFO 7832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:07:49,619 INFO 7832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:07:49,620 INFO 7832 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:07:49,620 INFO 7832 [egg-watcher:agent] watcher start success
+2022-05-08 10:07:49,624 INFO 7832 [egg:core] dump config after ready, 2ms
+2022-05-08 10:24:08,615 INFO 9355 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:24:08,618 INFO 9355 [egg:core] dump config after load, 2ms
+2022-05-08 10:24:08,632 INFO 9355 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:24:08,632 INFO 9355 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:24:08,633 INFO 9355 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:24:08,633 INFO 9355 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:24:08,633 INFO 9355 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:24:08,633 INFO 9355 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:24:08,633 INFO 9355 [egg-watcher:agent] watcher start success
+2022-05-08 10:24:08,638 INFO 9355 [egg:core] dump config after ready, 2ms
+2022-05-08 10:44:12,954 INFO 11116 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:44:12,958 INFO 11116 [egg:core] dump config after load, 1ms
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:44:12,973 INFO 11116 [egg-watcher:agent] watcher start success
+2022-05-08 10:44:12,978 INFO 11116 [egg:core] dump config after ready, 2ms
+2022-05-08 10:46:06,893 INFO 11298 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:46:06,896 INFO 11298 [egg:core] dump config after load, 2ms
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:46:06,911 INFO 11298 [egg-watcher:agent] watcher start success
+2022-05-08 10:46:06,917 INFO 11298 [egg:core] dump config after ready, 2ms
+2022-05-08 10:50:21,036 INFO 11734 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 10:50:21,039 INFO 11734 [egg:core] dump config after load, 2ms
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 10:50:21,054 INFO 11734 [egg-watcher:agent] watcher start success
+2022-05-08 10:50:21,059 INFO 11734 [egg:core] dump config after ready, 2ms
+2022-05-08 11:01:54,933 INFO 12675 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:01:54,936 INFO 12675 [egg:core] dump config after load, 2ms
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:01:54,952 INFO 12675 [egg-watcher:agent] watcher start success
+2022-05-08 11:01:54,957 INFO 12675 [egg:core] dump config after ready, 2ms
+2022-05-08 11:14:08,804 INFO 13793 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:14:08,807 INFO 13793 [egg:core] dump config after load, 1ms
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:14:08,824 INFO 13793 [egg-watcher:agent] watcher start success
+2022-05-08 11:14:08,829 INFO 13793 [egg:core] dump config after ready, 2ms
+2022-05-08 11:24:56,868 INFO 14712 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:24:56,871 INFO 14712 [egg:core] dump config after load, 2ms
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:24:56,886 INFO 14712 [egg-watcher:agent] watcher start success
+2022-05-08 11:24:56,891 INFO 14712 [egg:core] dump config after ready, 2ms
+2022-05-08 11:33:08,042 INFO 15460 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:33:08,045 INFO 15460 [egg:core] dump config after load, 1ms
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:33:08,062 INFO 15460 [egg-watcher:agent] watcher start success
+2022-05-08 11:33:08,067 INFO 15460 [egg:core] dump config after ready, 2ms
+2022-05-08 11:38:53,074 INFO 15913 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:38:53,077 INFO 15913 [egg:core] dump config after load, 1ms
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:38:53,093 INFO 15913 [egg-watcher:agent] watcher start success
+2022-05-08 11:38:53,145 INFO 15913 [egg:core] dump config after ready, 36ms
+2022-05-08 11:53:39,498 INFO 17191 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:53:39,502 INFO 17191 [egg:core] dump config after load, 2ms
+2022-05-08 11:53:39,518 INFO 17191 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:53:39,518 INFO 17191 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:53:39,518 INFO 17191 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:53:39,518 INFO 17191 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:53:39,518 INFO 17191 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:53:39,519 INFO 17191 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:53:39,519 INFO 17191 [egg-watcher:agent] watcher start success
+2022-05-08 11:53:39,523 INFO 17191 [egg:core] dump config after ready, 2ms
+2022-05-08 11:53:51,068 INFO 17242 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:53:51,072 INFO 17242 [egg:core] dump config after load, 1ms
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:53:51,087 INFO 17242 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:53:51,088 INFO 17242 [egg-watcher:agent] watcher start success
+2022-05-08 11:53:51,092 INFO 17242 [egg:core] dump config after ready, 2ms
+2022-05-08 11:56:48,332 INFO 17507 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 11:56:48,336 INFO 17507 [egg:core] dump config after load, 2ms
+2022-05-08 11:56:48,351 INFO 17507 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 11:56:48,351 INFO 17507 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 11:56:48,352 INFO 17507 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 11:56:48,352 INFO 17507 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 11:56:48,352 INFO 17507 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 11:56:48,352 INFO 17507 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 11:56:48,352 INFO 17507 [egg-watcher:agent] watcher start success
+2022-05-08 11:56:48,357 INFO 17507 [egg:core] dump config after ready, 2ms
+2022-05-08 12:01:38,698 INFO 17992 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 12:01:38,701 INFO 17992 [egg:core] dump config after load, 1ms
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 12:01:38,717 INFO 17992 [egg-watcher:agent] watcher start success
+2022-05-08 12:01:38,722 INFO 17992 [egg:core] dump config after ready, 2ms
+2022-05-08 12:13:27,704 INFO 19000 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 12:13:27,707 INFO 19000 [egg:core] dump config after load, 1ms
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 12:13:27,724 INFO 19000 [egg-watcher:agent] watcher start success
+2022-05-08 12:13:27,730 INFO 19000 [egg:core] dump config after ready, 3ms
+2022-05-08 12:15:33,035 INFO 19207 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 12:15:33,038 INFO 19207 [egg:core] dump config after load, 2ms
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 12:15:33,053 INFO 19207 [egg-watcher:agent] watcher start success
+2022-05-08 12:15:33,058 INFO 19207 [egg:core] dump config after ready, 2ms
+2022-05-08 12:24:52,219 INFO 20009 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 12:24:52,222 INFO 20009 [egg:core] dump config after load, 2ms
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 12:24:52,237 INFO 20009 [egg-watcher:agent] watcher start success
+2022-05-08 12:24:52,242 INFO 20009 [egg:core] dump config after ready, 2ms
+2022-05-08 12:56:11,026 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 998304ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 13:12:07,282 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 916221ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 13:28:16,310 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 908975ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 13:45:17,347 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 981030ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 14:01:59,487 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 942126ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 14:19:56,722 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 1037228ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 14:36:34,356 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 957659ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 14:47:33,261 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 618896ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 15:03:21,063 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 907798ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 15:54:13,230 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 883116ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 16:31:46,482 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 1053152ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 16:49:11,696 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 1005207ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 17:02:33,367 ERROR 20009 nodejs.ClusterClientNoResponseError: client no response in 741659ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 20009
+hostname: yushenguandeMBP
+
+2022-05-08 17:46:01,690 INFO 28141 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 17:46:01,693 INFO 28141 [egg:core] dump config after load, 2ms
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 17:46:01,710 INFO 28141 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 17:46:01,711 INFO 28141 [egg-watcher:agent] watcher start success
+2022-05-08 17:46:01,716 INFO 28141 [egg:core] dump config after ready, 2ms
+2022-05-08 18:29:40,480 INFO 31716 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:29:40,483 INFO 31716 [egg:core] dump config after load, 1ms
+2022-05-08 18:29:40,498 INFO 31716 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:29:40,498 INFO 31716 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:29:40,499 INFO 31716 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:29:40,499 INFO 31716 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:29:40,499 INFO 31716 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:29:40,499 INFO 31716 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:29:40,499 INFO 31716 [egg-watcher:agent] watcher start success
+2022-05-08 18:29:40,504 INFO 31716 [egg:core] dump config after ready, 2ms
+2022-05-08 18:30:13,135 INFO 31890 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:30:13,139 INFO 31890 [egg:core] dump config after load, 2ms
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:30:13,154 INFO 31890 [egg-watcher:agent] watcher start success
+2022-05-08 18:30:13,159 INFO 31890 [egg:core] dump config after ready, 2ms
+2022-05-08 18:33:55,695 INFO 32228 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:33:55,699 INFO 32228 [egg:core] dump config after load, 1ms
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:33:55,714 INFO 32228 [egg-watcher:agent] watcher start success
+2022-05-08 18:33:55,719 INFO 32228 [egg:core] dump config after ready, 2ms
+2022-05-08 18:36:35,908 INFO 32478 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:36:35,911 INFO 32478 [egg:core] dump config after load, 1ms
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:36:35,926 INFO 32478 [egg-watcher:agent] watcher start success
+2022-05-08 18:36:35,931 INFO 32478 [egg:core] dump config after ready, 2ms
+2022-05-08 18:40:29,023 INFO 32944 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:40:29,026 INFO 32944 [egg:core] dump config after load, 1ms
+2022-05-08 18:40:29,041 INFO 32944 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:40:29,041 INFO 32944 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:40:29,042 INFO 32944 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:40:29,042 INFO 32944 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:40:29,042 INFO 32944 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:40:29,042 INFO 32944 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:40:29,042 INFO 32944 [egg-watcher:agent] watcher start success
+2022-05-08 18:40:29,047 INFO 32944 [egg:core] dump config after ready, 2ms
+2022-05-08 18:45:14,073 INFO 33370 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:45:14,076 INFO 33370 [egg:core] dump config after load, 2ms
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:45:14,091 INFO 33370 [egg-watcher:agent] watcher start success
+2022-05-08 18:45:14,096 INFO 33370 [egg:core] dump config after ready, 2ms
+2022-05-08 18:46:22,701 INFO 33480 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:46:22,705 INFO 33480 [egg:core] dump config after load, 1ms
+2022-05-08 18:46:22,719 INFO 33480 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:46:22,719 INFO 33480 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:46:22,720 INFO 33480 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:46:22,720 INFO 33480 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:46:22,720 INFO 33480 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:46:22,720 INFO 33480 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:46:22,720 INFO 33480 [egg-watcher:agent] watcher start success
+2022-05-08 18:46:22,725 INFO 33480 [egg:core] dump config after ready, 2ms
+2022-05-08 18:47:49,466 INFO 33613 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:47:49,469 INFO 33613 [egg:core] dump config after load, 1ms
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:47:49,484 INFO 33613 [egg-watcher:agent] watcher start success
+2022-05-08 18:47:49,489 INFO 33613 [egg:core] dump config after ready, 2ms
+2022-05-08 18:50:26,605 INFO 33917 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:50:26,608 INFO 33917 [egg:core] dump config after load, 2ms
+2022-05-08 18:50:26,623 INFO 33917 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:50:26,623 INFO 33917 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:50:26,623 INFO 33917 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:50:26,623 INFO 33917 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:50:26,623 INFO 33917 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:50:26,624 INFO 33917 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:50:26,624 INFO 33917 [egg-watcher:agent] watcher start success
+2022-05-08 18:50:26,629 INFO 33917 [egg:core] dump config after ready, 2ms
+2022-05-08 18:58:55,240 INFO 34576 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:58:55,244 INFO 34576 [egg:core] dump config after load, 1ms
+2022-05-08 18:58:55,259 INFO 34576 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:58:55,259 INFO 34576 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:58:55,260 INFO 34576 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:58:55,260 INFO 34576 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:58:55,260 INFO 34576 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:58:55,260 INFO 34576 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:58:55,260 INFO 34576 [egg-watcher:agent] watcher start success
+2022-05-08 18:58:55,265 INFO 34576 [egg:core] dump config after ready, 2ms
+2022-05-08 18:59:16,087 INFO 34635 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 18:59:16,090 INFO 34635 [egg:core] dump config after load, 2ms
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 18:59:16,105 INFO 34635 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 18:59:16,106 INFO 34635 [egg-watcher:agent] watcher start success
+2022-05-08 18:59:16,110 INFO 34635 [egg:core] dump config after ready, 1ms
+2022-05-08 19:00:33,568 INFO 34871 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:00:33,571 INFO 34871 [egg:core] dump config after load, 2ms
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:00:33,588 INFO 34871 [egg-watcher:agent] watcher start success
+2022-05-08 19:00:33,593 INFO 34871 [egg:core] dump config after ready, 2ms
+2022-05-08 19:02:22,984 INFO 35024 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:02:22,987 INFO 35024 [egg:core] dump config after load, 1ms
+2022-05-08 19:02:23,002 INFO 35024 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:02:23,002 INFO 35024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:02:23,003 INFO 35024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:02:23,003 INFO 35024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:02:23,003 INFO 35024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:02:23,003 INFO 35024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:02:23,003 INFO 35024 [egg-watcher:agent] watcher start success
+2022-05-08 19:02:23,008 INFO 35024 [egg:core] dump config after ready, 2ms
+2022-05-08 19:07:37,192 INFO 35520 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:07:37,195 INFO 35520 [egg:core] dump config after load, 2ms
+2022-05-08 19:07:37,211 INFO 35520 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:07:37,211 INFO 35520 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:07:37,212 INFO 35520 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:07:37,212 INFO 35520 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:07:37,212 INFO 35520 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:07:37,212 INFO 35520 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:07:37,212 INFO 35520 [egg-watcher:agent] watcher start success
+2022-05-08 19:07:37,217 INFO 35520 [egg:core] dump config after ready, 2ms
+2022-05-08 19:08:46,201 INFO 35626 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:08:46,204 INFO 35626 [egg:core] dump config after load, 2ms
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:08:46,220 INFO 35626 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:08:46,221 INFO 35626 [egg-watcher:agent] watcher start success
+2022-05-08 19:08:46,225 INFO 35626 [egg:core] dump config after ready, 1ms
+2022-05-08 19:09:53,252 INFO 35748 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:09:53,255 INFO 35748 [egg:core] dump config after load, 2ms
+2022-05-08 19:09:53,270 INFO 35748 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:09:53,270 INFO 35748 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:09:53,271 INFO 35748 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:09:53,271 INFO 35748 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:09:53,271 INFO 35748 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:09:53,271 INFO 35748 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:09:53,271 INFO 35748 [egg-watcher:agent] watcher start success
+2022-05-08 19:09:53,276 INFO 35748 [egg:core] dump config after ready, 2ms
+2022-05-08 19:10:00,082 WARN 35748 [agent:development] reload worker because /Users/yushengyuan/yushengyuan/personal-project/Player/egg/app/router.ts~ rename
+2022-05-08 19:09:59,874 INFO 35748 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app/router.ts","stat":{"dev":16777232,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":27641485,"size":205,"blocks":8,"atimeMs":1651760815034.8132,"mtimeMs":1652008199854.711,"ctimeMs":1652008199854.711,"birthtimeMs":1651671385190.7327,"atime":"2022-05-05T14:26:55.035Z","mtime":"2022-05-08T11:09:59.855Z","ctime":"2022-05-08T11:09:59.855Z","birthtime":"2022-05-04T13:36:25.191Z"},"remove":false,"isDirectory":false,"isFile":true}
+2022-05-08 19:09:59,882 INFO 35748 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app/router.ts~","remove":true,"isDirectory":false,"isFile":false}
+2022-05-08 19:15:26,856 INFO 36320 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 19:15:26,859 INFO 36320 [egg:core] dump config after load, 2ms
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 19:15:26,874 INFO 36320 [egg-watcher:agent] watcher start success
+2022-05-08 19:15:26,880 INFO 36320 [egg:core] dump config after ready, 2ms
+2022-05-08 19:37:21,155 ERROR 36320 nodejs.ClusterClientNoResponseError: client no response in 877437ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 36320
+hostname: yushenguandeMBP
+
+2022-05-08 19:53:06,625 ERROR 36320 nodejs.ClusterClientNoResponseError: client no response in 905458ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+name: "ClusterClientNoResponseError"
+pid: 36320
+hostname: yushenguandeMBP
+
+2022-05-08 20:10:07,964 INFO 37711 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:10:07,967 INFO 37711 [egg:core] dump config after load, 2ms
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:10:07,984 INFO 37711 [egg-watcher:agent] watcher start success
+2022-05-08 20:10:07,989 INFO 37711 [egg:core] dump config after ready, 2ms
+2022-05-08 20:10:27,948 INFO 37799 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:10:27,951 INFO 37799 [egg:core] dump config after load, 2ms
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:10:27,968 INFO 37799 [egg-watcher:agent] watcher start success
+2022-05-08 20:10:27,973 INFO 37799 [egg:core] dump config after ready, 2ms
+2022-05-08 20:10:53,134 INFO 37869 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:10:53,137 INFO 37869 [egg:core] dump config after load, 1ms
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:10:53,153 INFO 37869 [egg-watcher:agent] watcher start success
+2022-05-08 20:10:53,158 INFO 37869 [egg:core] dump config after ready, 2ms
+2022-05-08 20:13:22,088 INFO 38138 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:13:22,092 INFO 38138 [egg:core] dump config after load, 2ms
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:13:22,109 INFO 38138 [egg-watcher:agent] watcher start success
+2022-05-08 20:13:22,115 INFO 38138 [egg:core] dump config after ready, 2ms
+2022-05-08 20:23:32,071 INFO 39142 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:23:32,074 INFO 39142 [egg:core] dump config after load, 2ms
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:23:32,090 INFO 39142 [egg-watcher:agent] watcher start success
+2022-05-08 20:23:32,095 INFO 39142 [egg:core] dump config after ready, 2ms
+2022-05-08 20:24:02,132 INFO 39192 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:24:02,135 INFO 39192 [egg:core] dump config after load, 2ms
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:24:02,150 INFO 39192 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:24:02,151 INFO 39192 [egg-watcher:agent] watcher start success
+2022-05-08 20:24:02,155 INFO 39192 [egg:core] dump config after ready, 2ms
+2022-05-08 20:26:24,308 INFO 39405 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:26:24,311 INFO 39405 [egg:core] dump config after load, 2ms
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:26:24,326 INFO 39405 [egg-watcher:agent] watcher start success
+2022-05-08 20:26:24,331 INFO 39405 [egg:core] dump config after ready, 2ms
+2022-05-08 20:37:26,571 INFO 40450 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:37:26,574 INFO 40450 [egg:core] dump config after load, 1ms
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:37:26,589 INFO 40450 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:37:26,590 INFO 40450 [egg-watcher:agent] watcher start success
+2022-05-08 20:37:26,594 INFO 40450 [egg:core] dump config after ready, 2ms
+2022-05-08 20:39:06,479 INFO 40665 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:39:06,482 INFO 40665 [egg:core] dump config after load, 1ms
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:39:06,498 INFO 40665 [egg-watcher:agent] watcher start success
+2022-05-08 20:39:06,503 INFO 40665 [egg:core] dump config after ready, 2ms
+2022-05-08 20:43:43,566 INFO 41027 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:43:43,569 INFO 41027 [egg:core] dump config after load, 1ms
+2022-05-08 20:43:43,584 INFO 41027 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:43:43,585 INFO 41027 [egg-watcher:agent] watcher start success
+2022-05-08 20:43:43,590 INFO 41027 [egg:core] dump config after ready, 2ms
+2022-05-08 20:44:17,529 INFO 41111 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:44:17,533 INFO 41111 [egg:core] dump config after load, 1ms
+2022-05-08 20:44:17,547 INFO 41111 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:44:17,547 INFO 41111 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:44:17,548 INFO 41111 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:44:17,548 INFO 41111 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:44:17,548 INFO 41111 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:44:17,548 INFO 41111 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:44:17,548 INFO 41111 [egg-watcher:agent] watcher start success
+2022-05-08 20:44:17,553 INFO 41111 [egg:core] dump config after ready, 2ms
+2022-05-08 20:46:09,597 INFO 41257 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:46:09,601 INFO 41257 [egg:core] dump config after load, 2ms
+2022-05-08 20:46:09,617 INFO 41257 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:46:09,617 INFO 41257 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:46:09,618 INFO 41257 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:46:09,618 INFO 41257 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:46:09,618 INFO 41257 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:46:09,618 INFO 41257 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:46:09,618 INFO 41257 [egg-watcher:agent] watcher start success
+2022-05-08 20:46:09,636 INFO 41257 [egg:core] dump config after ready, 4ms
+2022-05-08 20:54:06,262 INFO 42008 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:54:06,265 INFO 42008 [egg:core] dump config after load, 2ms
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:54:06,280 INFO 42008 [egg-watcher:agent] watcher start success
+2022-05-08 20:54:06,285 INFO 42008 [egg:core] dump config after ready, 2ms
+2022-05-08 20:56:16,710 INFO 42212 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:56:16,713 INFO 42212 [egg:core] dump config after load, 1ms
+2022-05-08 20:56:16,729 INFO 42212 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:56:16,729 INFO 42212 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:56:16,729 INFO 42212 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:56:16,730 INFO 42212 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:56:16,730 INFO 42212 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:56:16,730 INFO 42212 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:56:16,730 INFO 42212 [egg-watcher:agent] watcher start success
+2022-05-08 20:56:16,735 INFO 42212 [egg:core] dump config after ready, 2ms
+2022-05-08 20:59:35,248 INFO 42611 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 20:59:35,252 INFO 42611 [egg:core] dump config after load, 2ms
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 20:59:35,268 INFO 42611 [egg-watcher:agent] watcher start success
+2022-05-08 20:59:35,274 INFO 42611 [egg:core] dump config after ready, 2ms
+2022-05-08 21:00:10,076 INFO 42667 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:00:10,080 INFO 42667 [egg:core] dump config after load, 2ms
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:00:10,095 INFO 42667 [egg-watcher:agent] watcher start success
+2022-05-08 21:00:10,100 INFO 42667 [egg:core] dump config after ready, 2ms
+2022-05-08 21:01:29,556 INFO 42821 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:01:29,560 INFO 42821 [egg:core] dump config after load, 2ms
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:01:29,577 INFO 42821 [egg-watcher:agent] watcher start success
+2022-05-08 21:01:29,582 INFO 42821 [egg:core] dump config after ready, 2ms
+2022-05-08 21:02:30,601 INFO 42962 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:02:30,604 INFO 42962 [egg:core] dump config after load, 1ms
+2022-05-08 21:02:30,620 INFO 42962 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:02:30,620 INFO 42962 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:02:30,621 INFO 42962 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:02:30,621 INFO 42962 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:02:30,621 INFO 42962 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:02:30,621 INFO 42962 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:02:30,621 INFO 42962 [egg-watcher:agent] watcher start success
+2022-05-08 21:02:30,628 INFO 42962 [egg:core] dump config after ready, 3ms
+2022-05-08 21:03:11,740 INFO 43005 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:03:11,743 INFO 43005 [egg:core] dump config after load, 1ms
+2022-05-08 21:03:11,758 INFO 43005 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:03:11,759 INFO 43005 [egg-watcher:agent] watcher start success
+2022-05-08 21:03:11,764 INFO 43005 [egg:core] dump config after ready, 2ms
+2022-05-08 21:06:21,205 INFO 43265 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:06:21,208 INFO 43265 [egg:core] dump config after load, 2ms
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:06:21,226 INFO 43265 [egg-watcher:agent] watcher start success
+2022-05-08 21:06:21,231 INFO 43265 [egg:core] dump config after ready, 2ms
+2022-05-08 21:08:25,514 INFO 43599 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:08:25,517 INFO 43599 [egg:core] dump config after load, 2ms
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:08:25,532 INFO 43599 [egg-watcher:agent] watcher start success
+2022-05-08 21:08:25,537 INFO 43599 [egg:core] dump config after ready, 2ms
+2022-05-08 21:10:17,039 INFO 43788 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:10:17,043 INFO 43788 [egg:core] dump config after load, 2ms
+2022-05-08 21:10:17,059 INFO 43788 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:10:17,059 INFO 43788 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:10:17,060 INFO 43788 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:10:17,060 INFO 43788 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:10:17,060 INFO 43788 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:10:17,060 INFO 43788 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:10:17,060 INFO 43788 [egg-watcher:agent] watcher start success
+2022-05-08 21:10:17,065 INFO 43788 [egg:core] dump config after ready, 2ms
+2022-05-08 21:26:38,290 INFO 45127 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:26:38,293 INFO 45127 [egg:core] dump config after load, 2ms
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:26:38,312 INFO 45127 [egg-watcher:agent] watcher start success
+2022-05-08 21:26:38,317 INFO 45127 [egg:core] dump config after ready, 2ms
+2022-05-08 21:46:56,813 INFO 46989 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:46:56,816 INFO 46989 [egg:core] dump config after load, 2ms
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:46:56,832 INFO 46989 [egg-watcher:agent] watcher start success
+2022-05-08 21:46:56,838 INFO 46989 [egg:core] dump config after ready, 3ms
+2022-05-08 21:47:12,046 INFO 47024 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:47:12,049 INFO 47024 [egg:core] dump config after load, 1ms
+2022-05-08 21:47:12,064 INFO 47024 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:47:12,064 INFO 47024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:47:12,065 INFO 47024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:47:12,065 INFO 47024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:47:12,065 INFO 47024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:47:12,065 INFO 47024 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:47:12,065 INFO 47024 [egg-watcher:agent] watcher start success
+2022-05-08 21:47:12,070 INFO 47024 [egg:core] dump config after ready, 1ms
+2022-05-08 21:52:26,713 INFO 47648 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:52:26,717 INFO 47648 [egg:core] dump config after load, 2ms
+2022-05-08 21:52:26,732 INFO 47648 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:52:26,732 INFO 47648 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:52:26,732 INFO 47648 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:52:26,732 INFO 47648 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:52:26,732 INFO 47648 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:52:26,733 INFO 47648 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:52:26,733 INFO 47648 [egg-watcher:agent] watcher start success
+2022-05-08 21:52:26,737 INFO 47648 [egg:core] dump config after ready, 2ms
+2022-05-08 21:59:31,902 INFO 48301 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 21:59:31,905 INFO 48301 [egg:core] dump config after load, 2ms
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 21:59:31,922 INFO 48301 [egg-watcher:agent] watcher start success
+2022-05-08 21:59:31,927 INFO 48301 [egg:core] dump config after ready, 2ms
+2022-05-08 22:00:30,474 INFO 48435 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 22:00:30,477 INFO 48435 [egg:core] dump config after load, 2ms
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 22:00:30,492 INFO 48435 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 22:00:30,493 INFO 48435 [egg-watcher:agent] watcher start success
+2022-05-08 22:00:30,497 INFO 48435 [egg:core] dump config after ready, 2ms
+2022-05-08 22:00:53,595 INFO 48482 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 22:00:53,599 INFO 48482 [egg:core] dump config after load, 2ms
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 22:00:53,615 INFO 48482 [egg-watcher:agent] watcher start success
+2022-05-08 22:00:53,620 INFO 48482 [egg:core] dump config after ready, 2ms
+2022-05-08 22:04:49,013 INFO 48810 [egg:logger] init all loggers with options: {"dir":"/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"enablePerformanceTimer":false,"type":"agent"}
+2022-05-08 22:04:49,016 INFO 48810 [egg:core] dump config after load, 2ms
+2022-05-08 22:04:49,033 INFO 48810 [egg-watcher] Start watching: ["/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy","/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"]
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app"
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config"
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks"
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/mocks_proxy"
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher] Start watching: "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/app.js"
+2022-05-08 22:04:49,034 INFO 48810 [egg-watcher:agent] watcher start success
+2022-05-08 22:04:49,039 INFO 48810 [egg:core] dump config after ready, 2ms

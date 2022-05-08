@@ -29,10 +29,10 @@
           </el-col>
           <el-col :span="5">
             <el-row justify="end">
-              <div class="video-menu-operate-con" @click="leftMenuVisible">
+              <div class="video-menu-operate-con" @click.stop="leftMenuVisible">
                 <icon-collect name="menu-list"/>
               </div>
-              <div class="video-menu-operate-con" @click="settingsVisible">
+              <div class="video-menu-operate-con" @click.stop="settingsVisible">
                 <icon-collect name="setting"/>
               </div>
             </el-row>

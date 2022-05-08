@@ -5,17 +5,18 @@
     "moduleResolution": "node",
     "target": "esnext",
     "baseUrl": "./",
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "paths": {
       "@/components": ["./src/components"],
       "@/asserts": ["./src/asserts"],
       "@/hooks": ["./src/hooks"],
-      "~": ["./"]
+      "~/share/*": ["../share/*"]
     },
-    "sourceMap": true
   },
   "include": [
-    "./src/*.ts",
-    "./src/*.d.ts",
     "./src/**/*.ts",
     "./src/**/*.d.ts",
     "./src/**/*.vue",

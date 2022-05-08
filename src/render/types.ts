@@ -12,4 +12,6 @@ export enum TypesTimes {
 export interface SelectArrItem {
   name: string,
   imgSrc: string,
+  routerName: string,
+  fileAttr?: Boolean
 }

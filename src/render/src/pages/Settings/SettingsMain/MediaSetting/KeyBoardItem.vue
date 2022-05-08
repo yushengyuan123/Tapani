@@ -5,10 +5,9 @@
     </div>
     <div class="key-board-item-button-con">
       <keys
-        v-if="hasKey"
         :keys="getKey"
+        @save-key="updateKeySave"
       />
-      <span v-else>添加...</span>
     </div>
   </div>
 </template>
@@ -43,11 +42,10 @@ export default defineComponent({
     const text = props.text
     const {
       checkIsSetKey,
-      getSetKey
+      getSetKey,
+      updateKeyMap
     } = useKeyBoardSet()
     const operateName = props.operate
-
-    console.log(props)
 
     const hasKey = computed(() => {
       return checkIsSetKey(operateName)
@@ -58,10 +56,15 @@ export default defineComponent({
       return Array.from(res)
     })
 
+    const updateKeySave = (keys) => {
+      updateKeyMap(operateName, keys)
+    }
+
     return {
       text,
       hasKey,
-      getKey
+      getKey,
+      updateKeySave
     }
   }
 })

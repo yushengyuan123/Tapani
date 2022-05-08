@@ -1,0 +1,81 @@
+<template>
+  <div class="video-screen-setting-con">
+    <div class="video-screen-setting-screen-proportion-con">
+      <div class="video-screen-setting-screen-proportion">
+        画面比例
+      </div>
+      <div class="video-screen-setting-screen-dropdown">
+        <select-dropdown
+          :menu="menuArr"
+          @select-change=""
+        />
+      </div>
+    </div>
+    <equalizer-adjust
+      :label-width="85"
+      :progress-width="120"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import {
+  defineComponent
+} from 'vue'
+import {
+  useScreenControl
+} from "../../../store/screenControl"
+import EqualizerAdjust from "../../../components/Equalizer/EqualizerAdjust.vue"
+import SelectDropDown from "@/components/SelectDropDown/SelectDropDown.vue"
+import {
+  AspectRatio
+} from "~/share"
+
+interface menuAspectRatio {
+  value: AspectRatio
+}
+
+export default defineComponent({
+  name: "Screen",
+  components: {
+    [EqualizerAdjust.name]: EqualizerAdjust,
+    [SelectDropDown.name]: SelectDropDown
+  },
+  setup() {
+    const { updateAspectRatio } = useScreenControl()
+    const menuArr: menuAspectRatio[] = [
+      {
+        value: '默认'
+      },
+      {
+        value: '16:9'
+      },
+      {
+        value: '4:3'
+      },
+    ]
+    const updateProportion = (index) => {
+      updateAspectRatio(menuArr[index].value)
+    }
+
+    return {
+      menuArr
+    }
+  }
+})
+</script>
+
+<style scoped lang="less">
+.video-screen-setting-screen-proportion-con {
+  display: flex;
+  width: 100%;
+  padding: 5px 0;
+}
+.video-screen-setting-screen-proportion {
+  width: 80px;
+  font-size: 14px;
+}
+.video-screen-setting-screen-dropdown {
+  flex: 1;
+}
+</style>

@@ -7,6 +7,7 @@
             <select-item
               :item-text="item.name"
               :img-src="item.imgSrc"
+              :is-file="item?.fileAttr"
               @file-select="moveToPlayerPages(index)"
             />
           </template>
@@ -21,9 +22,10 @@ import {
   defineComponent,
 } from "vue"
 import SelectItem from "./SelectItem/SelectItem.vue"
-import { useRouter } from 'vue-router'
-import { SelectArrItem } from "~/types"
-import {ElMessage} from "element-plus";
+import {useRouter} from 'vue-router'
+import {
+  SelectArrItem
+} from "../../../types";
 
 export default defineComponent({
   name: "app-index",
@@ -31,26 +33,32 @@ export default defineComponent({
     [SelectItem.name]: SelectItem,
   },
   setup() {
-    const itemArr: SelectArrItem[] = [{
-      name: '打开文件',
-      imgSrc: 'src/asserts/file.png',
-    }, {
-      name: '打开文件夹',
-      imgSrc: 'src/asserts/folder.png',
-    }, {
-      name: '打开URL',
-      imgSrc: 'src/asserts/url.png',
-    }]
+    const itemArr: SelectArrItem[] = [
+      {
+        name: '打开文件',
+        imgSrc: 'src/asserts/file.png',
+        routerName: 'video-index',
+        fileAttr: true
+      },
+      // }, {
+      //   name: '打开文件夹',
+      //   imgSrc: 'src/asserts/folder.png',
+      // }, {
+      //   name: '打开URL',
+      //   imgSrc: 'src/asserts/url.png',
+      // },
+      {
+        name: '设置',
+        imgSrc: 'src/asserts/setting.png',
+        routerName: 'settings-index'
+      }
+    ]
     const router = useRouter()
 
     const moveToPlayerPages = (index) => {
-      if (index > 0) {
-        ElMessage.warning('该功能暂未开放')
-      } else {
-        router.push({
-          name: 'video-index'
-        })
-      }
+      router.push({
+        name: itemArr[index].routerName
+      })
     }
 
     return {

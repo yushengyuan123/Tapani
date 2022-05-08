@@ -11,7 +11,7 @@ export type MagicKeysSet = Array<Set<string>>
 
 export const useKeyBoardSet= defineStore('key-board-set', () => {
   const availableKeyMap = reactive<Record<OperatorKeyTypes, MagicKeysSet>>({
-    "full-screen": [new Set(['KeyA'])],
+    "full-screen": [new Set(['MetaLeft', 'Enter'])],
     "zoom-in": [new Set([])],
   })
   
@@ -23,8 +23,8 @@ export const useKeyBoardSet= defineStore('key-board-set', () => {
     return availableKeyMap[key][index]
   }
   
-  const updateKeyMap = (key: OperatorKeyTypes, payload, index = 0) => {
-    availableKeyMap[key][index] = payload
+  const updateKeyMap = (key: OperatorKeyTypes, payload: string[], index = 0) => {
+    availableKeyMap[key][index] = new Set(payload)
   }
   
   return {
