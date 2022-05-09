@@ -1,35 +1,40 @@
 import {
   getCurrentInstance
 } from 'vue'
-import {useVideoInfo} from "../../store/videoInfo";
-import {storeToRefs} from "pinia";
+import {useVideoInfo} from "../../store/videoInfo"
+import {storeToRefs} from "pinia"
 
 export const useControl = () => {
   const instance = getCurrentInstance()
   const videoInfoStore = useVideoInfo()
   const {
-    videoStatus
+    videoStatus,
   } = storeToRefs(videoInfoStore)
   
   const switchVideoStatus = () => {
-    videoStatus.value = !videoStatus.value
-    instance.emit('video-status-change', videoStatus.value)
+    videoInfoStore.updateVideoStatus(!videoStatus.value)
+    
+    instance!.emit('video-status-change', videoStatus.value)
   }
   
   const leftMenuVisible = () => {
-    instance.emit('visible-menu')
+    instance!.emit('visible-menu')
   }
   
   const settingsVisible = () => {
-    instance.emit('visible-settings')
+    instance!.emit('visible-settings')
   }
   
   const videoProgressChange = (percentage: number) => {
-    instance.emit('video-time-change', percentage)
+    instance!.emit('video-time-change', percentage)
   }
   
-  const volumeChange = () => {
-    instance.emit('volume-change')
+  const volumeChange = (volume: number) => {
+    instance!.emit('volume-change', volume)
+  }
+
+  const backHomePage = () => {
+    instance!.emit('back-home-page')
   }
   
   return {
@@ -37,6 +42,7 @@ export const useControl = () => {
     leftMenuVisible,
     settingsVisible,
     videoProgressChange,
-    volumeChange
+    volumeChange,
+    backHomePage
   }
 }

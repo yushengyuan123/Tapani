@@ -12,7 +12,7 @@ import MediaSetting from "@/pages/Settings/SettingsMain/MediaSetting/MediaSettin
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/video'
+    redirect: '/settings'
   },
   {
     path: '/index',

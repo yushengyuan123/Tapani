@@ -1,13 +1,19 @@
 <template>
   <div id="container" @click="disappearDrawer">
-    <video-control-area
-      @video-status-change="videoStatusChange"
-      @video-time-change="videoTimeChange"
-      @volume-change="volumeChange"
-      @visible-menu="visibleMenu"
-      @visible-settings="visibleSettings"
-    />
-    <video-screen />
+    <div
+      class="video-player-area"
+      ref="screenAreaRef"
+    >
+      <video-control-area
+        @video-status-change="videoStatusChange"
+        @video-time-change="videoTimeChange"
+        @volume-change="volumeChange"
+        @visible-menu="visibleMenu"
+        @visible-settings="visibleSettings"
+        @back-home-page="backHomePage"
+      />
+      <video-screen />
+    </div>
 
     <aside-drawer
       v-model:visible="drawerVisible"
@@ -37,7 +43,9 @@
 
 <script lang="ts">
 import {
-  defineComponent, ref
+  defineComponent,
+  ref,
+  watch
 } from "vue"
 import Controls from "@/components/VideoControls/Controls.vue"
 import MenuIndex from '@/components/Menu/MenuIndex.vue'
@@ -47,14 +55,14 @@ import Screen from "./Screen/Screen.vue"
 import Captions from "./Captions/Captions.vue"
 import Volume from "./Volume/Volume.vue"
 import {
+  useRouter
+} from 'vue-router'
+import {
   useAsideDrawerContent
 } from "./use-aside-drawer-content"
 import { useVideoInfo } from '../../store/videoInfo'
 import { storeToRefs } from "pinia"
 import AsideDrawer from "../../components/AsideDrawer/AsideDrawer.vue";
-import {
-  useEventListener
-} from "@vueuse/core"
 
 export default defineComponent({
   name: "video-player",
@@ -66,22 +74,40 @@ export default defineComponent({
     [AsideDrawer.name]: AsideDrawer,
   },
   setup() {
-    const currentRenderComponent = ref(Screen)
+    const currentRenderComponent = ref<any>(Screen)
+    const router = useRouter()
+    const screenAreaRef = ref<HTMLElement>()
     const { contentTabHeader } = useAsideDrawerContent()
     const videoInfoStore = useVideoInfo()
     const drawerVisible = ref(false)
-    const showDrawer = ref(true)
     const {
-      videoStatus,
-      videoCurrentTime,
-      videoDuration
+      videoDuration,
+      videoFullScreenMode
     } = storeToRefs(videoInfoStore)
+
+    watch(() => videoFullScreenMode.value, (curMode) => {
+      if (curMode) {
+        screenAreaRef.value!.requestFullscreen()
+      } else {
+        document.exitFullscreen()
+      }
+    })
 
     const disappearDrawer = () => {
       drawerVisible.value = false
     }
 
-    const switchTab = (index) => {
+    const fullScreenMode = () => {
+      screenAreaRef.value!.requestFullscreen()
+    }
+
+    const backHomePage = () => {
+      router.push({
+        path: '/index'
+      })
+    }
+
+    const switchTab = (index: number) => {
       switch (index) {
         case 0: {
           currentRenderComponent.value = Captions
@@ -104,26 +130,27 @@ export default defineComponent({
 
     const visibleSettings = () => {
       drawerVisible.value = true
-      console.log(drawerVisible.value)
     }
 
     const videoStatusChange = (curStatus: boolean) => {
-      videoStatus.value = curStatus
+      videoInfoStore.updateVideoStatus(curStatus)
     }
 
     const videoTimeChange = (percentage: number) => {
-      videoCurrentTime.value = videoDuration.value * percentage
+      videoInfoStore.updateCurrentTime(videoDuration.value * percentage)
     }
 
-    const volumeChange = () => {
-
+    const volumeChange = (volume: number) => {
+      videoInfoStore.updateVolume(volume)
     }
 
     return {
       currentRenderComponent,
       contentTabHeader,
-      showDrawer,
       drawerVisible,
+      screenAreaRef,
+      backHomePage,
+      fullScreenMode,
       disappearDrawer,
       visibleMenu,
       visibleSettings,
@@ -137,6 +164,10 @@ export default defineComponent({
 </script>
 
 <style scoped lang="less">
+.video-player-area {
+  height: 100%;
+  width: 100%;
+}
 .video-player-drawer-header-con {
   padding-top: 30px;
   height: 70px;

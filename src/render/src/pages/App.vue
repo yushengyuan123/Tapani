@@ -4,6 +4,7 @@
       <router-view />
     </el-container>
   </div>
+  <key-monitor />
 </template>
 
 <script lang="ts">
@@ -12,12 +13,18 @@ import {
   onMounted
 } from "vue"
 import VideoPlayer from './VideoPlayer/VideoPlayer.vue'
+import KeyMonitor from "../components/KeyMonitor/KeyMonitor.vue"
 import Index from './Index/Index.vue'
+import {
+  useScreenControl
+} from '../store/screenControl'
+import {
+  useSystemStorage
+} from './useSystemStorage'
 import {
   useVideoInfo
 } from "../store/videoInfo"
-
-const loudness = require('loudness')
+import { useAsyncQueue } from "@vueuse/core"
 
 export default defineComponent({
   name: "App",
@@ -25,20 +32,20 @@ export default defineComponent({
     VideoPlayer,
     [VideoPlayer.name]: VideoPlayer,
     [Index.name]: Index,
+    [KeyMonitor.name]: KeyMonitor
   },
   setup() {
-    const { updateVolume } = useVideoInfo()
+    const { mediaStorage } = useSystemStorage()
 
-    const initSystemVolume = () => {
-      loudness.getVolume().then(volume => {
-        console.log('获得声音', volume)
-        updateVolume(volume)
-      })
+    const initStoreStatus = () => {
+      const { updateAspectRatio } = useScreenControl()
+      const { updateVolume } = useVideoInfo()
+
+      updateAspectRatio(mediaStorage.screenProportion)
+      updateVolume(mediaStorage.volume)
     }
 
-    onMounted(() => {
-      // initSystemVolume()
-    })
+    initStoreStatus()
 
     return {}
   }

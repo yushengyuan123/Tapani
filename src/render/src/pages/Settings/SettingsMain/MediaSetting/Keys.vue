@@ -65,11 +65,11 @@ export default defineComponent({
     }
     const keysArr = toRef(props, 'keys')
 
-    const useMetaKey = (keyText) => {
+    const useMetaKey = (keyText: string) => {
       return regMeta.test(keyText) && SpecialKeySet.has(keyText)
     }
 
-    const useAltKey = (keyText) => {
+    const useAltKey = (keyText: string) => {
       return regAlt.test(keyText) && SpecialKeySet.has(keyText)
     }
 

@@ -28,13 +28,15 @@ export const useMedia = (videoRef: Ref<HTMLVideoElement>) => {
     videoBlobAddress,
     videoStatus,
     videoCurrentTime,
-    videoDuration
+    videoDuration,
+    videoVolume
   } = storeToRefs(videoInfoStore)
   
   const {
     playing,
     currentTime,
-    duration
+    duration,
+    volume,
   } = useMediaControls(videoRef, {
     src: videoBlobAddress
   })
@@ -42,14 +44,13 @@ export const useMedia = (videoRef: Ref<HTMLVideoElement>) => {
   videoDuration.value = duration.value
   
   watch(() => playing.value, (curPlaying) => {
-    console.log('status 发生变化')
     videoStatus.value = curPlaying
   })
   
   watch(() => duration.value, (curDuration) => {
     videoDuration.value = curDuration
   })
-
+  
   watch(() => videoStatus.value, (curValue) => {
     if (curValue && !playing.value) {
       videoRef.value.play()
@@ -66,5 +67,9 @@ export const useMedia = (videoRef: Ref<HTMLVideoElement>) => {
     if (oldSeconds.toFixed(0) !== curSeconds.toFixed(0)) {
       videoCurrentTime.value = curSeconds
     }
+  })
+  
+  watch(() => videoVolume.value, (curVolume) => {
+    volume.value = curVolume
   })
 }

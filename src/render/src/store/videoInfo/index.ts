@@ -14,8 +14,10 @@ export const useVideoInfo = defineStore('videoInfo', () => {
   const videoStatus = ref<boolean>(false)
   /* 视频总共时长 */
   const videoDuration = ref<number>(0)
-  /* 系统声音 */
-  const videoVolume = ref<number>(0)
+  /* 系统声音 满100*/
+  const videoVolume = ref<number>(40)
+  /* 全屏模式 */
+  const videoFullScreenMode = ref<boolean>(false)
   
   const getTimeFormat = (types: TypesTimes) => {
     let times: number
@@ -33,8 +35,8 @@ export const useVideoInfo = defineStore('videoInfo', () => {
     videoBlobAddress.value = payload
   }
   
-  const updateCurrentTime = (payload: boolean) => {
-    videoStatus.value = payload
+  const updateCurrentTime = (payload: number) => {
+    videoCurrentTime.value = payload
   }
   
   const updateVideoStatus = (payload: boolean) => {
@@ -49,17 +51,24 @@ export const useVideoInfo = defineStore('videoInfo', () => {
     videoVolume.value = payload
   }
   
+  const updateMode = (payload) => {
+    videoFullScreenMode.value = payload
+  }
+  
   return {
     videoBlobAddress,
     videoCurrentTime,
     videoStatus,
     videoDuration,
+    videoVolume,
+    videoFullScreenMode,
     getTimeFormat,
     updateVideoAddress,
     updateCurrentTime,
     updateVideoStatus,
     updateDuration,
-    updateVolume
+    updateVolume,
+    updateMode
   }
 })
 

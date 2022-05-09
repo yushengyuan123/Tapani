@@ -13,7 +13,10 @@ type registerIconName =
   'round-color-lens' |
   'baseline-dvr' |
   'round-missed-video-call' |
-  'baseline-media-bluetooth-on'
+  'baseline-media-bluetooth-on' |
+  'baseline-fullscreen' |
+  'outline-close-fullscreen' |
+  'baseline-home'
 
 type iconNewName =
   'continue' |
@@ -26,7 +29,10 @@ type iconNewName =
   'color' |
   'app' |
   'video' |
-  'media'
+  'media' |
+  'full-screen' |
+  'close-full-screen' |
+  'back-home'
 
 interface IconRegisterOption {
   name: iconNewName

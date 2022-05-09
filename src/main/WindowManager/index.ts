@@ -2,6 +2,7 @@ import {app, BrowserWindow} from "electron"
 import electronConfig from "../config/electronConfig"
 import * as is from "electron-is"
 import {AspectRatio} from "../global"
+import WindowUtils from "../core/api/window"
 
 enum ResizeDirection {
   Align = 'Align',
@@ -39,9 +40,14 @@ export default class WindowManager {
           mode: 'detach'
         })
       }
+
+      const windowUtils = new WindowUtils()
+
+      windowUtils.initWindowStatus()
   
       this.window.on('will-resize', (event, newBounds) => {
         event.preventDefault()
+        
         // 0表示宽度 1表示高度
         const curSize = this.window.getSize()
         const curWidth = curSize[0]
@@ -60,12 +66,12 @@ export default class WindowManager {
         }
         
         switch (resizeDirection) {
-        // 拉伸高度
+        // 拉伸宽度
         case ResizeDirection.Align: {
           this.window.setContentSize(~~(newBounds.height * AspectRatio.SixteenToNine), newBounds.height)
           break
         }
-        // 拉伸宽度
+        // 拉伸高度
         case ResizeDirection.Justify: {
           this.window.setContentSize(newBounds.width, ~~(newBounds.width / AspectRatio.SixteenToNine))
           break
@@ -106,7 +112,7 @@ export default class WindowManager {
     if (!window) {
       return
     }
-    console.log(args)
+
     window.webContents.send(channel, ...args)
   }
 }

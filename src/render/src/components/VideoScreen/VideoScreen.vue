@@ -1,19 +1,4 @@
 <template>
-<!--  <el-upload-->
-<!--    class="upload-demo"-->
-<!--    :auto-upload="false"-->
-<!--    :on-change="handleChange"-->
-<!--    :on-preview="handlePreview"-->
-<!--    :on-remove="handleRemove"-->
-<!--    :show-file-list="true"-->
-<!--  >-->
-<!--    <el-button type="primary">Click to upload</el-button>-->
-<!--    <template #tip>-->
-<!--      <div class="el-upload__tip">-->
-<!--        jpg/png files with a size less than 500KB.-->
-<!--      </div>-->
-<!--    </template>-->
-<!--  </el-upload>-->
   <video
     class="video-screen"
     ref="videoScreenRef"
@@ -37,6 +22,10 @@ export default defineComponent({
 
     useMedia(videoScreenRef)
 
+    const full = () => {
+      videoScreenRef.value!.requestFullscreen()
+    }
+
     const handleRemove: UploadProps['onRemove'] = (file, uploadFiles) => {
       console.log(file, uploadFiles)
     }
@@ -54,6 +43,7 @@ export default defineComponent({
 
     return {
       videoScreenRef,
+      full,
       handlePreview,
       handleRemove,
       handleChange,
@@ -64,6 +54,7 @@ export default defineComponent({
 
 <style scoped lang="less">
 .video-screen {
+  object-fit: fill;
   height: 100%;
   width: 100%;
 }

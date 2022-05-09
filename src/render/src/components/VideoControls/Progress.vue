@@ -25,11 +25,8 @@
 import {
   defineComponent,
   computed,
-  ref, watch, onMounted
+  ref, watch, onMounted, toRef
 } from "vue"
-import {
-  useProgress
-} from "./use-progress"
 import {
   useShrink
 } from "@/hooks/use-shrink"
@@ -40,8 +37,10 @@ import type {
 export default defineComponent({
   name: "video-progress",
   props: {
+    /* range：0 - 1 */
     percentage: {
       type: Number,
+      default: 0
     },
     strokeWidth: {
       type: Number,
@@ -58,8 +57,8 @@ export default defineComponent({
   },
   setup(props) {
     const defaultProgressWidth = props.width
-    const curWidth = props.percentage * defaultProgressWidth
     const defaultCirclePointerSize = 8
+    const actualRangeWidth = defaultProgressWidth - defaultCirclePointerSize
     const strokeWidth = props.strokeWidth
 
     const progressContainerWidth = computed(
@@ -67,6 +66,7 @@ export default defineComponent({
         width: `${defaultProgressWidth}px`
       })
     )
+
     const circlePointerStyle = computed(
       (): CSSProperties => ({
         width: `${defaultCirclePointerSize}px`,
@@ -74,11 +74,16 @@ export default defineComponent({
         top: `-${(defaultCirclePointerSize - strokeWidth) / 2}px`
       })
     )
+
     const barStyle = computed(
-      (): CSSProperties => ({
-        width: `${curWidth}px`,
-        "background-color": props.strokeColor
-      })
+      (): CSSProperties => {
+        const curWidth = props.percentage * actualRangeWidth + defaultCirclePointerSize
+
+        return {
+          width: `${curWidth}px`,
+          "background-color": props.strokeColor
+        }
+      }
     )
 
     const circlePointRef = ref<HTMLElement>()
@@ -115,8 +120,8 @@ export default defineComponent({
   .video-progress-bar-inner {
     position: relative;
     height: 100%;
-    width: 70%;
     border-radius: 100px;
+    width: 0;
 
     .video-progress-bar-inner-draggable-area {
       position: absolute;

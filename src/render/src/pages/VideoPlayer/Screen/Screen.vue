@@ -7,7 +7,7 @@
       <div class="video-screen-setting-screen-dropdown">
         <select-dropdown
           :menu="menuArr"
-          @select-change=""
+          @select-change="updateProportion"
         />
       </div>
     </div>
@@ -25,6 +25,8 @@ import {
 import {
   useScreenControl
 } from "../../../store/screenControl"
+import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
+import WindowUtils from '../../../api/window'
 import EqualizerAdjust from "../../../components/Equalizer/EqualizerAdjust.vue"
 import SelectDropDown from "@/components/SelectDropDown/SelectDropDown.vue"
 import {
@@ -32,34 +34,50 @@ import {
 } from "~/share"
 
 interface menuAspectRatio {
-  value: AspectRatio
+  value: AspectRatio,
+  count: number
 }
 
 export default defineComponent({
   name: "Screen",
   components: {
     [EqualizerAdjust.name]: EqualizerAdjust,
-    [SelectDropDown.name]: SelectDropDown
+    [SelectDropDown.name]: SelectDropDown,
+    [SelectDropDownVue.name]: SelectDropDownVue
   },
   setup() {
-    const { updateAspectRatio } = useScreenControl()
+    const { 
+      updateAspectRatio, 
+      screenProportionOption,
+      getRatioCount 
+    } = useScreenControl()
     const menuArr: menuAspectRatio[] = [
       {
-        value: '默认'
+        value: '默认',
+        count: 16 / 9
       },
       {
-        value: '16:9'
+        value: '16:9',
+        count: 16 / 9 
       },
       {
-        value: '4:3'
+        value: '4:3',
+        count: 4 / 3 
       },
     ]
-    const updateProportion = (index) => {
-      updateAspectRatio(menuArr[index].value)
+
+    const updateProportion = (index: number) => {
+      const windowUtils = new WindowUtils()
+      const ratio = menuArr[index].value
+      
+      windowUtils.windowResizable(getRatioCount(ratio))
+    
+      updateAspectRatio(ratio)
     }
 
     return {
-      menuArr
+      menuArr,
+      updateProportion
     }
   }
 })

@@ -20,6 +20,7 @@ export const useShrink = (
 ) => {
   const instance = getCurrentInstance()
   const defaultWidth = limitX[1]
+  const actualRange = defaultWidth - limitX[0]
   
   const onMouseDown = (event: MouseEvent) => {
     const mouseDownX = event.clientX
@@ -39,9 +40,9 @@ export const useShrink = (
       const curWidth = moveX + targetWidth
       targetRef.value.style.width = curWidth + 'px'
       
-      const percentage = (curWidth / defaultWidth).toFixed(4)
+      const percentage = ((curWidth - limitX[0]) / actualRange).toFixed(4)
       
-      instance.emit('change', percentage)
+      instance!.emit('change', percentage)
     }
     
     const onMouseup = () => {

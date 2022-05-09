@@ -17,6 +17,7 @@ a {
   text-decoration: none;
 }
 
+
 /* Controls Style
 -------------------------- */
 .control-container {
@@ -197,14 +198,12 @@ a {
 
 .select-dropdown-menu-con {
   background-color: @--drop-down-menu-con-item-bg;
-  border: 0.1px solid @--drop-down-menu-con-item-border-color;
+  border-color: @--drop-down-menu-con-item-border-color;
   color: @--settings-aside-text;
 }
 
-.select-dropdown-menu-item-con {
-  &.active {
-    background-color: @--drop-down-menu-item-bg;
-  }
+.select-dropdown-menu-item-con:hover {
+  background-color: @--drop-down-menu-item-bg;
 }
 
 .video-screen-setting-screen-proportion {

@@ -8,14 +8,11 @@
           :title="'画面比例'"
           :desc="'调整屏幕长、宽比'"
         >
-          <el-select v-model="activeProportion">
-            <el-option
-              v-for="item in screenProportion"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
-          </el-select>
+          <select-dropdown
+            v-model="activeValue"
+            :menu="screenProportionOption"
+            @select-change="updateProportion"
+          />
         </function-form-item>
       </div>
     </div>
@@ -40,10 +37,18 @@
 import {
   computed,
   defineComponent,
-  ref, unref, watchEffect
+  ref, toRaw, unref, watchEffect
 } from 'vue'
+import {
+  storeToRefs
+} from 'pinia'
+import WindowUtils from '../../../../api/window'
 import FunctionFormItem from "@/components/FunctionFormItem/FunctionFormItem.vue"
 import EqualizerAdjust from "@/components/Equalizer/EqualizerAdjust.vue"
+import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
+import {
+  useScreenControl
+} from '../../../../store/screenControl'
 import KeyBoardItem from "./KeyBoardItem.vue"
 import type {
   OperatorKeyTypes
@@ -65,9 +70,17 @@ export default defineComponent({
     [FunctionFormItem.name]: FunctionFormItem,
     [EqualizerAdjust.name]: EqualizerAdjust,
     [KeyBoardItem.name]: KeyBoardItem,
+    [SelectDropDownVue.name]: SelectDropDownVue
   },
   setup() {
-    let id = 0
+    const screenStroe = useScreenControl()
+    const { 
+      screenProportionOption,
+      updateAspectRatio ,
+      getRatioCount
+    } = screenStroe
+    const { screenProportion } = storeToRefs(screenStroe)
+    const activeValue = screenProportion
     const keyBoardSetItem = ref<KeyBoardSetItem[]>([
       {
         operate: "full-screen",
@@ -78,26 +91,23 @@ export default defineComponent({
         text: '放大（zoom-in）'
       }
     ])
-    const screenProportion = ref<ScreenProportion[]>([
-      {
-        value: id++,
-        label: '默认'
-      },
-      {
-        value: id++,
-        label: '4:3'
-      },
-      {
-        value: id++,
-        label: '16:9'
-      },
-    ])
-    const activeProportion = unref(screenProportion)[0].value
+    
+    const updateProportion = (index: number) => {
+      const windowUtils = new WindowUtils()
+      const ratio = screenProportionOption[index].value
+      
+      windowUtils.windowResizable(getRatioCount(ratio))
+    
+      updateAspectRatio(ratio)
+    }
 
     return {
+      activeValue,
       screenProportion,
-      activeProportion,
+      screenProportionOption,
+      // activeProportion,
       keyBoardSetItem,
+      updateProportion
     }
   }
 })

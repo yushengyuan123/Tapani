@@ -9,7 +9,9 @@
       </div>
     </div>
     <div class="function-setting-form-data">
-      <slot />
+      <div class="function-setting-form-item">
+        <slot />    
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +51,7 @@ export default defineComponent({
   padding: 10px 0;
 
   .function-setting-form-aside {
-    flex: 1;
+    width: 150px;
 
     .function-setting-form-item-title {
       font-size: 14px;
@@ -62,8 +64,14 @@ export default defineComponent({
   }
 
   .function-setting-form-data {
+    flex: 1;
     display: flex;
+    justify-content: end;
     align-items: center;
+    
+    .function-setting-form-item {
+      width: 150px;
+    }
   }
 }
 </style>
