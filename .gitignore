@@ -9,7 +9,7 @@ node_modules
 ./egg/logs
 
 # release
-./release/**/*
+/release/**/*
 
 # local env files
 .env.local
