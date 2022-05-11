@@ -2,9 +2,11 @@
   <div class="un-open-con">
     <div class="un-open-content">
       <div class="un-open-content-img">
-        <img src="src/asserts/unopen.png" alt="">
+        <img src="@/asserts/unopen.png" alt="">
       </div>
-      <p class="un-open-content-text">抱歉该功能暂未开放</p>
+      <p class="un-open-content-text">
+        {{$t("not_open.title")}}
+      </p>
     </div>
   </div>
 </template>

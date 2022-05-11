@@ -8,15 +8,15 @@
     <div>
       <equalizer-adjust-item
         :label="$t('app_setting.media_module.screen.light')"
-        :img-src="'src/asserts/light.png'"
+        :img-src="getImgSrc('light')"
       />
       <equalizer-adjust-item
         :label="$t('app_setting.media_module.screen.contrast')"
-        :img-src="'src/asserts/compareRatio.png'"
+        :img-src="getImgSrc('compareRatio')"
       />
       <equalizer-adjust-item
         :label="$t('app_setting.media_module.screen.saturation')"
-        :img-src="'src/asserts/fullRatio.png'"
+        :img-src="getImgSrc('fullRatio')"
       />
     </div>
   </div>
@@ -27,6 +27,7 @@ import {
   defineComponent,
   provide
 } from 'vue'
+import { getImgSrc } from '../../utils'
 import EqualizerAdjustItem from "./EqualizerAdjustItem.vue"
 
 export default defineComponent({
@@ -48,7 +49,9 @@ export default defineComponent({
     provide('labelWidth', props.labelWidth)
     provide('progressWidth', props.progressWidth)
 
-    return {}
+    return {
+      getImgSrc
+    }
   }
 })
 </script>

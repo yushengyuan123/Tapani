@@ -3,9 +3,15 @@ import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg'
 export default (appInfo: EggAppInfo) => {
   const config = {
     security: {
-      csrf: false
+      csrf: {
+        enable: false
+      }
     }
   } as PowerPartial<EggAppConfig>
+
+  config.logger = {
+    level: "NONE"
+  }
 
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security

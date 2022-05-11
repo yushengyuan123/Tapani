@@ -1,25 +1,46 @@
 {
-  "name": "Player",
+  "name": "Tapani",
   "version": "1.0.0",
-  "main": "lib/main/index.js",
+  "description": "This is a Player basic on Vue3.x",
+  "main": "./dist/electron/main.js",
   "author": "yushengyuan",
   "scripts": {
     "dep": "yarn install && cd ./src && yarn install",
-    "dev": "node ./build/dev-runner.js"
+    "dev": "node ./build/dev-runner.js",
+    "pack:release": "electron-builder"
+  },
+  "build": {
+    "productName": "Tapani",
+    "appId": "com.yushengyuan.Tapani",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "icon": "./appLogo.png",
+      "iconSize": 60
+    },
+    "files": [
+      "dist/electron/**/*"
+    ],
+    "dmg": {
+      "iconSize": 60
+    }
   },
   "dependencies": {
-    "electron": "^16.0.7",
     "electron-is": "^3.0.0",
     "electron-log": "^4.4.6",
     "vue": "^3.2.31"
   },
   "devDependencies": {
+    "electron": "^16.0.7",
     "@types/fs-extra": "^9.0.13",
     "@typescript-eslint/parser": "^5.10.1",
     "@vitejs/plugin-vue": "^1.10.2",
     "@vitejs/plugin-vue-jsx": "^1.3.1",
     "cfonts": "^2.9.3",
     "chalk": "^4.1.1",
+    "electron-builder": "^23.0.3",
     "eslint": "^6.8.0",
     "fs-extra": "^10.0.0",
     "ts-loader": "^9.2.3",

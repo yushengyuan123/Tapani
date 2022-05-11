@@ -57,20 +57,7 @@ export default defineComponent({
       getRatioCount 
     } = useScreenControl()
     const activeValue = screenProportion
-    const menuArr: menuAspectRatio[] = [
-      {
-        value: ProportionStringTypes.Default,
-        count: 16 / 9
-      },
-      {
-        value: ProportionStringTypes.SixteenToNine,
-        count: 16 / 9 
-      },
-      {
-        value: ProportionStringTypes.FourToThree,
-        count: 4 / 3 
-      },
-    ]
+    const menuArr: menuAspectRatio[] = screenProportionOption
 
     const updateProportion = (index: number) => {
       const windowUtils = new WindowUtils()

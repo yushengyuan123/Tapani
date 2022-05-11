@@ -11,12 +11,10 @@ const request = new Request({
   interceptors: {
     // 请求拦截器
     requestInterceptors: config => {
-      console.log('实例请求拦截器')
       return config
     },
     // 响应拦截器
     responseInterceptors: result => {
-      console.log('实例响应拦截器')
       return result
     },
   }

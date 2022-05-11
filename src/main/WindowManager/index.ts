@@ -1,7 +1,8 @@
 import {app, BrowserWindow} from "electron"
 import electronConfig from "../config/electronConfig"
+import * as path from 'path'
 import * as is from "electron-is"
-import {AspectRatio} from "../global"
+import { AspectRatio } from "../global"
 import WindowUtils from "../core/api/window"
 
 enum ResizeDirection {
@@ -32,10 +33,16 @@ export default class WindowManager {
       
       this.windows.set('main', this.window)
       
-      const debugAddress = 'http://localhost:1338/'
-      
       if (is.dev()) {
+        const debugAddress = 'http://localhost:1337/'
         this.window.loadURL(debugAddress)
+        this.window.webContents.openDevTools({
+          mode: 'detach'
+        })
+      } else {
+        console.log(path.join(__dirname, '/index.html'));
+        
+        this.window.loadFile(path.join(__dirname, '/index.html'))
         this.window.webContents.openDevTools({
           mode: 'detach'
         })

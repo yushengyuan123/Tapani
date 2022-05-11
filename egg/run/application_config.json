@@ -17,7 +17,30 @@
       "domainWhiteList": [],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
-      "csrf": false,
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "supportedRequests": [
+          {
+            "path": {},
+            "methods": [
+              "POST",
+              "PATCH",
+              "DELETE",
+              "PUT",
+              "CONNECT"
+            ]
+          }
+        ],
+        "refererWhiteList": []
+      },
       "xframe": {
         "enable": true,
         "value": "SAMEORIGIN",
@@ -276,7 +299,7 @@
       "dir": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/logs/demo",
       "encoding": "utf8",
       "env": "local",
-      "level": "INFO",
+      "level": "NONE",
       "consoleLevel": "INFO",
       "disableConsoleAfterReady": false,
       "outputJSON": false,

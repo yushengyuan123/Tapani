@@ -1,8 +1,7 @@
 <template>
-  <div id="container" @click="disappearDrawer">
+  <div id="container">
     <div
       class="video-player-area"
-      ref="screenAreaRef"
     >
       <video-control-area
         @video-status-change="videoStatusChange"
@@ -12,32 +11,34 @@
         @visible-settings="visibleSettings"
         @back-home-page="backHomePage"
       />
-      <video-screen />
-    </div>
-
-    <aside-drawer
-      v-model:visible="drawerVisible"
-    >
-      <template v-slot:header>
-        <div class="video-player-drawer-header-con">
-          <div class="video-player-drawer-header-tab-con">
-            <div
-              v-for="(item, index) in contentTabHeader"
-              :key="index"
-              class="video-player-drawer-header-tab"
-              @click="switchTab(index)"
-            >
-              {{ item.value }}
+      <video-screen
+        @click.self="disappearDrawer" 
+      />
+      <aside-drawer
+        v-model:visible="drawerVisible"
+      >
+        <template v-slot:header>
+          <div class="video-player-drawer-header-con">
+            <div class="video-player-drawer-header-tab-con">
+              <div
+                v-for="(item, index) in contentTabHeader"
+                :key="index"
+                class="video-player-drawer-header-tab"
+                :class="{active: activeTab === index}"
+                @click="switchTab(index)"
+              >
+                {{ item.value }}
+              </div>
             </div>
           </div>
-        </div>
-      </template>
-      <template v-slot:content>
-        <div class="video-player-drawer-content-con">
-          <component :is="currentRenderComponent"></component>
-        </div>
-      </template>
-    </aside-drawer>
+        </template>
+        <template v-slot:content>
+          <div class="video-player-drawer-content-con">
+            <component :is="currentRenderComponent"></component>
+          </div>
+        </template>
+      </aside-drawer>
+    </div>
   </div>
 </template>
 
@@ -54,15 +55,15 @@ import VideoScreen from "@/components/VideoScreen/VideoScreen.vue"
 import Screen from "./Screen/Screen.vue"
 import Captions from "./Captions/Captions.vue"
 import Volume from "./Volume/Volume.vue"
+import { useRouter } from "vue-router"
 import {
-  useRouter
-} from 'vue-router'
-import {
-  useAsideDrawerContent
+  useAsideDrawerContent,
+  SwitchComponent
 } from "./use-aside-drawer-content"
 import { useVideoInfo } from '../../store/videoInfo'
 import { storeToRefs } from "pinia"
-import AsideDrawer from "../../components/AsideDrawer/AsideDrawer.vue";
+import WindowUtils from "../../api/window"
+import AsideDrawer from "../../components/AsideDrawer/AsideDrawer.vue"
 
 export default defineComponent({
   name: "video-player",
@@ -72,11 +73,15 @@ export default defineComponent({
     [VideoUpload.name]: VideoUpload,
     [VideoScreen.name]: VideoScreen,
     [AsideDrawer.name]: AsideDrawer,
+    [Screen.name]: Screen,
+    [Captions.name]: Captions,
+    [Volume.name]: Volume
   },
   setup() {
-    const currentRenderComponent = ref<any>(Screen)
+    const windowUtils = new WindowUtils()
+    const currentRenderComponent = ref<string>(SwitchComponent.Screen)
+    const activeTab = ref<number>(1)
     const router = useRouter()
-    const screenAreaRef = ref<HTMLElement>()
     const { contentTabHeader } = useAsideDrawerContent()
     const videoInfoStore = useVideoInfo()
     const drawerVisible = ref(false)
@@ -87,18 +92,14 @@ export default defineComponent({
 
     watch(() => videoFullScreenMode.value, (curMode) => {
       if (curMode) {
-        screenAreaRef.value!.requestFullscreen()
+        windowUtils.setFullScreen()
       } else {
-        document.exitFullscreen()
+        windowUtils.reduceScreen()
       }
     })
 
     const disappearDrawer = () => {
       drawerVisible.value = false
-    }
-
-    const fullScreenMode = () => {
-      screenAreaRef.value!.requestFullscreen()
     }
 
     const backHomePage = () => {
@@ -108,27 +109,16 @@ export default defineComponent({
     }
 
     const switchTab = (index: number) => {
-      switch (index) {
-        case 0: {
-          currentRenderComponent.value = Captions
-          break
-        }
-        case 1: {
-          currentRenderComponent.value = Screen
-          break
-        }
-        case 2: {
-          currentRenderComponent.value = Volume
-          break
-        }
-      }
+      activeTab.value = index
+      
+      currentRenderComponent.value = contentTabHeader[index].renderComponent
     }
 
     const visibleMenu = () => {
       // console.log(111)
     }
 
-    const visibleSettings = () => {
+    const visibleSettings = () => {     
       drawerVisible.value = true
     }
 
@@ -145,12 +135,11 @@ export default defineComponent({
     }
 
     return {
+      activeTab,
       currentRenderComponent,
       contentTabHeader,
       drawerVisible,
-      screenAreaRef,
       backHomePage,
-      fullScreenMode,
       disappearDrawer,
       visibleMenu,
       visibleSettings,
@@ -188,6 +177,7 @@ export default defineComponent({
   flex: 0.33;
   text-align: center;
   font-size: 13px;
+  overflow: hidden;
   cursor: pointer;
 }
 .video-player-drawer-content-con {

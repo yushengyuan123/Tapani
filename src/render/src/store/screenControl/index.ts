@@ -2,12 +2,8 @@ import {
   defineStore
 } from "pinia"
 import {
-  AspectRatio
-} from "~/share/index.ts"
-import {
   ref
 } from "vue"
-import { useLocalStorage, useStorageAsync } from "@vueuse/core"
 import { useSystemStorage } from "../../pages/useSystemStorage"
 import { ProportionStringTypes } from '../../pages/useSystemStorage'
 
@@ -18,6 +14,7 @@ interface ScreenProportionSelectArr {
 
 export const useScreenControl = defineStore('screen-control', () => {
   const screenProportion = ref<ProportionStringTypes>(ProportionStringTypes.SixteenToNine)
+  const fullScreenMode = ref(false)
   const screenProportionOption: ScreenProportionSelectArr[]= [
     {
       value: ProportionStringTypes.Default,
@@ -34,12 +31,16 @@ export const useScreenControl = defineStore('screen-control', () => {
   ]
 
   const getRatioCount = (value: string) => {
-    screenProportionOption.forEach(item => {
+    let defaultValue = 16 / 9
+
+    for (const item of screenProportionOption) {
       if (item.value === value) {
-        return item.count
+        defaultValue = item.count
+        break
       }
-    })   
-    return 16 / 9
+    }
+     
+    return defaultValue
   }
   
   const updateAspectRatio = (ratio: ProportionStringTypes) => {
@@ -49,11 +50,16 @@ export const useScreenControl = defineStore('screen-control', () => {
     
     updateMediaStorage('screenProportion', ratio)
   }
+
+  const updateFullScreenMode = (value: boolean) => {
+    fullScreenMode.value = value
+  }
   
   return {
     screenProportion,
     getRatioCount,
     screenProportionOption,
     updateAspectRatio,
+    updateFullScreenMode
   }
 })

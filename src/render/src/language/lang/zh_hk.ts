@@ -6,16 +6,16 @@ export default {
   },
   app_setting: {
     setting_aside: {
-      app: '應用',
-      media: '媒體設置'
+      app: '應用程式',
+      media: '媒體設定'
     },
     app_module: {
       check_update: '檢查更新',
-      app_set_title: '應用程式設置',
+      app_set_title: '應用程式設定',
       language: '語言',
       language_desc: '幫助翻譯系統',
       debugger: '調試',
-      debugger_desc: '打開chrome控製臺（開發者選項））',
+      debugger_desc: '打開chrome控製臺（開發者選項）',
       debugger_button_desc: '打開Devtools',
       issue: '報告問題',
       issue_desc: '生成一個預填寫的Github問題',
@@ -54,5 +54,13 @@ export default {
     item: {
       default: '默認'
     }
+  },
+  not_open: {
+    title: "致歉本該功能暫未開放"
+  },
+  key_modify_dialog: {
+    title: '請輸入按鍵',
+    notice: '3秒後系統進行自動保存',
+    cancel_btn: '取消'
   }
 }

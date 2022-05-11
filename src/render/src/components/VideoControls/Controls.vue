@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['control-container']"
+    :class="['control-container', idleClass]"
   >
     <div class="control-container-inner">
       <div class="control-button-area">
@@ -29,13 +29,13 @@
           </el-col>
           <el-col :span="5">
             <el-row justify="end">
-              <div class="video-menu-operate-con" @click.stop="backHomePage">
+              <div class="video-menu-operate-con" @click="backHomePage">
                 <icon-collect name="back-home"/>
               </div>
-              <div class="video-menu-operate-con" @click.stop="settingsVisible">
+              <div class="video-menu-operate-con" @click="settingsVisible">
                 <icon-collect name="setting"/>
               </div>
-              <div class="video-menu-operate-con" @click.stop="switchMode">
+              <div class="video-menu-operate-con" @click="switchMode">
                 <icon-collect v-if="!videoFullScreenMode" name="full-screen"/>
                 <icon-collect v-else name="close-full-screen"/>
               </div>
@@ -66,34 +66,24 @@
 <script lang="ts">
 import {
   defineComponent,
-  computed, ref, inject
+  computed
 } from "vue"
 import { useIdle } from "@vueuse/core";
 import { useControl } from "./use-control";
 import Progress from "./Progress.vue"
-import IconBaseline5g from '~icons/ic/baseline-5g'
 import { useVideoInfo } from "../../store/videoInfo"
 import { storeToRefs } from "pinia"
-import {
-  convertSecondsToTime
-} from "../../utils"
-
-import type {
-  SetupContext
-} from "vue"
-import {useFullScreenMode} from "./use-full-screen-mode";
+import { convertSecondsToTime } from "../../utils"
 
 export default defineComponent({
   name: "video-control-area",
   components: {
     [Progress.name]: Progress
   },
-  setup(props, context: SetupContext) {
+  setup() {
     const videoInfoStore = useVideoInfo()
-    const {
-      videoFullScreenMode,
-      switchMode
-    } = useFullScreenMode()
+    const { updateMode } = videoInfoStore
+    const { videoFullScreenMode } = storeToRefs(videoInfoStore)
     const {
       videoDuration,
       videoCurrentTime,
@@ -102,7 +92,6 @@ export default defineComponent({
     } = storeToRefs(videoInfoStore)
     const curVolume = videoVolume.value / 100
     
-
     const {
       switchVideoStatus,
       leftMenuVisible,
@@ -111,6 +100,10 @@ export default defineComponent({
       settingsVisible,
       backHomePage
     } = useControl()
+
+    const switchMode = () => {     
+      updateMode(!videoFullScreenMode.value)
+    }
 
     const { idle } = useIdle(4000)
 
@@ -163,10 +156,12 @@ export default defineComponent({
   margin-left: -(@width / 2);
   bottom: 100px;
   height: 80px;
-  background-color: transparent;
   width: @width;
   opacity: 0.7;
-  z-index: 100000;
+  z-index: 20000;
+  border-radius: 6px;
+  overflow: hidden;
+
 
   &.control-user-idle {
     transition: opacity .8s linear;
@@ -177,7 +172,6 @@ export default defineComponent({
     height: 100%;
     width: 100%;
     display: flex;
-    border-radius: 6px;
     flex-direction: column;
     transition: all .3s ease-in-out;
     padding-top: 5px;
@@ -202,9 +196,6 @@ export default defineComponent({
         width: 40px;
       }
 
-      .control-operate-menu-con {
-      }
-
       .video-menu-operate-con {
         margin-left: 10px;
       }
@@ -217,8 +208,22 @@ export default defineComponent({
       font-size: 12px;
       padding-left: 10px;
       padding-right: 10px;
+      padding-bottom: 13px;
       box-sizing: border-box;
     }
   }
 }
+
+.control-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+
 </style>

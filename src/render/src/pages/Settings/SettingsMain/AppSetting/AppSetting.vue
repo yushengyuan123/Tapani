@@ -14,7 +14,7 @@
             <div class="setting-main-check-update">
               <icon-button
                 :text="$t('app_setting.app_module.check_update')"
-                :img-src="'src/asserts/update.png'"
+                :img-src="getImgSrc('update')"
               />
             </div>
           </div>
@@ -37,6 +37,7 @@ import {
 import BaseInfo from "./BaseInfo.vue"
 import FunctionSetting from "./FunctionSetting.vue"
 import Button from "./Button.vue"
+import { getImgSrc  } from '@/utils'
 
 export default defineComponent({
   name: "app-settings",
@@ -46,7 +47,9 @@ export default defineComponent({
     [Button.name]: Button
   },
   setup() {
-    return {}
+    return {
+      getImgSrc
+    }
   }
 })
 </script>

@@ -21,7 +21,7 @@ class Application extends EventEmitter {
     
     this.handleCommand()
     
-    // this.initEggServer()
+    this.initEggServer()
   }
   
   setupMenuManager() {

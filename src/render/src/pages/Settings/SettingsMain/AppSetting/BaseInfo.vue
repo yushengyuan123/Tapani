@@ -8,7 +8,7 @@
     >
       <div class="base-info-item-aside">
         <div class="base-info-item-icon-con">
-          <img :src="`src/asserts/${item.img}.png`" alt="">
+          <img :src="item.img" alt="">
         </div>
       </div>
       <div class="base-info-item-details">
@@ -29,6 +29,7 @@ import {
 } from 'vue'
 import { useIpcRenderer } from '@vueuse/electron'
 import { useI18n } from 'vue-i18n'
+import { getImgSrc } from '../../../../utils'
 
 interface BaseInfo {
   name: string,
@@ -45,19 +46,23 @@ export default defineComponent({
       {
         name: t('app_setting.app_module.issue'),
         desc: t('app_setting.app_module.issue_desc'),
-        img: 'question-feedback'
+        img: getImgSrc('question-feedback')
       },
       {
         name: 'Github',
         desc: t('app_setting.app_module.github'),
-        img: 'github'
+        img: getImgSrc('github')
       }
     ])
 
     const clickEvent = (index: number) => {
-      if (index === 1) {
-        ipcRenderer.send('openGithub', 'https://github.com/yushengyuan123/video-player-desktop')
+      let url: string = 'https://github.com/yushengyuan123/video-player-desktop'
+
+      if (index === 0) {
+        url += '/issues'
       }
+
+      ipcRenderer.send('openGithub', url)
     }
 
     return {

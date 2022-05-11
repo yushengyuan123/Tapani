@@ -15,7 +15,7 @@ export const useKeyMonitor = () => {
   watchEffect(() => {
     const curKeyArr = Array.from(current)
     const maybeMapKey = curKeyArr.join('-')
-      
+    
     if (keyMap.has(maybeMapKey) && curKeyArr.length > 0) {
       manager.execute(<OperatorKeyTypes>keyMap.get(maybeMapKey)) 
     }

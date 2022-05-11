@@ -13,14 +13,6 @@ import {
 import type {
   Ref
 } from "vue"
-import {UploadFile, UploadProps} from "element-plus"
-// const { playing, currentTime, duration, volume } = useMediaControls(videoScreenRef, {
-//   src: URL.createObjectURL(uploadFile.raw),
-// })
-//
-// watch(() => currentTime.value, (value) => {
-//   console.log('当前时间', value)
-// })
 
 export const useMedia = (videoRef: Ref<HTMLVideoElement>) => {
   const videoInfoStore = useVideoInfo()

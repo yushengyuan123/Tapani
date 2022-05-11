@@ -29,7 +29,8 @@ export default defineComponent({
   name: "key-board-item",
   props: {
     operate: {
-      type: String as PropType<OperatorKeyTypes>
+      type: String as PropType<OperatorKeyTypes>,
+      default: []
     },
     text: {
       type: String
@@ -41,28 +42,23 @@ export default defineComponent({
   setup(props) {
     const text = props.text
     const {
-      checkIsSetKey,
       getSetKey,
       updateKeyMap
     } = useKeyBoardSet()
     const operateName = props.operate
 
-    const hasKey = computed(() => {
-      return checkIsSetKey(operateName)
-    })
-
     const getKey = computed(() => {
-      const res = getSetKey(operateName)
-      return Array.from(res)
+      return getSetKey(operateName)
     })
 
-    const updateKeySave = (keys) => {
-      updateKeyMap(operateName, keys)
+    const updateKeySave = (keys: string[]) => {
+      if (keys.length > 0) {
+        updateKeyMap(operateName, keys)
+      }
     }
 
     return {
       text,
-      hasKey,
       getKey,
       updateKeySave
     }

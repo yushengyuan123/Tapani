@@ -54,5 +54,13 @@ export default {
     item: {
       default: '默认'
     }
+  },
+  not_open: {
+    title: "抱歉该功能暂未开放"
+  },
+  key_modify_dialog: {
+    title: '请输入按键',
+    notice: '3秒后系统进行自动保存',
+    cancel_btn: '取消'
   }
 }

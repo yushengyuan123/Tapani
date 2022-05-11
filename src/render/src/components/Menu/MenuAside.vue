@@ -2,8 +2,8 @@
   <div class="menu-aside-container">
     <div class="menu-aside-top">
       <router-link :to="'/index'">
-        <div class="menu-aside-download menu-aside-btn">
-          <icon-collect name="video"/>
+        <div class="menu-aside-btn">
+          <img src="@/asserts/back.png" alt="">
         </div>
       </router-link>
     </div>
@@ -29,7 +29,6 @@ export default defineComponent({
   display: flex;
   flex-flow: column;
   height: 100%;
-  background: rgba(29, 22, 22, 0.6);
 
   .menu-aside-top {
     flex: 1;
@@ -44,6 +43,12 @@ export default defineComponent({
     width: 28px;
     margin: 24px auto;
     cursor: pointer;
+
+    img {
+      @size: 30px;
+      height: @size;
+      width: @size;
+    }
   }
 
   .menu-aside-bottom {

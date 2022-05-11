@@ -1,6 +1,18 @@
 {
   "security": {
-    "csrf": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config/config.default.ts",
+    "csrf": {
+      "enable": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config/config.default.ts",
+      "type": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js"
+    },
     "domainWhiteList": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
     "protocolWhiteList": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
     "defaultMiddleware": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
@@ -42,6 +54,25 @@
       "ipExceptionList": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js",
       "checkAddress": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg-security/config/config.default.js"
     }
+  },
+  "logger": {
+    "level": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config/config.default.ts",
+    "dir": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "env": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js"
   },
   "keys": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config/config.default.ts",
   "middleware": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/config/config.default.ts",
@@ -238,25 +269,6 @@
       "parameterLimit": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js"
     },
     "onerror": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js"
-  },
-  "logger": {
-    "dir": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "encoding": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "env": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "level": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "consoleLevel": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "disableConsoleAfterReady": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "outputJSON": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "buffer": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "appLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "coreLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "agentLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "errorLogName": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "coreLogger": {
-      "consoleLevel": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.local.js"
-    },
-    "allowDebugAtProd": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",
-    "enablePerformanceTimer": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js"
   },
   "httpclient": {
     "enableDNSCache": "/Users/yushengyuan/yushengyuan/personal-project/Player/egg/node_modules/egg/config/config.default.js",

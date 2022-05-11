@@ -1,9 +1,5 @@
-import {
-  OperatorKeyTypes
-} from '../store/keyboard'
-import {
-  useVideoInfo
-} from '../store/videoInfo'
+import { OperatorKeyTypes } from '../store/keyboard'
+import { useVideoInfo } from '../store/videoInfo'
 
 class HotKeyOperateManager {
   operateMap!: Map<OperatorKeyTypes, Function>

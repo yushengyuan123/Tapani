@@ -2,7 +2,7 @@
   <div class="video-index-select-con">
     <div class="video-index-select-inner">
       <div class="video-index-select-inner-logo-con">
-        <img src="src/asserts/Vue.png" alt="">
+        <img src="@/asserts/appLogo.png" alt="">
       </div>
       <div class="video-index-select-inner-logo-desc">
         <h1>Vue Player</h1>
@@ -32,48 +32,42 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-} from "vue"
+import { defineComponent } from "vue"
 import SelectItem from "./SelectItem/SelectItem.vue"
-import {useRouter} from 'vue-router'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import {
-  SelectArrItem
-} from "../../../types";
+import { SelectArrItem } from "../../../types"
+import { getImgSrc } from "../../utils"
 
 export default defineComponent({
   name: "app-index",
   components: {
     [SelectItem.name]: SelectItem,
   },
-  setup(props, context) {
+  setup() {
     const router = useRouter()
     const { t } = useI18n()
     const itemArr: SelectArrItem[] = [
       {
         name: t('app_index.select_item_file'),
-        imgSrc: 'src/asserts/file.png',
+        imgSrc: getImgSrc('folder'),
         routerName: 'video-index',
         fileAttr: true
       },
       // }, {
       //   name: '打开文件夹',
-      //   imgSrc: 'src/asserts/folder.png',
+      //   imgSrc: '@/asserts/folder.png',
       // }, {
       //   name: '打开URL',
-      //   imgSrc: 'src/asserts/url.png',
+      //   imgSrc: '@/asserts/url.png',
       // },
       {
         name: t('app_index.select_item_setting'),
-        imgSrc: 'src/asserts/setting.png',
+        imgSrc: getImgSrc('setting'),
         routerName: 'settings-index'
       }
     ]
-
-    console.log(context);
     
-
     const moveToPlayerPages = (index: number) => {
       router.push({
         name: itemArr[index].routerName
@@ -121,6 +115,7 @@ export default defineComponent({
 .video-index-select-inner-logo-con {
   display: flex;
   justify-content: center;
+  padding: 30px;
   img {
     @size: 200px;
     height: @size;

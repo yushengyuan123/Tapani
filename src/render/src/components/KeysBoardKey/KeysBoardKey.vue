@@ -1,7 +1,7 @@
 <template>
   <div class="keys-board-key-con">
-    <img v-if="useMetaKey" src="src/asserts/mac-command.png" alt="">
-    <img v-else-if="useAltKey" src="src/asserts/mac-option.png" alt="">
+    <img v-if="useMetaKey" src="@/asserts/mac-command.png" alt="">
+    <img v-else-if="useAltKey" src="@/asserts/mac-option.png" alt="">
     <span v-else>{{ keyText }}</span>
   </div>
 </template>

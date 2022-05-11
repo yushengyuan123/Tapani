@@ -28,7 +28,11 @@ class WindowUtils {
   initWindowStatus() {
     this.windowResizable()
 
-    this.openGithub()
+    this.openBrowserUrl()
+
+    this.setFullScreen()
+    
+    this.reduceScreen()
   }
   
   // 调节窗口比例，宽度不变，改变长度
@@ -36,14 +40,26 @@ class WindowUtils {
     ipcMain.on('windowResizable', (e, resizeable: AspectRatio) => {
       const sizeArr = this.mainWindow?.getSize()
       const curWidth = sizeArr[0]
-    
+      
       this.mainWindow?.setContentSize(curWidth, ~~(curWidth / resizeable))
     })
   }
 
-  openGithub() {
+  openBrowserUrl() {
     ipcMain.on('openGithub', (e, url: string) => {
       shell.openExternal(url)
+    })
+  }
+
+  setFullScreen() {
+    ipcMain.on('setFullScreen', (e) => {
+      this.mainWindow?.setFullScreen(true)
+    })
+  }
+
+  reduceScreen() {
+    ipcMain.on('reduceScreen', (e) => {
+      this.mainWindow?.setFullScreen(false)
     })
   }
 }

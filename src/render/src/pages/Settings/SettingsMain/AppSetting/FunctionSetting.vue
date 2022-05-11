@@ -18,7 +18,7 @@
       >
         <icon-button
           :text="$t('app_setting.app_module.debugger_button_desc')"
-          :img-src="'src/asserts/debug.png'"
+          :img-src="getImgSrc('debug')"
         />
       </function-form-item>
     </div>
@@ -34,6 +34,7 @@ import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
 import Button from "./Button.vue"
 import { storeToRefs } from 'pinia'
 import { useLanguage } from '../../../../store/language'
+import { getImgSrc } from '../../../../utils'
 
 interface LanguageSelectOption {
   value: string,
@@ -61,7 +62,8 @@ export default defineComponent({
     return {
       languageList,
       activeValue,
-      dropdownSelect
+      dropdownSelect,
+      getImgSrc
     }
   }
 })

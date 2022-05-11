@@ -23,3 +23,7 @@ export function addUnit(value: number | string) {
   }
   return value
 }
+
+export function getImgSrc(name: string) {
+  return new URL(`../asserts/${name}.png`, import.meta.url).href
+}

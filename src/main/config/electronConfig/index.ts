@@ -1,6 +1,4 @@
-import type {
-  BrowserWindowConstructorOptions
-} from "electron"
+import type { BrowserWindowConstructorOptions } from "electron"
 import * as is from "electron-is"
 import { AspectRatio } from "../../global"
 

@@ -54,5 +54,13 @@ export default {
     item: {
       default: 'Default'
     }
+  },
+  not_open: {
+    title: "Sorry, this module is not open"
+  },
+  key_modify_dialog: {
+    title: 'Please input your key',
+    notice: 'The key will be saved after three seconds',
+    cancel_btn: 'cancel'
   }
 }

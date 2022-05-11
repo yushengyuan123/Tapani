@@ -30,12 +30,12 @@ a {
 /* Controls Style
 -------------------------- */
 .control-container {
-  background-color: #000000;
+  // background-color: #000000;
   color: @--control-area-text;
+}
 
-  .control-container-inner {
-    background-color: @--control-area-inner-bg;
-  }
+.control-container:after {
+  background-color: @--control-area-inner-bg;
 }
 
 
@@ -62,6 +62,13 @@ a {
 .select-item-text {
   color: @--select-item-con-text;
 }
+
+/* Menu Aside Style
+-------------------------- */
+.menu-aside-container {
+  background-color: @--settings-aside-item-bg;
+}
+
 
 /* Setting Aside Style
 -------------------------- */
@@ -179,6 +186,10 @@ a {
 .video-player-drawer-header-tab {
   background-color: @--aside-drawer-header-tab-bg;
   color: white;
+
+  &.active {
+    background-color: @--aside-drawer-header-tab-active;
+  }
 }
 
 .key-modify-dialog-save-notice {

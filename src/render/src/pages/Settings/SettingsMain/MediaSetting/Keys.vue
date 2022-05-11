@@ -6,11 +6,11 @@
   >
     <div
       v-for="(item, index) in keysArr"
-      :key="item"
+      :key="index"
       class="keys-con-text"
     >
-      <img v-if="useMetaKey(item)" src="src/asserts/mac-command.png" alt="">
-      <img v-else-if="useAltKey(item)" src="src/asserts/mac-option.png" alt="">
+      <img v-if="useMetaKey(item)" src="@/asserts/mac-command.png" alt="">
+      <img v-else-if="useAltKey(item)" src="@/asserts/mac-option.png" alt="">
       <span v-else>{{ formatKey(item) }}</span>
       <span v-if="index !== keysArr.length - 1">
         +
@@ -34,6 +34,7 @@
 <script lang="ts">
 import {
   defineComponent,
+  PropType,
   ref, SetupContext,
   toRef
 } from 'vue'
@@ -52,9 +53,11 @@ export default defineComponent({
   name: "keys",
   props: {
     keys: {
-      type: Array
+      type: Array as PropType<string[]>,
+      default: []
     }
   },
+  emits: ['save-key'],
   components: {
     [KeyModifyDialog.name]: KeyModifyDialog
   },
@@ -84,7 +87,7 @@ export default defineComponent({
       return word;
     }
 
-    const keySave = (keys) => {
+    const keySave = (keys: string[]) => {
       context.emit('save-key', keys)
     }
 

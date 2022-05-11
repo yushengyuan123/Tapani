@@ -1,7 +1,7 @@
 import { useLocalStorage } from "@vueuse/core"
 import { defineStore } from "pinia"
 import { LanguageSorts  } from "../language"
-import { useI18n } from "vue-i18n"
+import { KeyMap, OperatorKeyTypes } from '../store/keyboard'
 
 export enum ProportionStringTypes {
   'Default' = '默认',
@@ -23,6 +23,10 @@ export const useSystemStorage = defineStore('system-storage', () => {
     volume: 40,
     screenProportion: ProportionStringTypes.SixteenToNine
   })
+  // const keyBoardStorage = useLocalStorage<KeyMap>('player-keyboard-setting', {
+  //   "full-screen": [new Set(['MetaLeft', 'Enter'])],
+  //   "zoom-in": [new Set([])],
+  // })
   const langStorage = useLocalStorage<LanguageStorage>('player-system-language', {
     curLang: "zh_CN" 
   })
@@ -34,6 +38,10 @@ export const useSystemStorage = defineStore('system-storage', () => {
   const updateLanguageStorage = <T extends keyof LanguageStorage>(key: T, value: LanguageSorts) => {
     langStorage.value[key] = value
   }
+
+  // const updateKeyMap = (key: OperatorKeyTypes, payload: string[], index = 0) => {
+  //   keyBoardStorage.value[key][index] = new Set(payload)
+  // }
 
   return {
     updateMediaStorage,

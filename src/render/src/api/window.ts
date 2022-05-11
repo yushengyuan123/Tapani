@@ -21,6 +21,14 @@ class WindowUtils {
   windowResizable(resizeable: AspectRatio) {
     this.ipcRenderer.send('windowResizable', resizeable)
   }
+
+  setFullScreen() {
+    this.ipcRenderer.send('setFullScreen')
+  }
+
+  reduceScreen() {
+    this.ipcRenderer.send('reduceScreen')
+  }
 }
 
 export default WindowUtils

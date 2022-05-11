@@ -7,7 +7,7 @@
       class="select-dropdown-arrow-con">
       <img
         :class="{reverse: arrowDirection}"
-        src="src/asserts/arrow.png"
+        src="@/asserts/arrow.png"
         alt=""
       >
     </div>
@@ -24,7 +24,8 @@
         <div class="select-dropdown-menu-item-correct">
           <img 
             v-if="activeIndex === index"
-            src="src/asserts/correct.png" alt=""
+            src="@/asserts/correct.png" 
+            alt=""
           >
         </div>
         <p class="select-dropdown-menu-item-text">
@@ -48,10 +49,11 @@ interface DropdownMenuItem {
 
 export default defineComponent({
   name: "select-dropdown",
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'select-change'],
   props: {
     menu: {
-      type: Array as PropType<DropdownMenuItem[]>
+      type: Array as PropType<DropdownMenuItem[]>,
+      default: []
     },
     modelValue: {
       type: String
@@ -90,13 +92,14 @@ export default defineComponent({
       }
     )
 
-    const changeDirection = () => {
+    const changeDirection = () => {      
       arrowDirection.value = !arrowDirection.value
     }
 
     const changeItem = (index: number) => {
       activeIndex.value = index
-      arrowDirection.value = !arrowDirection.value     
+      arrowDirection.value = !arrowDirection.value
+      
       context.emit('select-change', index)
     }
 

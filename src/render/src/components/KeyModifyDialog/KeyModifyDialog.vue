@@ -6,7 +6,7 @@
       <el-container id="container">
         <div class="key-modify-dialog-header">
           <el-header>
-              请输入按键
+            {{$t("key_modify_dialog.title")}}
           </el-header>
         </div>
         <el-main>
@@ -21,7 +21,7 @@
             </template>
           </div>
           <div class="key-modify-dialog-save-notice">
-            3秒后系统进行自动保存
+            {{$t("key_modify_dialog.notice")}}
           </div>
         </el-main>
         <el-footer>
@@ -29,7 +29,7 @@
             class="key-modify-dialog-cancel-button"
             @click="onCancel"
           >
-            取消
+            {{$t("key_modify_dialog.cancel_btn")}}
           </div>
         </el-footer>
       </el-container>
@@ -62,7 +62,7 @@ export default defineComponent({
       type: Boolean
     }
   },
-  emits: ['update:visible'],
+  emits: ['update:visible', 'save'],
   components: {
     [GlobalBlock.name]: GlobalBlock,
     [Progress.name]: Progress,
