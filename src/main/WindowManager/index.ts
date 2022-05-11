@@ -32,7 +32,7 @@ export default class WindowManager {
       
       this.windows.set('main', this.window)
       
-      const debugAddress = 'http://localhost:1337/'
+      const debugAddress = 'http://localhost:1338/'
       
       if (is.dev()) {
         this.window.loadURL(debugAddress)

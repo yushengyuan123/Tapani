@@ -1,10 +1,6 @@
 import { useIpcRenderer } from "@vueuse/electron"
-import {
-  AspectRatio
-} from '~/share/index'
-import type {
-  UseIpcRendererReturn
-} from "@vueuse/electron"
+import { AspectRatio } from '~/share/index'
+import type { UseIpcRendererReturn } from "@vueuse/electron"
 
 class WindowUtils {
   ipcRenderer!: UseIpcRendererReturn

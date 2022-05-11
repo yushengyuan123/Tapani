@@ -51,7 +51,7 @@ export const useVideoInfo = defineStore('videoInfo', () => {
     videoVolume.value = payload
   }
   
-  const updateMode = (payload) => {
+  const updateMode = (payload: boolean) => {
     videoFullScreenMode.value = payload
   }
   

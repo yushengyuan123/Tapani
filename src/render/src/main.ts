@@ -28,6 +28,9 @@ import registerCommands from './command'
 /** Directives Import */
 import directives from "./directives"
 
+/** I18n Import */
+import { setupI18n } from './language'
+
 function initElementPlus(app: AppOps) {
   app.use(ElementPlus)
 }
@@ -58,6 +61,8 @@ function initVueApplication() {
   initDirectives(app)
   
   initIcons(app)
+
+  app.use(setupI18n())
   
   registerCommands()
   

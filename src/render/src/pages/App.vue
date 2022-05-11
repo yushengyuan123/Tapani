@@ -4,27 +4,19 @@
       <router-view />
     </el-container>
   </div>
-  <key-monitor />
 </template>
 
 <script lang="ts">
 import {
   defineComponent,
-  onMounted
 } from "vue"
 import VideoPlayer from './VideoPlayer/VideoPlayer.vue'
-import KeyMonitor from "../components/KeyMonitor/KeyMonitor.vue"
 import Index from './Index/Index.vue'
-import {
-  useScreenControl
-} from '../store/screenControl'
-import {
-  useSystemStorage
-} from './useSystemStorage'
-import {
-  useVideoInfo
-} from "../store/videoInfo"
-import { useAsyncQueue } from "@vueuse/core"
+import { useKeyMonitor  } from "../hooks/use-key-monitor"
+import { useScreenControl } from '../store/screenControl'
+import { useSystemStorage } from './useSystemStorage'
+import { useVideoInfo } from "../store/videoInfo"
+import { useLanguage, sortsToValue } from "../store/language"
 
 export default defineComponent({
   name: "App",
@@ -32,17 +24,20 @@ export default defineComponent({
     VideoPlayer,
     [VideoPlayer.name]: VideoPlayer,
     [Index.name]: Index,
-    [KeyMonitor.name]: KeyMonitor
   },
   setup() {
-    const { mediaStorage } = useSystemStorage()
+    const { mediaStorage, langStorage } = useSystemStorage()
+
+    useKeyMonitor()
 
     const initStoreStatus = () => {
       const { updateAspectRatio } = useScreenControl()
       const { updateVolume } = useVideoInfo()
+      const { updateDefaultLanguage } = useLanguage()
 
       updateAspectRatio(mediaStorage.screenProportion)
       updateVolume(mediaStorage.volume)
+      updateDefaultLanguage(sortsToValue[langStorage.curLang])
     }
 
     initStoreStatus()

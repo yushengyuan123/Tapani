@@ -1,6 +1,8 @@
 import {
   ipcMain,
-  BrowserWindow
+  Shell,
+  BrowserWindow,
+  shell
 } from 'electron'
 import WindowManager from '../../WindowManager'
 import {
@@ -25,6 +27,8 @@ class WindowUtils {
 
   initWindowStatus() {
     this.windowResizable()
+
+    this.openGithub()
   }
   
   // 调节窗口比例，宽度不变，改变长度
@@ -34,6 +38,12 @@ class WindowUtils {
       const curWidth = sizeArr[0]
     
       this.mainWindow?.setContentSize(curWidth, ~~(curWidth / resizeable))
+    })
+  }
+
+  openGithub() {
+    ipcMain.on('openGithub', (e, url: string) => {
+      shell.openExternal(url)
     })
   }
 }

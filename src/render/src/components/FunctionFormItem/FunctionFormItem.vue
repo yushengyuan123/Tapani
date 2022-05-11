@@ -51,7 +51,7 @@ export default defineComponent({
   padding: 10px 0;
 
   .function-setting-form-aside {
-    width: 150px;
+    width: 200px;
 
     .function-setting-form-item-title {
       font-size: 14px;

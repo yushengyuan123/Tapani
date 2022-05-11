@@ -1,12 +1,12 @@
 <template>
   <div class="media-setting-con">
     <div class="media-setting-item-con">
-      <h1 class="media-setting-title">媒体设置</h1>
+      <h1 class="media-setting-title">{{$t("app_setting.media_module.title")}}</h1>
       <equalizer-adjust />
       <div>
         <function-form-item
-          :title="'画面比例'"
-          :desc="'调整屏幕长、宽比'"
+          :title="$t('app_setting.media_module.screen.proportion')"
+          :desc="$t('app_setting.media_module.screen.proportion_desc')"
         >
           <select-dropdown
             v-model="activeValue"
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="media-setting-item-con">
-      <h1 class="media-setting-title">快捷键</h1>
+      <h1 class="media-setting-title">{{$t('app_setting.media_module.hot_key.title')}}</h1>
       <div class="key-board-item-area">
         <template
           v-for="item in keyBoardSetItem"
@@ -35,9 +35,8 @@
 
 <script lang="ts">
 import {
-  computed,
   defineComponent,
-  ref, toRaw, unref, watchEffect
+  ref
 } from 'vue'
 import {
   storeToRefs
@@ -86,10 +85,10 @@ export default defineComponent({
         operate: "full-screen",
         text: '全屏（full-screen）'
       },
-      {
-        operate: "zoom-in",
-        text: '放大（zoom-in）'
-      }
+      // {
+      //   operate: "zoom-in",
+      //   text: '放大（zoom-in）'
+      // }
     ])
     
     const updateProportion = (index: number) => {

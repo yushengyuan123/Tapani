@@ -4,6 +4,7 @@
       v-for="(item, index) in baseArr"
       :key="index"
       class="base-info-item-con"
+      @click="clickEvent(index)"
     >
       <div class="base-info-item-aside">
         <div class="base-info-item-icon-con">
@@ -26,6 +27,8 @@
 import {
   defineComponent, ref
 } from 'vue'
+import { useIpcRenderer } from '@vueuse/electron'
+import { useI18n } from 'vue-i18n'
 
 interface BaseInfo {
   name: string,
@@ -36,20 +39,30 @@ interface BaseInfo {
 export default defineComponent({
   name: "base-info",
   setup() {
+    const { t } = useI18n()
+    const ipcRenderer = useIpcRenderer()
     const baseArr: BaseInfo[] = ref([
       {
-        name: '报告问题',
-        desc: '生成一个预填写的Github问题',
+        name: t('app_setting.app_module.issue'),
+        desc: t('app_setting.app_module.issue_desc'),
         img: 'question-feedback'
       },
       {
         name: 'Github',
-        desc: '源码',
+        desc: t('app_setting.app_module.github'),
         img: 'github'
       }
     ])
+
+    const clickEvent = (index: number) => {
+      if (index === 1) {
+        ipcRenderer.send('openGithub', 'https://github.com/yushengyuan123/video-player-desktop')
+      }
+    }
+
     return {
-      baseArr
+      baseArr,
+      clickEvent
     }
   }
 })

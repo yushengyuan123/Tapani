@@ -1,26 +1,23 @@
 <template>
   <div class="function-setting-con">
-    <h1 class="function-setting-title">应用程序设置</h1>
+    <h1 class="function-setting-title">{{$t('app_setting.app_module.app_set_title')}}</h1>
     <div class="function-setting-form-con">
         <function-form-item
-          :title="'语言'"
-          :desc="'Help translate Tabby'"
+          :title="$t('app_setting.app_module.language')"
+          :desc="$t('app_setting.app_module.language_desc')"
         >
-          <el-select v-model="activeLabel">
-            <el-option
-              v-for="item in languageOptions"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
-          </el-select>
+          <select-dropdown
+            v-model="activeValue"
+            :menu="languageList"
+            @select-change="dropdownSelect"
+          />
         </function-form-item>
       <function-form-item
-        :title="'调试'"
-        :desc="'打开chrome控制台(开发者选项)'"
+        :title="$t('app_setting.app_module.debugger')"
+        :desc="$t('app_setting.app_module.debugger_desc')"
       >
         <icon-button
-          :text="'打开Devtools'"
+          :text="$t('app_setting.app_module.debugger_button_desc')"
           :img-src="'src/asserts/debug.png'"
         />
       </function-form-item>
@@ -33,11 +30,13 @@ import {
   defineComponent, ref, toRaw, unref
 } from 'vue'
 import FunctionFormItem from "@/components/FunctionFormItem/FunctionFormItem.vue"
+import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
 import Button from "./Button.vue"
+import { storeToRefs } from 'pinia'
+import { useLanguage } from '../../../../store/language'
 
 interface LanguageSelectOption {
   value: string,
-  label: string
 }
 
 export default defineComponent({
@@ -45,28 +44,24 @@ export default defineComponent({
   components: {
     [FunctionFormItem.name]: FunctionFormItem,
     [Button.name]: Button,
+    [SelectDropDownVue.name]: SelectDropDownVue
   },
-  setup(props) {
-    let optionsId = 1
-    const languageOptions = ref<LanguageSelectOption[]>([
-      {
-        value: (optionsId++).toString(),
-        label: 'English'
-      },
-      {
-        value: (optionsId++).toString(),
-        label: '中文(简体)'
-      },
-      {
-        value: (optionsId++).toString(),
-        label: '中文(繁体)'
-      },
-    ])
-    const activeLabel = ref(unref(languageOptions)[0].label)
+  setup() {
+    const languageStore = useLanguage()
+    const { defaultLanguage } = storeToRefs(languageStore)
+    const { updateDefaultLanguage, languageList } = languageStore
+    const activeValue = defaultLanguage
 
+    const dropdownSelect = (index: number) => {
+      updateDefaultLanguage(languageList[index].value)
+
+      location.reload()
+    }
+  
     return {
-      languageOptions,
-      activeLabel
+      languageList,
+      activeValue,
+      dropdownSelect
     }
   }
 })

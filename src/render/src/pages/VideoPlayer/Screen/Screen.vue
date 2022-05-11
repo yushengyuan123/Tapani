@@ -2,10 +2,11 @@
   <div class="video-screen-setting-con">
     <div class="video-screen-setting-screen-proportion-con">
       <div class="video-screen-setting-screen-proportion">
-        画面比例
+        {{$t('video.video_setting.screen.proportion')}}
       </div>
       <div class="video-screen-setting-screen-dropdown">
         <select-dropdown
+          v-model="activeValue"
           :menu="menuArr"
           @select-change="updateProportion"
         />
@@ -25,6 +26,9 @@ import {
 import {
   useScreenControl
 } from "../../../store/screenControl"
+import {
+  ProportionStringTypes
+} from '../../../pages/useSystemStorage'
 import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
 import WindowUtils from '../../../api/window'
 import EqualizerAdjust from "../../../components/Equalizer/EqualizerAdjust.vue"
@@ -34,8 +38,8 @@ import {
 } from "~/share"
 
 interface menuAspectRatio {
-  value: AspectRatio,
-  count: number
+  value: ProportionStringTypes,
+  count: AspectRatio
 }
 
 export default defineComponent({
@@ -49,19 +53,21 @@ export default defineComponent({
     const { 
       updateAspectRatio, 
       screenProportionOption,
+      screenProportion,
       getRatioCount 
     } = useScreenControl()
+    const activeValue = screenProportion
     const menuArr: menuAspectRatio[] = [
       {
-        value: '默认',
+        value: ProportionStringTypes.Default,
         count: 16 / 9
       },
       {
-        value: '16:9',
+        value: ProportionStringTypes.SixteenToNine,
         count: 16 / 9 
       },
       {
-        value: '4:3',
+        value: ProportionStringTypes.FourToThree,
         count: 4 / 3 
       },
     ]
@@ -76,6 +82,7 @@ export default defineComponent({
     }
 
     return {
+      activeValue,
       menuArr,
       updateProportion
     }

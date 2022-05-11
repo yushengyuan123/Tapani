@@ -1,19 +1,21 @@
 <template>
   <div class="equalizer-adjust-page-equalizer">
     <div class="equalizer-adjust-page-equalizer-title-con">
-      <div class="equalizer-adjust-page-equalizer-title-text">画面均衡器</div>
+      <div class="equalizer-adjust-page-equalizer-title-text">
+        {{$t('app_setting.media_module.screen.equalizer_title')}}
+      </div>
     </div>
     <div>
       <equalizer-adjust-item
-        :label="'亮度'"
+        :label="$t('app_setting.media_module.screen.light')"
         :img-src="'src/asserts/light.png'"
       />
       <equalizer-adjust-item
-        :label="'对比度'"
+        :label="$t('app_setting.media_module.screen.contrast')"
         :img-src="'src/asserts/compareRatio.png'"
       />
       <equalizer-adjust-item
-        :label="'饱和度'"
+        :label="$t('app_setting.media_module.screen.saturation')"
         :img-src="'src/asserts/fullRatio.png'"
       />
     </div>

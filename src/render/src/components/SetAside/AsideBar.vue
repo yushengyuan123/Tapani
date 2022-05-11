@@ -32,7 +32,8 @@ import {
   defineComponent,
   ref
 } from 'vue'
-import { useRouter } from "vue-router";
+import { useRouter } from "vue-router"
+import { useI18n } from 'vue-i18n'
 import {
   iconNewName
 } from "../Icons/types";
@@ -47,10 +48,11 @@ export default defineComponent({
   name: "aside-bar",
   setup() {
     const currentActiveIndex = ref(0)
+    const { t } = useI18n()
     const router = useRouter()
     const settingsItem: SettingItems[] = [
       {
-        name: '应用',
+        name: t('app_setting.setting_aside.app'),
         icon: "app",
         path: 'app'
       },
@@ -59,7 +61,7 @@ export default defineComponent({
       //   icon: "color"
       // },
       {
-        name: '媒体设置',
+        name: t('app_setting.setting_aside.media'),
         icon: 'media',
         path: 'media'
       }

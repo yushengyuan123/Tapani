@@ -7,11 +7,6 @@
         </div>
       </router-link>
     </div>
-<!--    <div class="menu-aside-bottom menu-aside-btn">-->
-<!--      <router-link :to="'/settings'">-->
-<!--        <icon-collect name="setting"/>-->
-<!--      </router-link>-->
-<!--    </div>-->
   </div>
 </template>
 

@@ -7,13 +7,13 @@
             <div class="setting-main-icon-con">
               <div class="setting-main-icon-logo"></div>
               <h1 class="setting-main-app-name">
-                Player
+                Vue Player
               </h1>
               <div class="setting-main-version">1.0.0</div>
             </div>
             <div class="setting-main-check-update">
               <icon-button
-                :text="'检查更新'"
+                :text="$t('app_setting.app_module.check_update')"
                 :img-src="'src/asserts/update.png'"
               />
             </div>

@@ -9,20 +9,26 @@ import {
 } from "vue"
 import { useLocalStorage, useStorageAsync } from "@vueuse/core"
 import { useSystemStorage } from "../../pages/useSystemStorage"
+import { ProportionStringTypes } from '../../pages/useSystemStorage'
+
+interface ScreenProportionSelectArr {
+  value: ProportionStringTypes,
+  count: number
+}
 
 export const useScreenControl = defineStore('screen-control', () => {
-  const screenProportion = ref('16:9')
-  const screenProportionOption = [
+  const screenProportion = ref<ProportionStringTypes>(ProportionStringTypes.SixteenToNine)
+  const screenProportionOption: ScreenProportionSelectArr[]= [
     {
-      value: '默认',
+      value: ProportionStringTypes.Default,
       count: 16 / 9
     },
     {
-      value: '16:9',
+      value: ProportionStringTypes.SixteenToNine,
       count: 16 / 9 
     },
     {
-      value: '4:3',
+      value: ProportionStringTypes.FourToThree,
       count: 4 / 3 
     },
   ]
@@ -36,8 +42,9 @@ export const useScreenControl = defineStore('screen-control', () => {
     return 16 / 9
   }
   
-  const updateAspectRatio = (ratio: string) => {
+  const updateAspectRatio = (ratio: ProportionStringTypes) => {
     screenProportion.value = ratio
+
     const { updateMediaStorage } = useSystemStorage()
     
     updateMediaStorage('screenProportion', ratio)
