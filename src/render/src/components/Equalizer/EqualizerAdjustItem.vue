@@ -13,25 +13,43 @@
     </div>
     <div class="equalizer-adjust-progress">
       <video-progress
-        :percentage="0"
+        :percentage="countProgressPercentage"
         :width="progressWidth"
         :stroke-color="'#615d5d'"
+        @change="progressChange"
       />
+    </div>
+    <div class="equalizer-adjust-progress-value">
+      {{ labalValue }}
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import {
+  computed,
   CSSProperties,
   defineComponent,
-  inject, provide
+  inject, PropType, provide, SetupContext
 } from 'vue'
+import { useScreenControl, FilterStyleKey } from '../../store/screenControl'
 import Progress from "@/components/VideoControls/Progress.vue"
+
+function formatRange(value: number) {  
+  return ~~((value - 100) / 10)
+}
+
+function formatProgress(value: number) {
+  return (value - 100) / 100 + 0.5
+}
 
 export default defineComponent({
   name: "equalizer-adjust-item",
   props: {
+    id: {
+      type: String as PropType<FilterStyleKey>,
+      default: ''
+    },
     label: {
       type: String
     },
@@ -39,25 +57,45 @@ export default defineComponent({
       type: String
     }
   },
+  emits: ['value-update'],
   components: {
     [Progress.name]: Progress
   },
-  setup(props) {
+  setup(props, context: SetupContext) {
     const label = props.label
     const imgSrc = props.imgSrc
+    const { getFilterValue } = useScreenControl()
 
     const labelWidth = inject('labelWidth')
     const progressWidth = inject('progressWidth')
 
     const labelStyle: CSSProperties = {
-      width: labelWidth + 'px'
+      minWidth: labelWidth + 'px'
     }
-    // consoe.log(11)
+
+    const labalValue = computed(() => {
+      return formatRange(getFilterValue(props.id))
+    })
+
+    const countProgressPercentage = computed(() => {
+      return formatProgress(getFilterValue(props.id))
+    }) 
+    
+    const progressChange = (value: number) => {
+      context.emit('value-update', {
+        value: value,
+        label: props.id
+      })
+    }
+
     return {
       label,
       imgSrc,
       labelStyle,
-      progressWidth
+      progressWidth,
+      labalValue,
+      progressChange,
+      countProgressPercentage
     }
   }
 })
@@ -93,5 +131,13 @@ export default defineComponent({
 .equalizer-adjust-progress {
   display: flex;
   align-items: center;
+}
+
+.equalizer-adjust-progress-value {
+  min-width: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 0 5px;
+  text-align: right;
 }
 </style>

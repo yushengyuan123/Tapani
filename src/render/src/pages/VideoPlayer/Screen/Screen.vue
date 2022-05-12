@@ -20,15 +20,9 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent
-} from 'vue'
-import {
-  useScreenControl
-} from "../../../store/screenControl"
-import {
-  ProportionStringTypes
-} from '../../../pages/useSystemStorage'
+import { defineComponent } from 'vue'
+import { useScreenControl } from "../../../store/screenControl"
+import { ProportionStringTypes } from '../../../pages/useSystemStorage'
 import SelectDropDownVue from '@/components/SelectDropDown/SelectDropDown.vue'
 import WindowUtils from '../../../api/window'
 import EqualizerAdjust from "../../../components/Equalizer/EqualizerAdjust.vue"

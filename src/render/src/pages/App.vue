@@ -1,4 +1,5 @@
 <template>
+  <header-drag-area />
   <div class="app-con">
     <el-container id="container">
       <router-view />
@@ -7,10 +8,9 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-} from "vue"
+import { defineComponent } from "vue"
 import VideoPlayer from './VideoPlayer/VideoPlayer.vue'
+import HeaderDragArea from '@/components/HeaderDragArea/HeaderDragArea.vue'
 import Index from './Index/Index.vue'
 import { useKeyMonitor  } from "../hooks/use-key-monitor"
 import { useScreenControl } from '../store/screenControl'
@@ -24,6 +24,7 @@ export default defineComponent({
     VideoPlayer,
     [VideoPlayer.name]: VideoPlayer,
     [Index.name]: Index,
+    [HeaderDragArea.name]: HeaderDragArea
   },
   setup() {
     const { mediaStorage, langStorage } = useSystemStorage()
@@ -49,9 +50,8 @@ export default defineComponent({
 
 <style scoped lang="less">
 .app-con {
+  position: relative;
   height: 100%;
   width: 100%;
-  //background: transparent url('@/asserts/index-bg.png') top center no-repeat;
-  background-size: cover;
 }
 </style>

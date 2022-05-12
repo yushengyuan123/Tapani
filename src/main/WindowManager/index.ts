@@ -39,13 +39,8 @@ export default class WindowManager {
         this.window.webContents.openDevTools({
           mode: 'detach'
         })
-      } else {
-        console.log(path.join(__dirname, '/index.html'));
-        
+      } else {        
         this.window.loadFile(path.join(__dirname, '/index.html'))
-        this.window.webContents.openDevTools({
-          mode: 'detach'
-        })
       }
 
       const windowUtils = new WindowUtils()

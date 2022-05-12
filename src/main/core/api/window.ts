@@ -33,6 +33,8 @@ class WindowUtils {
     this.setFullScreen()
     
     this.reduceScreen()
+
+    this.openDevTools()
   }
   
   // 调节窗口比例，宽度不变，改变长度
@@ -60,6 +62,14 @@ class WindowUtils {
   reduceScreen() {
     ipcMain.on('reduceScreen', (e) => {
       this.mainWindow?.setFullScreen(false)
+    })
+  }
+
+  openDevTools() {
+    ipcMain.on('openDevTools', (e) => {
+      this.mainWindow?.webContents.openDevTools({
+        mode: 'detach'
+      })
     })
   }
 }

@@ -6,7 +6,10 @@ import {
 } from "vue"
 import { useSystemStorage } from "../../pages/useSystemStorage"
 import { ProportionStringTypes } from '../../pages/useSystemStorage'
+import { useLocalStorage } from '@vueuse/core'
 
+export type FilterStyleKey = 'brightness' | 'contrast' | 'saturate'
+export type FilterControlOptions = Record<FilterStyleKey, number>
 interface ScreenProportionSelectArr {
   value: ProportionStringTypes,
   count: number
@@ -15,6 +18,11 @@ interface ScreenProportionSelectArr {
 export const useScreenControl = defineStore('screen-control', () => {
   const screenProportion = ref<ProportionStringTypes>(ProportionStringTypes.SixteenToNine)
   const fullScreenMode = ref(false)
+  const filterStyle = useLocalStorage<FilterControlOptions>('player-system-filter', {
+    brightness: 100,
+    contrast: 100,
+    saturate: 100,
+  })
   const screenProportionOption: ScreenProportionSelectArr[]= [
     {
       value: ProportionStringTypes.Default,
@@ -42,6 +50,10 @@ export const useScreenControl = defineStore('screen-control', () => {
      
     return defaultValue
   }
+
+  const getFilterValue = (key: FilterStyleKey) => {
+    return filterStyle.value[key]
+  }
   
   const updateAspectRatio = (ratio: ProportionStringTypes) => {
     screenProportion.value = ratio
@@ -54,12 +66,19 @@ export const useScreenControl = defineStore('screen-control', () => {
   const updateFullScreenMode = (value: boolean) => {
     fullScreenMode.value = value
   }
-  
+
+  const updateFilterStyle = (key: FilterStyleKey, value: number) => {
+    filterStyle.value[key] = Math.min(value, 200)
+  }
+
   return {
+    filterStyle,
     screenProportion,
     getRatioCount,
+    getFilterValue,
     screenProportionOption,
     updateAspectRatio,
-    updateFullScreenMode
+    updateFullScreenMode,
+    updateFilterStyle
   }
 })

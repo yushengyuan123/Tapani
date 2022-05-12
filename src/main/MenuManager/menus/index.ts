@@ -17,7 +17,19 @@ const template: AppMenuOption[] = [
         command: Command.APPLICATION_OPEN_FILE
       }
     ]
-  }
+  },
+  {
+    id: 'menu.volume',
+    label: '声音',
+  },
+  {
+    id: 'menu.capture',
+    label: '截图',
+  },
+  {
+    id: 'menu.help',
+    label: '帮助',
+  },
 ]
 
 export default template

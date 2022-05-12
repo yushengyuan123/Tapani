@@ -2,7 +2,8 @@
   "name": "PlayerRender",
   "version": "1.0.0",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@vueuse/core": "^8.3.1",

@@ -29,6 +29,10 @@ class WindowUtils {
   reduceScreen() {
     this.ipcRenderer.send('reduceScreen')
   }
+
+  openDevTools() {
+    this.ipcRenderer.send('openDevTools')
+  }
 }
 
 export default WindowUtils

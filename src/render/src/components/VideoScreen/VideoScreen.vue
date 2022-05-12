@@ -2,51 +2,55 @@
   <video
     class="video-screen"
     ref="videoScreenRef"
+    :style="videoFilterStyle"
     autoplay
   />
 </template>
 
 <script lang="ts">
-import {defineComponent, ref, watch} from "vue"
+import {computed, CSSProperties, defineComponent, Ref, ref, watch} from "vue"
 import {useMedia} from "./use-media";
 import {useVideoInfo} from '../../store/videoInfo'
 import {storeToRefs} from 'pinia'
-import {UploadProps, UploadFile} from "element-plus";
-import {useMediaControls} from "@vueuse/core"
+import {UploadProps, UploadFile} from "element-plus"
+import { useScreenControl } from "../../store/screenControl"
+import type { FilterControlOptions } from "../../store/screenControl"
+
+function filterValue(filterStyle: Ref<FilterControlOptions>) {
+  const brightness = filterStyle.value.brightness
+  const contrast = filterStyle.value.contrast
+  const saturate = filterStyle.value.saturate
+  
+  return `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%)`
+}
 
 export default defineComponent({
   name: "video-screen",
   setup() {
     const videoScreenRef = ref<HTMLVideoElement>()
     const { videoBlobAddress } = storeToRefs(useVideoInfo())
+    const { filterStyle } = storeToRefs(useScreenControl())
 
     useMedia(videoScreenRef)
 
-    const full = () => {
-      videoScreenRef.value!.requestFullscreen()
-    }
-
-    const handleRemove: UploadProps['onRemove'] = (file, uploadFiles) => {
-      console.log(file, uploadFiles)
-    }
-
-    const handlePreview: UploadProps['onPreview'] = (uploadFile) => {
-      // console.log(uploadFile)
-    }
+    const videoFilterStyle = computed(
+      (): CSSProperties => {      
+        return {
+          filter: filterValue(filterStyle)
+        }
+      }     
+    )
 
     const handleChange: UploadProps['onChange'] = (
       uploadFile: UploadFile
     ) => {
-      console.log(uploadFile.raw)
       videoBlobAddress.value = URL.createObjectURL(uploadFile.raw)
     }
 
     return {
       videoScreenRef,
-      full,
-      handlePreview,
-      handleRemove,
       handleChange,
+      videoFilterStyle
     }
   }
 })

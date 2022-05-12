@@ -182,7 +182,7 @@ export default defineComponent({
 }
 .video-player-drawer-content-con {
   height: 100%;
-  padding: 10px 15px;
+  padding: 10px 8px 10px 15px;
   box-sizing: border-box;
 }
 </style>

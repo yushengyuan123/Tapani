@@ -17,15 +17,15 @@
       "output": "release"
     },
     "mac": {
+      "icon": "./appLogo.png"
+    },
+    "dmg": {
       "icon": "./appLogo.png",
       "iconSize": 60
     },
     "files": [
       "dist/electron/**/*"
-    ],
-    "dmg": {
-      "iconSize": 60
-    }
+    ]
   },
   "dependencies": {
     "electron-is": "^3.0.0",

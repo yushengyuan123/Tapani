@@ -70,6 +70,8 @@ export default defineComponent({
     align-items: center;
     
     .function-setting-form-item {
+      display: flex;
+      justify-content: end;
       width: 150px;
     }
   }

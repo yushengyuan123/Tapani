@@ -2,7 +2,9 @@
   <div class="media-setting-con">
     <div class="media-setting-item-con">
       <h1 class="media-setting-title">{{$t("app_setting.media_module.title")}}</h1>
-      <equalizer-adjust />
+      <div class="media-setting-equalizer-con">
+        <equalizer-adjust />
+      </div>
       <div>
         <function-form-item
           :title="$t('app_setting.media_module.screen.proportion')"

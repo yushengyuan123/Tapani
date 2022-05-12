@@ -5,7 +5,7 @@
         <img src="@/asserts/appLogo.png" alt="">
       </div>
       <div class="video-index-select-inner-logo-desc">
-        <h1>Vue Player</h1>
+        <h1>Tapani</h1>
       </div>
       <div class="video-index-select-inner-app-desc">
         {{ $t("app_index.app_desc") }}
@@ -86,7 +86,6 @@ export default defineComponent({
 .video-index-select-con {
   height: 100%;
   width: 100%;
-  background-color: #1a1a1a;
 }
 
 .video-index-select-inner-con {
@@ -124,6 +123,7 @@ export default defineComponent({
 }
 
 .video-index-select-inner-logo-desc {
+  font-family: Monaco;
   height: 60px;
   color: white;
   font-size: 30px;

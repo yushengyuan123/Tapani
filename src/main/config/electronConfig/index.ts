@@ -7,7 +7,9 @@ const initHeight: number = 700
 const electronConfig: BrowserWindowConstructorOptions = {
   height: initHeight,
   width: ~~(initHeight * AspectRatio.SixteenToNine),
-  backgroundColor: is.macOS() ? '#000000' : '#FFF',
+  transparent: true,
+  vibrancy: 'ultra-dark',
+  // backgroundColor: is.macOS() ? '#000000' : '#FFF',
   webPreferences: {
     // preload: path.join(__dirname, 'renderPreload.ts'),
     contextIsolation: false,
