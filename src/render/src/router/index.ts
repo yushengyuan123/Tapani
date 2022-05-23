@@ -8,11 +8,12 @@ import VideoIndex from "@/pages/VideoPlayer/Index.vue"
 import Settings from "@/pages/Settings/Settings.vue"
 import AppSetting from "@/pages/Settings/SettingsMain/AppSetting/AppSetting.vue"
 import MediaSetting from "@/pages/Settings/SettingsMain/MediaSetting/MediaSetting.vue"
+import Download from "@/pages/Download/Download.vue"
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/index'
+    redirect: '/download'
   },
   {
     path: '/index',
@@ -23,6 +24,11 @@ const routes: RouteRecordRaw[] = [
     path: '/video',
     name: 'video-index',
     component: VideoIndex
+  },
+  {
+    path: '/download',
+    name: 'download-index',
+    component: Download
   },
   {
     path: '/settings',

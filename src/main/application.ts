@@ -6,6 +6,8 @@ import {Command} from "~"
 import {dialog} from 'electron'
 import is from "electron-is"
 import * as path from "path"
+import { DownloadManager } from './core/webtorrent/lib/DownloadManager'
+import KoaServer from './core/server'
 
 class Application extends EventEmitter {
   menuManager!: MenuManager
@@ -20,6 +22,8 @@ class Application extends EventEmitter {
     this.initWindowManager()
     
     this.handleCommand()
+
+    this.initWebSocket()
     
     this.initEggServer()
   }
@@ -31,24 +35,31 @@ class Application extends EventEmitter {
   initWindowManager() {
     this.windowManager = new WindowManager()
   }
+
+  initWebSocket() {
+    const manager = new DownloadManager()
+
+    manager.add()
+  }
   
   initEggServer() {
-    if (is.dev()) {
-      const scriptPath = path.join(__dirname, '../../startup.sh')
-      const server = spawn(`sh`, [scriptPath])
+    new KoaServer()
+    // if (is.dev()) {
+    //   const scriptPath = path.join(__dirname, '../../startup.sh')
+    //   const server = spawn(`sh`, [scriptPath])
   
-      server.stdout.on('data', (data: Buffer) => {
-        console.log('[Egg Server]:', data.toString())
-      })
+    //   server.stdout.on('data', (data: Buffer) => {
+    //     console.log('[Egg Server]:', data.toString())
+    //   })
   
-      server.stderr.on('data', (data: Buffer) => {
-        console.error('[Egg Server]: error', data.toString())
-      })
+    //   server.stderr.on('data', (data: Buffer) => {
+    //     console.error('[Egg Server]: error', data.toString())
+    //   })
   
-      server.on('close', () => {
-        console.error('http server close！')
-      })
-    }
+    //   server.on('close', () => {
+    //     console.error('http server close！')
+    //   })
+    // }
   }
   
   sendCommandToAll(command: CommandTypes, ...args: any[]) {

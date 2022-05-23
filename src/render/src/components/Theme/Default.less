@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+textarea {
+  outline: none;
+}
+
 h1 {
   margin: 0;
 }
@@ -19,10 +23,6 @@ a {
 
 /* Index Area
 -------------------------- */
-.video-index-select-con {
-  background-color: @--index-app-bg;
-}
-
 .video-index-select-inner-app-desc {
   color: @--index-app-desc-color;
 }
@@ -65,13 +65,17 @@ a {
 
 /* Menu Aside Style
 -------------------------- */
-.menu-aside-container {
-  background-color: @--settings-aside-item-bg;
-}
+// .menu-aside-container {
+//   background-color: @--settings-aside-item-bg;
+// }
 
 
 /* Setting Aside Style
 -------------------------- */
+.settings-con {
+  background-color: @--settings-aside-item-bg;
+}
+
 .settings-aside {
   background-color: @--settings-aside-item-bg;
 }
@@ -85,7 +89,7 @@ a {
 }
 
 .setting-main {
-  background-color: @--settings-main-content;
+  // background-color: @--settings-main-content;
 
   .setting-main-check-update-button {
     background-color: @--settings-main-app-button-bg;
@@ -234,6 +238,69 @@ a {
   color: @--settings-aside-text;
 }
 
+/* Download Index Style
+-------------------------- */
+.download-index-con {
+  background-color: @--settings-aside-item-bg;
+}
+
+/* Download Header Style
+-------------------------- */
+.download-header-con {
+  background-color: black;
+}
+
+/* Download Menu Style
+-------------------------- */
+.download-menu-item-text {
+  color: @--keys-board-color;
+}
+
+/* Download Opr Style
+-------------------------- */
+.download-operate-item {
+  background-color: @--aside-drawer-header-border-bottom;
+}
+
+/* Download Item Style
+-------------------------- */
+.content-item-con {
+  background-color: @--download-content-item-bg;
+}
+
+.content-item-file-name {
+  color: @--download-content-item-name-color;
+}
+
+.content-item-file-size {
+  color: @--download-content-item-size-color;
+}
+
+.content-item-file-contain-file {
+  color: @--settings-main-app-border;
+}
+
+.content-item-file-status {
+  color: @--download-content-item-name-color;
+}
+
+/* AddTask Dialog Style
+-------------------------- */
+.add-task-con {
+  background-color: @--add-task-dialog-bg;
+}
+
+.add-task-button {
+  color: @--keys-modify-dialog-footer-button-color;
+}
+
+/* Textarea Style
+-------------------------- */
+.ta-textarea {
+  background-color: @--textarea-bg;
+  color: @--textarea-color;
+  border-color: @--textarea-border-color;
+}
 
 #app,
 #container{

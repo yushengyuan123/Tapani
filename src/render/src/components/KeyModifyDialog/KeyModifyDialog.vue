@@ -115,7 +115,6 @@ export default defineComponent({
 <style scoped lang="less">
 .key-modify-dialog-con {
   width: 500px;
-  background-color: #1f2427;
   border-radius: 10px;
   overflow: hidden;
 }
