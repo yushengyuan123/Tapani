@@ -7,7 +7,7 @@ export const responseHandler = async (context: Context, next: Next) => {
   ) => {
     context.body = {
       code: 200,
-      msg: message || '成功',
+      msg: message || 'success',
       data: data || null,
     }
   }

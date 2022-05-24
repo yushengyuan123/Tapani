@@ -1,18 +1,17 @@
 import { Context, Next } from 'koa'
+import { DownloadReq } from '~/share/api/task'
+import { downloadFile } from '../services/taskServices'
 
 class TaskController {
   async addTask(context: Context, next: Next) {
+    // @ts-ignore
+    const body = context.request.body as DownloadReq
 
-    console.log('TaskController')
+    downloadFile({
+      magnet: body.magnet
+    })
 
-    context.success('caonims')
-
-    // context.body = {
-    //   code: 123,
-    //   message: 'caonima'
-    // }
-    
-    // await next()
+    context.success()
   }
 }
 

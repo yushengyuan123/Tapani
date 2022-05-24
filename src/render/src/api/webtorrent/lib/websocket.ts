@@ -28,6 +28,7 @@ export class WebSocketClient extends EventEmitter {
  
   open() {
     this.socket = new WebSocket(this.url)
+    const self = this
     const socket = this.socket
 
     socket.onclose = (...args) => {
@@ -40,16 +41,13 @@ export class WebSocketClient extends EventEmitter {
       let message
 
       try {
-        message = event.data
+        message = JSON.parse(event.data)
       } catch (err) {
         this.emit('error', err)
         return
       }
-      // this._onmessage(message)
-      console.log('shoudaoxiaoxi');
       
-      console.log(message)
-      
+      self._onmessage(message)
     }
 
     socket.onopen = (...args) => {

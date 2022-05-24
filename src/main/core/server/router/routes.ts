@@ -12,7 +12,7 @@ export interface RoutesRecord {
 
 export const routes: RoutesRecord[] = [
   {
-    method: "get",
+    method: "post",
     path: '/task/add',
     controller: TaskController.addTask
   }

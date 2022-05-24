@@ -3,12 +3,21 @@
     v-if="visible"
   >
     <div class="add-task-con">
-      <div class="add-task-magnet-con">
-        <ta-textarea
-          :placeholder="'请输入磁力链接'" 
-          class="add-task-magnet-textarea">
-        </ta-textarea>
-      </div>
+      <el-tabs v-model="active">
+        <el-tab-pane label="磁力链接" name="magnet">
+          <div class="add-task-magnet-con">
+            <ta-textarea
+              :placeholder="'请输入磁力链接'" 
+              class="add-task-magnet-textarea">
+            </ta-textarea>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane label="种子任务" name="torrent">
+          <div class="add-task-torrent-con">
+            <ta-torrent-upload />                       
+          </div>   
+        </el-tab-pane>
+      </el-tabs>
       <div class="add-task-form-con">
         <el-form 
           :model="formData" 
@@ -35,7 +44,7 @@
         >
           确定
         </div>
-      </div>
+      </div>          
     </div>
   </global-block>
 </template>
@@ -46,6 +55,7 @@ import {
 } from 'vue'
 import TextArea from "@/components/TextArea/TextArea.vue"
 import GlobalBlock from "@/components/GlobalBlock/GlobalBlock.vue"
+import TorrentUpload from './TorrentUpload.vue'
 
 export interface addTaskFormData {
   fileName: string,
@@ -62,11 +72,12 @@ export default defineComponent({
   emits: ['update:visible', 'submit'],
   components: {
     [GlobalBlock.name]: GlobalBlock,
-    [TextArea.name]: TextArea
+    [TextArea.name]: TextArea,
+    [TorrentUpload.name]: TorrentUpload
   },
   setup(props, context) {
     const visible = true
-    const active = 'User'
+    const active = 'magnet'
     const formData = reactive<addTaskFormData>({
       fileName: '',
       downloadDir: ''
@@ -123,6 +134,10 @@ export default defineComponent({
 
 .add-task-magnet-con {
   margin-bottom: 10px;
+}
+
+.add-task-torrent-con {
+  margin-bottom: 20px;
 }
 
 .add-task-form-con {

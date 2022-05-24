@@ -25,7 +25,7 @@ const webpackMainConfig = {
   resolve: {
     extensions: [ '.ts', '.js' ],
     alias: {
-      "~": path.resolve(__dirname, '../src/share')
+      "~/share": path.resolve(__dirname, '../src/share')
     }
   },
   output: {

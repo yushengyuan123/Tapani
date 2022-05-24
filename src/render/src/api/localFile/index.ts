@@ -4,7 +4,7 @@ interface Req {
   filePath: string
 }
 
-const getLocalFile = (path) => {
+function getLocalFile(path: string) {
   return fetch<Req, Blob>({
     url: '/video',
     method: "post",

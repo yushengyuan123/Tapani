@@ -7,17 +7,17 @@
       <div class="content-item-details">
         <div class="content-item-top-con">
           <div class="content-item-file-name">
-            阳光电影www.ygdy8.com.神秘海域.2022.HD.1080P.中英双字。mkv
+            {{ name }}
           </div>
           <div class="content-item-file-info">
-            <span class="content-item-file-size">1.6GB</span>
+            <span class="content-item-file-size">{{ size }}</span>
             <span class="content-item-file-contain-file">(共1个文件)</span>
-            <span class="content-item-file-status">已暂停</span>
+            <span class="content-item-file-status">{{ statusText }}</span>
           </div>
           <div class="content-item-file-download-progress">
             <el-progress
               stroke-width="3" 
-              :percentage="50" 
+              :percentage="percentage" 
             />
           </div>
         </div>
@@ -28,13 +28,39 @@
 
 <script lang="ts">
 import {
-  defineComponent
+  defineComponent, PropType, toRefs, computed
 } from 'vue'
+import { DownloadMessage } from '../DownloadContent.vue'
 
 export default defineComponent({
   name: "content-item",
-  setup() {
-    return {}
+  props: {
+    details: {
+      type: Object as PropType<DownloadMessage>
+    }
+  },
+  setup(props) {
+    const {
+      name, 
+      size, 
+      status, 
+      progress
+    } = toRefs(props.details as DownloadMessage)
+
+    const statusText = computed(() => {
+      return status.value ? '下载中' : '已暂停'
+    })
+
+    const percentage = computed(() => {
+      return progress.value * 100
+    })
+
+    return {
+      name,
+      size,
+      statusText,
+      percentage
+    }
   }
 })
 </script>

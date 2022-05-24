@@ -1,5 +1,6 @@
 import { EventEmitter } from 'events'
 import WebSocket, { WebSocketServer } from 'ws'
+import { DownloadItem } from './DownloadManager'
 
 export class WebSocketMainServer extends EventEmitter {
   socket!:WebSocket
@@ -16,7 +17,7 @@ export class WebSocketMainServer extends EventEmitter {
     WebSocketMainServer.instance = this
   }
 
-  sendMessage(message: any) {
+  sendMessage(message: DownloadItem) {
     return new Promise((resolve, reject) => {
       const cb = (err: any) => {
         if (err) {

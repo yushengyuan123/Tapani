@@ -19,6 +19,7 @@ import DownloadHeader from "./DownloadHeader/DownloadHeader.vue"
 import DownloadContent from "./DownloadContent/DownloadContent.vue"
 import DownloadOperate from "./DownloadOperate/DownloadOperate.vue"
 import AddTask from "@/components/Task/AddTask.vue"
+import { taskApi } from "../../api/task"
 // import WebTorrent from "webtorrent/webtorrent.min.js"
 // const os = require('os')
 // const WebTorrent = require('webtorrent')
@@ -53,18 +54,12 @@ export default defineComponent({
       console.log('11231321');
       
       console.log(form);
+      taskApi.downloadTask(form).then(res => {
+        console.log(res);      
+      })
       
     }
     
-  
-    onMounted(() => {
-      // console.log('1111');
-      const ws = new WebSocketClient()
-
-      ws.open()
-    })
-
-
     return {
       visible,
       visibleAddTask,

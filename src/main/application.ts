@@ -1,8 +1,8 @@
 import { spawn } from 'child_process'
 import WindowManager from "./WindowManager"
 import MenuManager from "./MenuManager"
-import {EventEmitter} from 'events'
-import {Command} from "~"
+import { EventEmitter } from 'events'
+import { Command } from "~/share/index"
 import {dialog} from 'electron'
 import is from "electron-is"
 import * as path from "path"
@@ -37,9 +37,7 @@ class Application extends EventEmitter {
   }
 
   initWebSocket() {
-    const manager = new DownloadManager()
-
-    manager.add()
+    new DownloadManager()
   }
   
   initEggServer() {

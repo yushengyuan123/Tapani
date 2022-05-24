@@ -29,11 +29,7 @@ export default defineComponent({
   setup(props, context) {
     const content = ref('')
 
-    const onChange = () => {
-      console.log(
-        content.value
-      );
-      
+    const onChange = () => {    
       context.emit('update:value', content.value)
     }
 

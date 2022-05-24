@@ -1,6 +1,6 @@
 import {
   Command
-} from "~"
+} from "~/share/index"
 
 const template: AppMenuOption[] = [
   {
