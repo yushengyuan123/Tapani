@@ -24,6 +24,18 @@ export class WebSocketClient extends EventEmitter {
 
   _onmessage = (message: any) => {
     this.emit('input', message)
+
+    // if (Array.isArray(message)) {
+    //   for (const object of message) {
+    //     this._onobject(object)
+    //   }
+    // } else {
+    //   this._onobject(message)
+    // }
+  }
+
+  _onobject (message: any) {
+    
   }
  
   open() {
@@ -35,13 +47,11 @@ export class WebSocketClient extends EventEmitter {
       this.emit('close', ...args)
     }
 
-    socket.onmessage = (event) => {
-      console.log(event)
-      
+    socket.onmessage = (event) => {      
       let message
 
       try {
-        message = JSON.parse(event.data)
+        message = JSON.parse(event.data)       
       } catch (err) {
         this.emit('error', err)
         return

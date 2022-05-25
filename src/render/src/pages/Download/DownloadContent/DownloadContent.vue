@@ -2,7 +2,9 @@
   <div class="download-content-con">
     <div v-if="isRender" class="download-content-inner-con">
       <content-item
-        :details="itemInfo"
+        v-for="(item, index) in itemInfo"
+        :key="index"
+        :details="item"
       />
     </div>
   </div>
@@ -17,13 +19,17 @@ import {
 } from 'vue'
 import ContentItem from './ContentItem/ContentItem.vue'
 import { WebSocketClient } from '../../../api/webtorrent/lib/websocket'
+import { CreateTaskMessage, MessageFormat, MessageTypes, UpdateInfo } from '~/share/api/websocketMessage'
 
 export interface DownloadMessage {
+  id: string,
   name: string,
   progress: number,
   status: boolean,
   size: number
 }
+
+const uidToIndex = new Map<string, number>()
 
 export default defineComponent({
   name: "download-content",
@@ -33,26 +39,44 @@ export default defineComponent({
   setup() {
     const ws = new WebSocketClient()
     const isRender = ref(false)
-    const itemInfo = reactive({
-      name: '',
-      size: 1,
-      status: false,
-      progress: 0
-    })
+    const itemInfo = ref<DownloadMessage[]>([])
 
-    ws.on('input', (message: DownloadMessage) => {
+    const createTask = (list: CreateTaskMessage) => {
+      itemInfo.value = []
+      
+      list.forEach((item, index) => {
+        uidToIndex.set(item.id, index)
+
+        itemInfo.value.push({
+          id: item.id,
+          name: item.name,
+          progress: 0,
+          status: true,
+          size: item.length
+        })
+      })
+    }
+
+    const updateProgress = (data: UpdateInfo) => {
+      console.log('进度更新', data);
+      
+      const index = uidToIndex.get(data.id) as number
+      itemInfo.value[index].progress
+    }
+
+    const receiveMessage = (message: MessageFormat) => {
       if (!isRender.value) {
         isRender.value = true
-      } 
+      }
 
-      itemInfo.name = message.name
-      itemInfo.size = message.size
-      itemInfo.status = message.status
-      itemInfo.progress = message.progress
+      if (message.types === MessageTypes.CREATE) {        
+        createTask(message.data as CreateTaskMessage)
+      } else {
+        updateProgress(message.data as UpdateInfo)
+      }
+    }
 
-      console.log(itemInfo);
-      
-    })
+    ws.on('input', receiveMessage)
 
     onMounted(() => {
       ws.open()

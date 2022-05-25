@@ -25,7 +25,12 @@ import { taskApi } from "../../api/task"
 // const WebTorrent = require('webtorrent')
 import { WebSocketClient } from '../../api/webtorrent/lib/websocket'
 
-import type { addTaskFormData } from '../../components/Task/AddTask.vue'
+import type { addTaskFormData, TabLable } from '../../components/Task/AddTask.vue'
+
+interface SubmitEmits extends addTaskFormData{
+  magnet: string,
+  mode: TabLable
+}
 
 export default defineComponent({
   name: "download-index",
@@ -36,21 +41,13 @@ export default defineComponent({
     [AddTask.name]: AddTask
   },
   setup() {
-    // const magnetURI = 'magnet:?xt=urn:btih:3cea508c91bb81cde022559580ec7fc3262059fb&dn=%e9%98%b3%e5%85%89%e7%94%b5%e5%bd%b1www.ygdy8.com.%e6%b8%a9%e5%be%b7%e7%b1%b3%e5%b0%94%e5%84%bf%e7%ab%a5.2020.BD.1080P.%e4%b8%ad%e8%8b%b1%e5%8f%8c%e5%ad%97.mkv&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce'
-    // const client = new WebTorrent()
-    // console.log(os);
-    
-    // console.log(os.tmpdir());
-    const visible = ref(false)
+    const visible = ref(true)
 
-    // console.log(client);
     const visibleAddTask = () => {     
       visible.value = true
     }
 
-    const submitTask = (
-      form: addTaskFormData & { magnet: string }
-    ) => {
+    const submitTask = (form: SubmitEmits) => {
       console.log('11231321');
       
       console.log(form);

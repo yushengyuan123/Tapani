@@ -10,7 +10,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": {
-      "@/components": ["./src/components"],
+      "@/components/*": ["./src/components/*"],
       "@/asserts": ["./src/asserts"],
       "@/hooks": ["./src/hooks"],
       "~/share/*": ["../share/*"]

@@ -1,14 +1,12 @@
 const WebTorrent = require('webtorrent')
 import * as os from 'os'
 import * as path from 'path'
+import { v4 as uuidv4 } from 'uuid'
 import { WebSocketMainServer } from './server'
+import { generateMessage, MessageTypes } from '~/share/api/websocketMessage'
 
-export interface DownloadItem {
-  name: string,
-  progress: number,
-  status: boolean,
-  size: number
-}
+import type { CreateTaskInfo } from '~/share/api/websocketMessage'
+
 
 export interface DownloadOptions {
   name: string
@@ -22,7 +20,7 @@ export interface DownloadTaskOps {
 export class DownloadManager extends WebSocketMainServer {
   client!: any
 
-  downloadList!: DownloadItem[]
+  downloadList: CreateTaskInfo[] = []
 
   defaultOutputDir!: string
 
@@ -40,6 +38,22 @@ export class DownloadManager extends WebSocketMainServer {
     DownloadManager.instance = this
   }
 
+  addToDownloadList(
+    id: string, 
+    name: string, 
+    length: number, 
+    total: number,
+    outputDir: string
+  ) {
+    this.downloadList.push({
+      id: id,
+      name: name,
+      length: length,
+      totalFilesLength: total,
+      outputDir: outputDir
+    })
+  }
+
   init() {
     this.client = new WebTorrent()
 
@@ -51,38 +65,28 @@ export class DownloadManager extends WebSocketMainServer {
     const outputDir = options?.outputDir || this.defaultOutputDir
     const targetDir = path.join(outputDir, 'Player')
 
-    uri = '/Users/yushengyuan/yushengyuan/opcua/torrent/my.torrent'
-
-    this.downloadList.push({
-      name: '阳光电影www.ygdy8.com.温德米尔儿童.2020.BD.1080P.中英双字',
-      progress: 0,
-      status: true,
-      size: 1.6
-    })
-
-    self.sendMessage({
-      name: '阳光电影www.ygdy8.com.温德米尔儿童.2020.BD.1080P.中英双字',
-      progress: 0,
-      status: true,
-      size: 1.6
-    })
-    
     this.client.add(uri, {
       path: targetDir
     }, (torrent: any) => {
-      console.log(torrent)
+      console.log(torrent.files)
+      const files = torrent.files
+      const len = files.length
+      const firstFiles = files[0]
+      const { name, length } = firstFiles
+      const uid = uuidv4()
+
+      self.addToDownloadList(uid, name, length, len, targetDir)
+
+      self.sendMessage(generateMessage(MessageTypes.CREATE, self.downloadList))
       
-      // Got torrent metadata!
       let interval = setInterval(() => {
         const message = 'Progress: ' + (torrent.progress * 100).toFixed(1) + '%'
         console.log(message)
-        self.sendMessage({
-          name: '阳光电影www.ygdy8.com.温德米尔儿童.2020.BD.1080P.中英双字',
-          progress: torrent.progress,
-          status: true,
-          size: 1.6
-        })
-      }, 1000)
+        self.sendMessage(generateMessage(MessageTypes.UPDATE, {
+          id: uid,
+          progress: torrent.progress
+        }))
+      }, 2000)
       
       torrent.on('done', function () {
         console.log('torrent download finished')

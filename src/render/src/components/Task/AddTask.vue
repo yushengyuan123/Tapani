@@ -3,10 +3,11 @@
     v-if="visible"
   >
     <div class="add-task-con">
-      <el-tabs v-model="active">
+      <el-tabs v-model="active" @tab-change="handleTabChange">
         <el-tab-pane label="磁力链接" name="magnet">
           <div class="add-task-magnet-con">
             <ta-textarea
+              v-model="magnetUri"
               :placeholder="'请输入磁力链接'" 
               class="add-task-magnet-textarea">
             </ta-textarea>
@@ -56,11 +57,14 @@ import {
 import TextArea from "@/components/TextArea/TextArea.vue"
 import GlobalBlock from "@/components/GlobalBlock/GlobalBlock.vue"
 import TorrentUpload from './TorrentUpload.vue'
+import { useParseTorrent } from '../../store/torrentFiles/torrent'
 
 export interface addTaskFormData {
   fileName: string,
   downloadDir: string
 }
+
+export type TabLable = 'torrent' | 'magnet'
 
 export default defineComponent({
   name: "add-task",
@@ -76,16 +80,16 @@ export default defineComponent({
     [TorrentUpload.name]: TorrentUpload
   },
   setup(props, context) {
+    let active: TabLable = 'magnet'
     const visible = true
-    const active = 'magnet'
     const formData = reactive<addTaskFormData>({
       fileName: '',
       downloadDir: ''
     })
     const magnetUri = ref('')
 
-    const tabClick = () => {
-
+    const handleTabChange = (tab: any) => {
+      active = tab
     }
 
     const onCancel = () => {
@@ -93,18 +97,32 @@ export default defineComponent({
     }
 
     const onSubmit = () => {
+      const { getCurrentTorrent } = useParseTorrent()
+      let payload
+
+      if (active === "magnet") {
+        payload = magnetUri.value
+      } else {
+        const file = getCurrentTorrent()
+        if (file) {
+          payload = file.path
+        }
+      }
+
       context.emit('submit', {
-        magnet: magnetUri.value,
+        magnet: payload,
+        mode: active,
         ...formData
       })
       context.emit('update:visible', false)
     }
 
     return {
+      magnetUri,
       formData,
       visible,
       active,
-      tabClick,
+      handleTabChange,
       onCancel,
       onSubmit
     }
@@ -114,7 +132,7 @@ export default defineComponent({
 
 <style scoped lang="less">
 .add-task-con {
-  width: 500px;
+  width: 600px;
   background-color: #1f2427;
   border-radius: 10px;
   overflow: hidden;

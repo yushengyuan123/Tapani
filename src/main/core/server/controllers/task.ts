@@ -7,11 +7,19 @@ class TaskController {
     // @ts-ignore
     const body = context.request.body as DownloadReq
 
+    let payload = null
+
+    if (body.mode === "magnet") {
+      payload = body.magnet
+    } else {
+      payload = body.magnet
+    }
+
     downloadFile({
-      magnet: body.magnet
+      magnet: payload
     })
 
-    context.success()
+    context.success('success', payload)
   }
 }
 

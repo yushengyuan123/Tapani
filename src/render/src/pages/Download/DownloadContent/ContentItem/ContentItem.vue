@@ -31,6 +31,7 @@ import {
   defineComponent, PropType, toRefs, computed
 } from 'vue'
 import { DownloadMessage } from '../DownloadContent.vue'
+import { convertByte } from '../../../../utils'
 
 export default defineComponent({
   name: "content-item",
@@ -47,17 +48,15 @@ export default defineComponent({
       progress
     } = toRefs(props.details as DownloadMessage)
 
-    const statusText = computed(() => {
-      return status.value ? '下载中' : '已暂停'
-    })
+    const statusText = computed(() => status.value ? '下载中' : '已暂停')
 
-    const percentage = computed(() => {
-      return progress.value * 100
-    })
+    const percentage = computed(() => progress.value * 100)
+
+    const formatSize = computed(() => convertByte(size.value))
 
     return {
       name,
-      size,
+      size: formatSize,
       statusText,
       percentage
     }

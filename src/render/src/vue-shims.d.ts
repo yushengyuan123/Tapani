@@ -1,4 +1,5 @@
-// declare module "*" {
-//   // @ts-ignore
-//   export default {}
-// }
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
+}
